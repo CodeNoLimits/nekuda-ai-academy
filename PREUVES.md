@@ -10,6 +10,12 @@ Note de contrôle pour David. La page publique est en hébreu (RTL, langue par d
 - **Retirés parce qu'ils brouillaient le message** : la sphère 3D, le spot /brag, le carrousel produits et les flip cards. On peut les remettre si tu veux.
 - La version verticale du film n'est pas utilisée : c'est encore l'ancien montage (coffret noir et or).
 
+## v5.1 (demande de David, 18/10)
+
+- **Prix clarifié** : « 1,849 ₪ למפגש, לקבוצה של עד 6 משתתפות » sous le prix, avec le calcul « כשאתן 6, כ-308 ₪ למשתתפת למפגש » (1849 / 6 = 308,17). Ajouté aussi : la taille de groupe dans « l'offre en un coup d'œil », une question FAQ, le syllabus et le JSON-LD. Cela remplace l'ancienne règle « aucune taille de groupe », à la demande explicite de David.
+- **4ᵉ clip** `6020660f` (blazer, l'hébreu le plus propre) placé au CTA final, dans un cadre de téléphone, avec sous-titres HE/EN. C'est la promesse répétée en clôture, comme en ouverture.
+- QA 1440 et 390, HE et EN : 0 scroll horizontal, 0 erreur, 9 vidéos dont 4 sous-titrées, aucun prix avant la section ההשקעה.
+
 ## v5 : les 5 nouveaux clips de David (18/10, 15h30)
 
 Transcription faite avec ElevenLabs Scribe sur ton compte (environ 0,12 $, 319 crédits), puisque Whisper est inaccessible depuis le cloud. Les 5 pistes audio ont été concaténées en un seul fichier pour ne lancer qu'une transcription.
