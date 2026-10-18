@@ -10,6 +10,15 @@ Note de contrôle pour David. La page publique est en hébreu (RTL, langue par d
 - **Retirés parce qu'ils brouillaient le message** : la sphère 3D, le spot /brag, le carrousel produits et les flip cards. On peut les remettre si tu veux.
 - La version verticale du film n'est pas utilisée : c'est encore l'ancien montage (coffret noir et or).
 
+## v6 (retours de David et de son épouse, 18/10)
+
+- **Tzniout** : toutes les formules « דויד מחזיק לכן את היד » / « holds your hand » sont remplacées par « ליווי צמוד בהתחלה » / « close guidance at the start » (0 occurrence restante).
+- **Hébreu** : « מי שרוצה לגדול », sans « תיאבון » (0 occurrence restante).
+- **Prix** : « 1,849 ₪ למפגש לכל הקבוצה יחד (עד 6 משתתפות), לא לכל משתתפת ». Le calcul par participante (308 ₪) est retiré pour éviter toute ambiguïté.
+- **L'offre mise en relief** : elle est remontée juste après le hero, avant le film. C'est un grand panneau crème : la carte « 100% עצמאות מלאה עם כלי ה-AI » en noir et or, puis 10 רילס et le site + פרסום 2.0, puis une grille de 8 informations et deux CTA.
+- **Thème bicolore** : obsidienne et or pour le hero, le film, les séances, Grow, le prix et le CTA final ; crème « pierre de Jérusalem » pour l'offre, l'avant/après, les résultats, David et la FAQ, en alternance. Doré foncé `#7A5E1C` sur crème pour respecter le contraste AA.
+- **Lighthouse mobile** : 93 / 100 / 100 / 100. QA 1440 et 390, HE et EN : 0 scroll horizontal, 0 erreur, prix seulement dans la section ההשקעה.
+
 ## v5.1 (demande de David, 18/10)
 
 - **Prix clarifié** : « 1,849 ₪ למפגש, לקבוצה של עד 6 משתתפות » sous le prix, avec le calcul « כשאתן 6, כ-308 ₪ למשתתפת למפגש » (1849 / 6 = 308,17). Ajouté aussi : la taille de groupe dans « l'offre en un coup d'œil », une question FAQ, le syllabus et le JSON-LD. Cela remplace l'ancienne règle « aucune taille de groupe », à la demande explicite de David.
