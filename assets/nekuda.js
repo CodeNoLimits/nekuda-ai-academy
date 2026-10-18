@@ -38,7 +38,7 @@
   });
   window.NK = { lang: function () { return root.lang; } };
 
-  /* ---------- Scroll reveal: IO threshold .05 + forced activation after 400ms ---------- */
+  /* ---------- Scroll reveal: content is visible at rest, IO only adds a short lift (threshold .05) ---------- */
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   function show(el) { el.classList.add('in'); }
   if ('IntersectionObserver' in window) {
@@ -46,8 +46,9 @@
       entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
     }, { threshold: 0.05 });
     reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(show);
   }
-  setTimeout(function () { reveals.forEach(show); }, 400);
 
   /* ---------- Videos: one at a time ---------- */
   document.addEventListener('play', function (e) {

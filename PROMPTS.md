@@ -26,7 +26,9 @@ Animate this exact product photo. Keep the product, its shape and all printed te
 | Fichier | Source | Contenu |
 |---|---|---|
 | `video/film.mp4` | repo Gemini, commit `10c56bd` (`final_nekuda_trailer.mp4`) | film 57 s, 7 plans, sous-titres HE/EN |
-| `video/annex_01.mp4` | upload David `Man_holding_candle_talking_to…134923` (1080p) | bougie « HaEsh Sheli », studio |
-| `video/annex_02.mp4` | upload `Man_presenting_product_box…` | coffret + cartes flottantes |
-| `video/annex_03.mp4` | upload `Man_holding_name-verse_print…` | cadre « Birkat Hashem » |
-| `video/ch_1…7.jpg` | images extraites du film (sous-titres rognés) | vignettes des chapitres |
+| `video/s1.mp4` … `s5.mp4` | repo Gemini, `seq_02` … `seq_06` (plans sous-titrés) | une vidéo par séance |
+| `video/hd/ch_1…7.webp`, `video/ch_1…7.webp` | uploads bruts de David, frames bouche fermée | posters 1280×720 et vignettes 640×360 |
+| `assets/img/proof/*_real.webp` | photos réelles milamila.co.il | paires « réel → IA » |
+| `assets/img/proof/*_ai.webp`, `video/hd/david.webp`, `og.jpg` | uploads bruts de David | frames souriantes, bouche fermée |
+
+Frames retenues : ch1 `a6498f27`@7.43 · ch2 `6846b3f2`@4.78 · ch3 `e30dbd6e`@7.76 · ch4 `77570582`@9.90 · ch5 `75a554fe`@9.65 · ch6 `2abecada`@7.50 · ch7 `2abecada`@9.87 · David `77570582`@9.90 · OG `a6498f27`@7.43.

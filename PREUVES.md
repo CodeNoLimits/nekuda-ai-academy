@@ -10,6 +10,19 @@ Note de contrôle pour David. La page publique est en hébreu (RTL, langue par d
 - **Retirés parce qu'ils brouillaient le message** : la sphère 3D, le spot /brag, le carrousel produits et les flip cards. On peut les remettre si tu veux.
 - La version verticale du film n'est pas utilisée : c'est encore l'ancien montage (coffret noir et or).
 
+## v4 (retours mobile de David, 18/10 après-midi)
+
+- **Bug corrigé** : les vignettes de chapitres s'étiraient en hauteur sur mobile, à cause des attributs `width`/`height` sans `height:auto`. Le film est maintenant en pleine largeur, avec une barre de chapitres segmentée (cliquable, qui se remplit pendant la lecture) et un carrousel de vignettes 16:9 qui défile au doigt sur mobile.
+- **Images HD, sourire bouche fermée** : toutes les vignettes, posters, paires « réel → IA », la photo « David » et la vignette WhatsApp viennent des clips bruts (sans sous-titres). Les frames ont été choisies en mesurant la bouche image par image (OpenCV) puis vérifiées à l'œil. Elles sont pour la plupart en fin de plan, quand Veo termine sur un sourire. Vignettes du carrousel en 640×360, posters en 1280×720 WebP.
+- **Chaque séance a sa vidéo** (s1–s5, les plans sous-titrés du film) avec une **animation en haut de la vidéo** : numéro de séance, promesse, puis mots-clés qui apparaissent un par un. Elle se déclenche quand la carte entre à l'écran et se replie en simple titre pendant la lecture. Elle est faite en HTML/CSS plutôt qu'avec Remotion, ce qui la garde nette, bilingue HE/EN et sans poids vidéo supplémentaire.
+- **Effet « wow » discret** : des points de lumière dorés (la נקודה) dérivent en fond et forment une constellation autour du doigt ou de la souris. Ils démarrent après le chargement, à 30 i/s, et s'arrêtent avec `prefers-reduced-motion`. S'y ajoutent un reflet doré sur les mots clés du titre et un éclat périodique sur les boutons dorés.
+- **Vignette WhatsApp** `og.jpg` (1200×630, 85 Ko) : en hébreu, sans prix. `og:description` hébreu sans prix, `og:locale he_IL`.
+- **Prix en fin de page** : aucun 1,849 avant la section « ההשקעה » (vérifié automatiquement). La barre mobile affiche « עצמאות ב-AI + 10 רילס » au lieu du prix.
+- **Livrables** : d'abord l'autonomie complète avec les outils IA (« דויד מחזיק לכן את היד בהתחלה »), puis 10 Reels, puis un site neuf ou amélioré avec une stratégie de pub 2.0.
+- **Accompagnement inclus vs Grow ×10** : comparatif côte à côte. Grow ×10 = les stratégies Terminator de David (agence 2016–2020, avant l'empire Airbnb à Jérusalem, puis de 2023 à aujourd'hui), badge « לטרמינייטוריות של הביזנס », prix séparé décidé ensemble.
+- **Retirés** : la vidéo verticale, `film.jpg`, les anciennes annexes. Le selfie à la plage n'est pas utilisé : une autre personne est sur la photo et sa qualité ne tient pas à côté des plans Veo.
+- **QA** : 1440 et 390, HE et EN, 0 scroll horizontal, 0 erreur, 0 image cassée, 7 chapitres, 5 animations de séance déclenchées. **Lighthouse mobile** : landing 95 / 100 / 100 / 100 (TBT 0 ms, CLS 0), syllabus 100 / 100 / 100 / 100.
+
 ## v3 (publication)
 
 - **URL publique** : https://codenolimits.github.io/nekuda-academy/ (dossier `nekuda-academy/` du repo `CodeNoLimits/CodeNoLimits.github.io`, seulement les fichiers du site, sans ces notes internes).

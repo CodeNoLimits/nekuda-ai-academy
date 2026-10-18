@@ -1,31 +1,39 @@
 <!doctype html>
 <html lang="he" dir="rtl"
-  data-title-he="Nekuda AI Academy · 5 מפגשי AI בבית הדפוס בבת ים · DreamNova Studios"
-  data-title-en="Nekuda AI Academy · 5 hands-on AI sessions in Bat Yam · DreamNova Studios">
+  data-title-he="Nekuda AI Academy · הקורס הכי יוצא דופן בחיים שלכן · DreamNova"
+  data-title-en="Nekuda AI Academy · The most extraordinary course of your life · DreamNova">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Nekuda AI Academy · 5 מפגשי AI בבית הדפוס בבת ים · DreamNova Studios</title>
-<meta name="description" content="סדנת AI מעשית בבת ים עם דויד (צלחיה) אמור: 5 מפגשים, כל משתתפת יוצאת עם 10 רילס / פרסומות וידאו AI ואתר שבנתה בעצמה. 1,849 ₪ למפגש." />
+<title>Nekuda AI Academy · הקורס הכי יוצא דופן בחיים שלכן · DreamNova</title>
+<meta name="description" content="סדנת AI מעשית בבת ים עם דויד (צלחיה) אמור: עצמאות מלאה עם כלי ה-AI, 10 רילס לעסק שלך, ואתר חדש או משודרג עם אסטרטגיית פרסום 2.0." />
 <meta name="theme-color" content="#0a0a0a" />
-<meta property="og:title" content="Nekuda AI Academy × DreamNova Studios" />
-<meta property="og:description" content="5 מפגשים. 10 רילס. ואתר שבנית בעצמך — בבית הדפוס בבת ים." />
-<meta property="og:image" content="https://codenolimits.github.io/nekuda-academy/video/film.jpg" />
-<meta property="og:url" content="https://codenolimits.github.io/nekuda-academy/" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://codenolimits.github.io/nekuda-academy/" />
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="he_IL" />
+<meta property="og:site_name" content="Nekuda AI Academy × DreamNova" />
+<meta property="og:title" content="Nekuda AI Academy · הקורס הכי יוצא דופן בחיים שלכן" />
+<meta property="og:description" content="סדנת AI מעשית בבית הדפוס בבת ים עם דויד (צלחיה) אמור: עצמאות מלאה עם כלי ה-AI, 10 רילס לעסק שלך, ואתר חדש או משודרג עם אסטרטגיית פרסום 2.0." />
+<meta property="og:url" content="https://codenolimits.github.io/nekuda-academy/" />
+<meta property="og:image" content="https://codenolimits.github.io/nekuda-academy/og.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="דויד (צלחיה) אמור · 5 מפגשים, 10 רילס, ואתר שבנית בעצמך" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://codenolimits.github.io/nekuda-academy/og.jpg" />
+<link rel="canonical" href="https://codenolimits.github.io/nekuda-academy/" />
 <link rel="icon" href="assets/img/nekuda_logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Heebo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/nekuda.css" />
+<link rel="preload" as="image" href="video/hd/ch_1.webp" fetchpriority="high" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Course",
   "name": "Nekuda AI Academy",
-  "description": "Hands-on AI workshop in Bat Yam: 5 sessions of 2.5–3 hours. Every participant leaves with 10 AI Reels / video ads and a new or upgraded website she built herself.",
+  "description": "Hands-on AI workshop in Bat Yam: 5 sessions of 2.5–3 hours. Full independence with AI tools, 10 AI Reels / video ads, and a new or upgraded website with an Ads 2.0 strategy, with support until each participant is independent.",
   "inLanguage": ["he", "en"],
   "provider": { "@type": "Organization", "name": "DreamNova Studios", "founder": { "@type": "Person", "name": "David (Tselahya) Amor" } },
   "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "onsite", "location": { "@type": "Place", "name": "Bat Yam, Israel" } },
@@ -34,6 +42,7 @@
 </script>
 </head>
 <body>
+<canvas id="lights" aria-hidden="true"></canvas>
 <a class="skip" href="#main"><span data-he>דלגו לתוכן</span><span data-en>Skip to content</span></a>
 
 <nav class="nav" aria-label="main">
@@ -42,10 +51,11 @@
     <div><b>Nekuda AI</b><br /><span>× DreamNova Studios</span></div>
   </a>
   <div class="nav-links">
+    <a href="#film"><span data-he>הסרט</span><span data-en>Film</span></a>
     <a href="#offer"><span data-he>ההצעה</span><span data-en>The offer</span></a>
     <a href="#how"><span data-he>5 המפגשים</span><span data-en>5 sessions</span></a>
     <a href="#proof"><span data-he>תוצאות</span><span data-en>Results</span></a>
-    <a href="#price"><span data-he>מחיר</span><span data-en>Price</span></a>
+    <a href="#support"><span data-he>ליווי ו-Grow</span><span data-en>Support & Grow</span></a>
     <a href="#faq"><span data-he>שאלות</span><span data-en>FAQ</span></a>
   </div>
   <div class="lang" role="group" aria-label="Language">
@@ -58,46 +68,53 @@
 </nav>
 
 <main id="main">
-<!-- ============ HERO: promise + the film ============ -->
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="reveal">
+<!-- ============ HERO ============ -->
+<section class="hero hero-v4" id="top">
+  <div class="wrap">
+    <div class="intro reveal">
       <span class="eyebrow"><span data-he>סדנת AI מעשית · בבית הדפוס בבת ים</span><span data-en>Hands-on AI workshop · at the print studio in Bat Yam</span></span>
       <h1>
         <span data-he>5 מפגשים. <em>10 רילס.</em> ואתר שבנית בעצמך.</span>
         <span data-en>5 sessions. <em>10 Reels.</em> And a website you built yourself.</span>
       </h1>
       <p class="lead">
-        <span data-he>עם דויד (צלחיה) אמור לומדות להפיק סרטוני פרסום ב-AI למוצרים שלכן ולהעלות אתר לאוויר. מכל מפגש יוצאות עם תוצר מוכן לעסק. לא צריך ידע טכני.</span>
-        <span data-en>With David (Tselahya) Amor you learn to produce AI video ads for your own products and to put a website live. You leave every session with something ready for your business. No technical background needed.</span>
+        <span data-he>עם דויד (צלחיה) אמור יוצאות עם <strong>עצמאות מלאה בכלי ה-AI</strong>: מפיקות סרטוני פרסום למוצרים שלכן, מעלות אתר לאוויר ובונות <strong>אסטרטגיית פרסום 2.0</strong>. בהתחלה דויד מחזיק לכן את היד, ומלווה עד שאתן עצמאיות. לא צריך ידע טכני.</span>
+        <span data-en>With David (Tselahya) Amor you leave with <strong>full independence with AI tools</strong>: you produce ad videos for your own products, put a website live and build an <strong>Ads 2.0 strategy</strong>. At the start David holds your hand, and he supports you until you're independent. No technical background needed.</span>
       </p>
       <div class="cta-row">
         <a class="btn" data-wa href="https://wa.me/972584921492" target="_blank" rel="noopener">
           <span data-he>שריינו מקום בוואטסאפ</span><span data-en>Book your spot on WhatsApp</span><span class="ico" aria-hidden="true">↗</span>
         </a>
-        <a class="btn ghost" href="#how">
-          <span data-he>איך זה עובד</span><span data-en>How it works</span><span class="ico" aria-hidden="true">↗</span>
+        <a class="btn ghost" href="#film">
+          <span data-he>צפו בסרט · 57 שניות</span><span data-en>Watch the film · 57 s</span><span class="ico" aria-hidden="true">↗</span>
         </a>
       </div>
       <ul class="facts">
-        <li><b dir="ltr">1,849 ₪</b><span data-he>למפגש</span><span data-en>per session</span></li>
-        <li><b dir="ltr">15,000 ₪+</b><span data-he>שווי קורס אקדמי למשתתפת</span><span data-en>academy-course value per participant</span></li>
-        <li><b>5</b><span data-he>מפגשים של <bdi>2.5–3</bdi> שעות בבת ים</span><span data-en>sessions of 2.5–3 hours in Bat Yam</span></li>
-        <li><b data-he>פעם ביום</b><b data-en>Daily</b><span data-he>תשובות מדויד בוואטסאפ</span><span data-en>WhatsApp answers from David</span></li>
+        <li><b dir="ltr">100%</b><span data-he>עצמאות בכלי ה-AI</span><span data-en>independence with AI tools</span></li>
+        <li><b>10</b><span data-he>רילס / פרסומות AI</span><span data-en>AI Reels / ads</span></li>
+        <li><b>1</b><span data-he>אתר + אסטרטגיית פרסום 2.0</span><span data-en>site + Ads 2.0 strategy</span></li>
+        <li><b>5</b><span data-he>מפגשים של <bdi>2.5–3</bdi> שעות</span><span data-en>sessions of 2.5–3 hours</span></li>
       </ul>
-    </div>
-
-    <div class="reveal film" id="film">
-      <div class="bezel"><div class="core" style="padding:12px">
-        <video id="player" controls playsinline preload="metadata" poster="video/film.webp" src="video/film.mp4"></video>
-        <div class="chips-row" id="chapters" aria-label="chapters"></div>
-        <p class="hint"><span data-he>כל הקורס בסרט אחד של 57 שניות, עם כתוביות. לחצו על פרק כדי לקפוץ אליו.</span><span data-en>The whole course in one 57-second film, with subtitles. Tap a chapter to jump to it.</span></p>
-      </div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ THE OFFER AT A GLANCE ============ -->
+<!-- ============ THE FILM ============ -->
+<section class="film-sec" id="film">
+  <div class="wrap">
+    <div class="bezel film-card reveal"><div class="core">
+      <video id="player" controls playsinline preload="metadata" poster="video/hd/ch_1.webp" src="video/film.mp4"></video>
+      <div class="seg" id="seg" aria-label="chapters timeline"></div>
+      <div class="film-head">
+        <span class="card-label"><span class="dot"></span><span data-he>הסרט · כל הקורס ב-57 שניות, עם כתוביות</span><span data-en>The film · the whole course in 57 seconds, subtitled</span></span>
+        <span class="hint"><span data-he>בחרו פרק</span><span data-en>Pick a chapter</span></span>
+      </div>
+      <div class="rail" id="rail" aria-label="chapters"></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ OFFER AT A GLANCE ============ -->
 <section id="offer">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -116,22 +133,21 @@
           <div><dt><span data-he>כמה זמן</span><span data-en>How long</span></dt>
             <dd><span data-he>5 מפגשים של <bdi>2.5–3</bdi> שעות.</span><span data-en>5 sessions of 2.5–3 hours.</span><small><span data-he>את התאריכים קובעים יחד.</span><span data-en>Dates are set together.</span></small></dd></div>
           <div><dt><span data-he>ידע מוקדם</span><span data-en>Prior knowledge</span></dt>
-            <dd><span data-he>לא צריך. מתחילות מאפס ומתקדמות צעד אחר צעד.</span><span data-en>None. You start from zero and go step by step.</span></dd></div>
+            <dd><span data-he>לא צריך. מתחילות מאפס, ודויד מחזיק לכן את היד בהתחלה.</span><span data-en>None. You start from zero, and David holds your hand at the start.</span></dd></div>
           <div><dt><span data-he>על מה מתרגלות</span><span data-en>What you practise on</span></dt>
             <dd><span data-he>רק על המוצרים שלכן. כל תרגיל מייצר סרטון אמיתי או עמוד אמיתי לעסק.</span><span data-en>Only your own products. Every exercise produces a real video or a real page for your business.</span><small><span data-he>בכבוד מלא לטקסטים הקדושים: לא נותנים ל-AI לצייר אותם מחדש.</span><span data-en>With full respect for the sacred texts: we never let the AI redraw them.</span></small></dd></div>
           <div><dt><span data-he>הכלים</span><span data-en>Tools</span></dt>
             <dd><ul class="chips" style="margin-top:2px"><li>Gemini</li><li>Google Flow</li><li>Veo 3</li><li>Claude</li><li>Claude Code</li><li>Grok</li></ul></dd></div>
           <div><dt><span data-he>ליווי</span><span data-en>Support</span></dt>
-            <dd><span data-he>קו וואטסאפ ייעודי: דויד עונה פעם ביום בין המפגשים, וליווי עד שכל אחת עצמאית.</span><span data-en>A dedicated WhatsApp line: David answers once a day between sessions, and supports you until each of you is independent.</span></dd></div>
-          <div><dt><span data-he>מחיר</span><span data-en>Price</span></dt>
-            <dd><b class="mono" dir="ltr" style="color:var(--gold-light);font-size:20px;font-weight:500">1,849 ₪</b> <span data-he>למפגש</span><span data-en>per session</span><small><span data-he>שווי של קורס אקדמי: כ-15,000 ₪ למשתתפת.</span><span data-en>Value of an academy course: about 15,000 ₪ per participant.</span></small></dd></div>
+            <dd><span data-he>וואטסאפ ייעודי, דויד עונה פעם ביום, וליווי עד שכל אחת עצמאית.</span><span data-en>A dedicated WhatsApp line, David answers once a day, and support until each of you is independent.</span></dd></div>
         </dl>
       </div></div>
       <div class="bezel reveal"><div class="core take">
         <span class="card-label"><span class="dot"></span><span data-he>כל משתתפת יוצאת עם</span><span data-en>Every participant leaves with</span></span>
+        <div class="row lead-row"><div class="big-num" dir="ltr">100%</div><div><h3><span data-he>עצמאות מלאה עם כלי ה-AI</span><span data-en>Full independence with AI tools</span></h3><p><span data-he>הכי חשוב: את יודעת להפעיל לבד את כל הכלים. ובהתחלה, דויד מחזיק לך את היד.</span><span data-en>Most important: you know how to run every tool on your own. And at the start, David holds your hand.</span></p></div></div>
         <div class="row"><div class="big-num">10</div><div><h3><span data-he>רילס / פרסומות וידאו AI</span><span data-en>AI Reels / video ads</span></h3><p><span data-he>על המוצרים שלך, מוכנים להעלאה לאינסטגרם, טיקטוק ופייסבוק.</span><span data-en>Of your own products, ready to post on Instagram, TikTok and Facebook.</span></p></div></div>
-        <div class="row"><div class="big-num">1</div><div><h3><span data-he>אתר חדש או משודרג</span><span data-en>A new or upgraded website</span></h3><p><span data-he>באוויר, שבנית בעצמך בסדנה. או שדרוג מלא לאתר הקיים, כמו milamila.co.il.</span><span data-en>Live, built by you in the workshop. Or a full upgrade of your current site, like milamila.co.il.</span></p></div></div>
-        <a class="btn" data-wa href="https://wa.me/972584921492" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:auto"><span data-he>אני רוצה מקום</span><span data-en>I want a spot</span><span class="ico" aria-hidden="true">↗</span></a>
+        <div class="row"><div class="big-num">1</div><div><h3><span data-he>אתר חדש או משודרג + אסטרטגיית פרסום 2.0</span><span data-en>A new or upgraded site + an Ads 2.0 strategy</span></h3><p><span data-he>אתר שבנית בעצמך, או שדרוג מלא לאתר הקיים כמו milamila.co.il, עם תוכנית פרסום מודרנית.</span><span data-en>A site you built yourself, or a full upgrade of your current one like milamila.co.il, with a modern advertising plan.</span></p></div></div>
+        <a class="btn" data-wa href="https://wa.me/972584921492" target="_blank" rel="noopener" style="align-self:flex-start"><span data-he>אני רוצה מקום</span><span data-en>I want a spot</span><span class="ico" aria-hidden="true">↗</span></a>
       </div></div>
     </div>
   </div>
@@ -152,26 +168,29 @@
       <div class="bezel reveal"><div class="core">
         <span class="tag"><span data-he>אחרי 5 המפגשים</span><span data-en>After the 5 sessions</span></span>
         <ul class="ba-list after">
+          <li><span data-he>את מפעילה לבד את כל כלי ה-AI, בלי לחכות לאף אחד</span><span data-en>You run every AI tool yourself, without waiting for anyone</span></li>
           <li><span data-he>סרטונים עם תנועה, אור וקול למוצרים האמיתיים שלך</span><span data-en>Videos with motion, light and sound for your real products</span></li>
           <li><span data-he>טיוטות פוסטים שמוכנות לבד, ואת רק מאשרת</span><span data-en>Post drafts that prepare themselves, and you just approve</span></li>
-          <li><span data-he>את מעדכנת את האתר ומפיקה סרטונים בעצמך</span><span data-en>You update your site and produce videos yourself</span></li>
         </ul>
       </div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS: 5 sessions ============ -->
+<!-- ============ 5 SESSIONS ============ -->
 <section id="how">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow"><span data-he>איך זה עובד · 5 מפגשים</span><span data-en>How it works · 5 sessions</span></span>
-      <h2><span data-he>צעד אחר צעד, <em>מאפס ועד אתר באוויר.</em></span><span data-en>Step by step, <em>from zero to a live website.</em></span></h2>
-      <p class="lead"><span data-he>כל מפגש נגמר עם משהו ביד. כך נראה המסלול:</span><span data-en>Every session ends with something in your hands. Here is the path:</span></p>
+      <h2><span data-he>צעד אחר צעד, <em>מאפס ועד עצמאות.</em></span><span data-en>Step by step, <em>from zero to independence.</em></span></h2>
+      <p class="lead"><span data-he>לכל מפגש יש סרטון משלו. כל מפגש נגמר עם משהו ביד.</span><span data-en>Each session has its own clip. Every session ends with something in your hands.</span></p>
     </div>
-    <div class="steps">
-      <article class="step bezel reveal"><div class="core">
-        <div class="thumb"><img src="video/ch_2.webp" alt="" loading="lazy" decoding="async" width="480" height="360" /><button type="button" class="watch" data-seek="8"><span data-he>▶ צפו בפרק בסרט</span><span data-en>▶ Watch this chapter</span></button></div>
+    <div class="sessions-v4">
+      <article class="sess bezel reveal"><div class="core">
+        <div class="media">
+          <video controls playsinline preload="none" poster="video/hd/ch_2.webp" src="video/s1.mp4"></video>
+          <div class="ov" aria-hidden="true"><span class="k"><span data-he>מפגש 1</span><span data-en>SESSION 1</span></span><span class="t"><span data-he>מכירות את כל הכלים</span><span data-en>Meet every tool</span></span><span class="tags"><span style="--i:0">Gemini</span><span style="--i:1">Google Flow</span><span style="--i:2">Claude</span><span style="--i:3">Grok</span></span><i class="bar"></i></div>
+        </div>
         <div>
           <span class="num"><span data-he>מפגש 1</span><span data-en>SESSION 1</span></span>
           <h3><span data-he>יסודות ה-AI והכלים</span><span data-en>AI foundations and the tools</span></h3>
@@ -183,8 +202,11 @@
           <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>חשבונות מוכנים + תמונת מוצר ראשונה</span><span data-en>accounts ready + your first product image</span></span>
         </div>
       </div></article>
-      <article class="step bezel reveal"><div class="core">
-        <div class="thumb"><img src="video/ch_3.webp" alt="" loading="lazy" decoding="async" width="480" height="360" /><button type="button" class="watch" data-seek="16"><span data-he>▶ צפו בפרק בסרט</span><span data-en>▶ Watch this chapter</span></button></div>
+      <article class="sess bezel reveal"><div class="core">
+        <div class="media">
+          <video controls playsinline preload="none" poster="video/hd/ch_3.webp" src="video/s2.mp4"></video>
+          <div class="ov" aria-hidden="true"><span class="k"><span data-he>מפגש 2</span><span data-en>SESSION 2</span></span><span class="t"><span data-he>4 רילס ראשונים, בלי קוד</span><span data-en>Your first 4 Reels, no code</span></span><span class="tags"><span style="--i:0" data-he>Flow בלי קוד</span><span style="--i:0" data-en>No-code Flow</span><span style="--i:1" data-he>4 רילס</span><span style="--i:1" data-en>4 Reels</span><span style="--i:2" data-he>מוקאפ אתר</span><span style="--i:2" data-en>Site mockup</span></span><i class="bar"></i></div>
+        </div>
         <div>
           <span class="num"><span data-he>מפגש 2</span><span data-en>SESSION 2</span></span>
           <h3><span data-he>Google Flow לעומק, בלי קוד</span><span data-en>Google Flow in depth, no code</span></h3>
@@ -196,8 +218,11 @@
           <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>4 רילס ראשונים + מוקאפ אתר</span><span data-en>your first 4 Reels + a site mockup</span></span>
         </div>
       </div></article>
-      <article class="step bezel reveal"><div class="core">
-        <div class="thumb"><img src="video/ch_4.webp" alt="" loading="lazy" decoding="async" width="480" height="360" /><button type="button" class="watch" data-seek="24"><span data-he>▶ צפו בפרק בסרט</span><span data-en>▶ Watch this chapter</span></button></div>
+      <article class="sess bezel reveal"><div class="core">
+        <div class="media">
+          <video controls playsinline preload="none" poster="video/hd/ch_4.webp" src="video/s3.mp4"></video>
+          <div class="ov" aria-hidden="true"><span class="k"><span data-he>מפגש 3</span><span data-en>SESSION 3</span></span><span class="t"><span data-he>האתר שלך עולה לאוויר</span><span data-en>Your site goes live</span></span><span class="tags"><span style="--i:0" data-he>אתר באוויר</span><span style="--i:0" data-en>Live site</span><span style="--i:1" data-he>קטלוג PDF</span><span style="--i:1" data-en>PDF catalogue</span><span style="--i:2" data-he>טיוטות לרשתות</span><span style="--i:2" data-en>Social drafts</span></span><i class="bar"></i></div>
+        </div>
         <div>
           <span class="num"><span data-he>מפגש 3</span><span data-en>SESSION 3</span></span>
           <h3><span data-he>האתר עולה לאוויר + אוטומציות</span><span data-en>Your site goes live + automations</span></h3>
@@ -209,30 +234,36 @@
           <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>אתר חי + מכונת טיוטות לרשתות</span><span data-en>a live site + a social drafts machine</span></span>
         </div>
       </div></article>
-      <article class="step bezel reveal"><div class="core">
-        <div class="thumb"><img src="video/ch_5.webp" alt="" loading="lazy" decoding="async" width="480" height="360" /><button type="button" class="watch" data-seek="34"><span data-he>▶ צפו בפרק בסרט</span><span data-en>▶ Watch this chapter</span></button></div>
+      <article class="sess bezel reveal"><div class="core">
+        <div class="media">
+          <video controls playsinline preload="none" poster="video/hd/ch_5.webp" src="video/s4.mp4"></video>
+          <div class="ov" aria-hidden="true"><span class="k"><span data-he>מפגש 4</span><span data-en>SESSION 4</span></span><span class="t"><span data-he>פרסום 2.0 שמביא לקוחות</span><span data-en>Ads 2.0 that bring clients</span></span><span class="tags"><span style="--i:0" data-he>סרט פרסום</span><span style="--i:0" data-en>Ad film</span><span style="--i:1" data-he>אסטרטגיית פרסום 2.0</span><span style="--i:1" data-en>Ads 2.0 strategy</span><span style="--i:2">Claude Code</span></span><i class="bar"></i></div>
+        </div>
         <div>
           <span class="num"><span data-he>מפגש 4</span><span data-en>SESSION 4</span></span>
-          <h3><span data-he>סרטי פרסום ואיתור לקוחות</span><span data-en>Ad films and finding clients</span></h3>
+          <h3><span data-he>סרטי פרסום, פרסום 2.0 ואיתור לקוחות</span><span data-en>Ad films, Ads 2.0 and finding clients</span></h3>
           <ul class="ticks">
             <li><span data-he>סרט פרסום מלא עם דיבור וסנכרון שפתיים</span><span data-en>A complete ad film with voice and lip-sync</span></li>
-            <li><span data-he>הדפדפן עושה בשבילך משימות חוזרות</span><span data-en>The browser does repetitive tasks for you</span></li>
+            <li><span data-he>אסטרטגיית פרסום 2.0: איזה תוכן, לאיזה קהל, באיזה ערוץ</span><span data-en>An Ads 2.0 strategy: which content, for which audience, on which channel</span></li>
             <li><span data-he>רשימת לקוחות פוטנציאליים בעזרת Claude Code, למשל ארגונים, בתי ספר וועדי עובדים שמזמינים מארזי מתנה, עם הצעת מחיר ב-PDF. את שולחת את ההודעות בעצמך</span><span data-en>A list of potential clients built with Claude Code, for example companies, schools and staff committees that order gift boxes, with a PDF quote. You send the messages yourself</span></li>
           </ul>
-          <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>סרט פרסום + רשימת לקוחות + רילס <bdi>5–7</bdi></span><span data-en>an ad film + a client list + Reels 5–7</span></span>
+          <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>סרט פרסום + אסטרטגיית פרסום 2.0 + רשימת לקוחות + רילס <bdi>5–7</bdi></span><span data-en>an ad film + an Ads 2.0 strategy + a client list + Reels 5–7</span></span>
         </div>
       </div></article>
-      <article class="step bezel reveal"><div class="core">
-        <div class="thumb"><img src="video/ch_6.webp" alt="" loading="lazy" decoding="async" width="480" height="360" /><button type="button" class="watch" data-seek="44"><span data-he>▶ צפו בפרק בסרט</span><span data-en>▶ Watch this chapter</span></button></div>
+      <article class="sess bezel reveal"><div class="core">
+        <div class="media">
+          <video controls playsinline preload="none" poster="video/hd/ch_6.webp" src="video/s5.mp4"></video>
+          <div class="ov" aria-hidden="true"><span class="k"><span data-he>מפגש 5</span><span data-en>SESSION 5</span></span><span class="t"><span data-he>עצמאות מלאה, מ-A עד Z</span><span data-en>Full independence, A to Z</span></span><span class="tags"><span style="--i:0" data-he>10 רילס</span><span style="--i:0" data-en>10 Reels</span><span style="--i:1" data-he>אתר חי</span><span style="--i:1" data-en>Live site</span><span style="--i:2" data-he>מכונה שמשתפרת</span><span style="--i:2" data-en>Self-improving machine</span></span><i class="bar"></i></div>
+        </div>
         <div>
           <span class="num"><span data-he>מפגש 5</span><span data-en>SESSION 5</span></span>
           <h3><span data-he>הכול ביחד, מ-A עד Z</span><span data-en>Everything together, A to Z</span></h3>
           <ul class="ticks">
             <li><span data-he>משלימות את חבילת 10 הרילס / הפרסומות</span><span data-en>You complete the pack of 10 Reels / ads</span></li>
             <li><span data-he>מערכת שלומדת מהמספרים שלך ומערוץ YouTube אחד שתבחרי</span><span data-en>A system that learns from your numbers and from one YouTube channel you choose</span></li>
-            <li><span data-he>תוכנית ההמשך האישית שלך</span><span data-en>Your personal next-steps plan</span></li>
+            <li><span data-he>בודקות שאת מפעילה הכול לבד, ובונות את תוכנית ההמשך שלך</span><span data-en>We check you run everything on your own, and build your next-steps plan</span></li>
           </ul>
-          <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>10 רילס + אתר חי + מערכת שמשתפרת</span><span data-en>10 Reels + a live site + a self-improving system</span></span>
+          <span class="out"><b><span data-he>יוצאות עם:</span><span data-en>You leave with:</span></b><span data-he>עצמאות מלאה + 10 רילס + אתר חי</span><span data-en>full independence + 10 Reels + a live site</span></span>
         </div>
       </div></article>
     </div>
@@ -242,69 +273,102 @@
   </div>
 </section>
 
-<!-- ============ PROOF: real products ============ -->
+<!-- ============ PROOF ============ -->
 <section id="proof">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow"><span data-he>תוצאות · milamila.co.il</span><span data-en>Results · milamila.co.il</span></span>
       <h2><span data-he>ככה זה נראה <em>על מוצרים אמיתיים.</em></span><span data-en>This is what it looks like <em>on real products.</em></span></h2>
-      <p class="lead"><span data-he>שלושה מוצרים מהחנות ״נקודה למחשבה״: הצילום האמיתי, ולידו סרטון AI שדויד הפיק ממנו. זה סוג התוכן שתפיקו למוצרים שלכן.</span><span data-en>Three products from the “Nekuda LeMachshava” shop: the real photo, and next to it an AI video David produced from it. This is the kind of content you'll make for your own products.</span></p>
+      <p class="lead"><span data-he>שלושה מוצרים מהחנות ״נקודה למחשבה״: הצילום האמיתי, ולידו פריים מסרטון ה-AI שדויד הפיק ממנו.</span><span data-en>Three products from the “Nekuda LeMachshava” shop: the real photo, and next to it a frame from the AI video David produced from it.</span></p>
     </div>
     <div class="grid-3">
-      <article class="bezel proof-card reveal"><div class="core">
-        <video controls playsinline preload="metadata" poster="video/annex_01.webp" src="video/annex_01.mp4"></video>
-        <div class="meta"><img src="assets/img/thumb_07.webp" alt="" loading="lazy" decoding="async" width="64" height="64" /><div><b><span data-he>נר עם מסר נסתר · ״האש שלי״</span><span data-en>Hidden-message candle · “HaEsh Sheli”</span></b><small><span data-he>צילום אמיתי ← סרטון AI</span><span data-en>Real photo → AI video</span></small></div></div>
-        <p class="use"><span data-he>בסדנה: להבת הנר מונפשת, ו-3 גרסאות רילס 9:16 עם קישור לרכישה.</span><span data-en>In the workshop: the candle flame comes alive, plus 3 vertical 9:16 Reel versions with a link to buy.</span></p>
+      <article class="bezel pair reveal"><div class="core">
+        <div class="imgs">
+          <figure><img src="assets/img/proof/candle_real.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /><figcaption><span data-he>צילום אמיתי</span><span data-en>Real photo</span></figcaption></figure>
+          <figure class="ai"><img src="assets/img/proof/candle_ai.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /><figcaption>AI</figcaption></figure>
+          <span class="arrow" aria-hidden="true"><span data-he>←</span><span data-en>→</span></span>
+        </div>
+        <h3><span data-he>נר עם מסר נסתר · ״האש שלי״</span><span data-en>Hidden-message candle · “HaEsh Sheli”</span></h3>
+        <p><span data-he>בסדנה: להבת הנר מונפשת, ו-3 גרסאות רילס 9:16 עם קישור לרכישה.</span><span data-en>In the workshop: the candle flame comes alive, plus 3 vertical 9:16 Reel versions with a link to buy.</span></p>
       </div></article>
-      <article class="bezel proof-card reveal"><div class="core">
-        <video controls playsinline preload="metadata" poster="video/annex_02.webp" src="video/annex_02.mp4"></video>
-        <div class="meta"><img src="assets/img/thumb_04.webp" alt="" loading="lazy" decoding="async" width="64" height="64" /><div><b><span data-he>קלפי ״דרך אמונה״ · 48 מסרים</span><span data-en>“Derekh Emunah” cards · 48 messages</span></b><small><span data-he>צילום אמיתי ← סרטון AI</span><span data-en>Real photo → AI video</span></small></div></div>
-        <p class="use"><span data-he>בסדנה: תבנית ״הקלף היומי״, קלף מונפש לכל בוקר. 48 קלפים הם 48 ימים של תוכן, מוכן לאישור שלך.</span><span data-en>In the workshop: a “card of the day” template, one animated card each morning. 48 cards are 48 days of content, ready for your approval.</span></p>
+      <article class="bezel pair reveal"><div class="core">
+        <div class="imgs">
+          <figure><img src="assets/img/proof/cards_real.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /><figcaption><span data-he>צילום אמיתי</span><span data-en>Real photo</span></figcaption></figure>
+          <figure class="ai"><img src="assets/img/proof/cards_ai.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /><figcaption>AI</figcaption></figure>
+          <span class="arrow" aria-hidden="true"><span data-he>←</span><span data-en>→</span></span>
+        </div>
+        <h3><span data-he>קלפי ״דרך אמונה״ · 48 מסרים</span><span data-en>“Derekh Emunah” cards · 48 messages</span></h3>
+        <p><span data-he>בסדנה: תבנית ״הקלף היומי״, קלף מונפש לכל בוקר. 48 קלפים הם 48 ימים של תוכן, מוכן לאישור שלך.</span><span data-en>In the workshop: a “card of the day” template, one animated card each morning. 48 cards are 48 days of content, ready for your approval.</span></p>
       </div></article>
-      <article class="bezel proof-card reveal"><div class="core">
-        <video controls playsinline preload="metadata" poster="video/annex_03.webp" src="video/annex_03.mp4"></video>
-        <div class="meta"><img src="assets/img/thumb_05.webp" alt="" loading="lazy" decoding="async" width="64" height="64" /><div><b><span data-he>פרינט אישי ״ברכת השם״</span><span data-en>Personal “Birkat Hashem” print</span></b><small><span data-he>צילום אמיתי ← סרטון AI</span><span data-en>Real photo → AI video</span></small></div></div>
-        <p class="use"><span data-he>בסדנה: כלי באתר שמראה ללקוחה תצוגה מקדימה של הפסוק לשם שלה, עם PDF להזמנה.</span><span data-en>In the workshop: a tool on the site that shows the customer a preview of the verse for her name, with a PDF to order.</span></p>
+      <article class="bezel pair reveal"><div class="core">
+        <div class="imgs">
+          <figure><img src="assets/img/proof/birkat_real.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /><figcaption><span data-he>צילום אמיתי</span><span data-en>Real photo</span></figcaption></figure>
+          <figure class="ai"><img src="assets/img/proof/birkat_ai.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /><figcaption>AI</figcaption></figure>
+          <span class="arrow" aria-hidden="true"><span data-he>←</span><span data-en>→</span></span>
+        </div>
+        <h3><span data-he>פרינט אישי ״ברכת השם״</span><span data-en>Personal “Birkat Hashem” print</span></h3>
+        <p><span data-he>בסדנה: כלי באתר שמראה ללקוחה תצוגה מקדימה של הפסוק לשם שלה, עם PDF להזמנה.</span><span data-en>In the workshop: a tool on the site that shows the customer a preview of the verse for her name, with a PDF to order.</span></p>
       </div></article>
     </div>
     <p class="note reveal"><span data-he>האותיות על המוצרים בתוך הסרטונים נוצרו ע״י ה-AI ואינן הטקסט המקורי. בסדנה לומדות להוסיף את הטקסט האמיתי אחרי.</span><span data-en>The lettering on the products inside the videos was drawn by the AI and is not the original text. In the workshop you learn to add the real text afterwards.</span></p>
   </div>
 </section>
 
-<!-- ============ SUPPORT ============ -->
+<!-- ============ SUPPORT vs GROW ×10 ============ -->
 <section id="support">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow"><span data-he>ליווי</span><span data-en>Support</span></span>
-      <h2><span data-he>לא נשארות <em>לבד.</em></span><span data-en>You're never <em>on your own.</em></span></h2>
-      <p class="lead"><span data-he>הליווי ממשיך עד שכל אחת עצמאית. ומי שרוצה לגדול עוד, ממשיכה לתוכנית Grow.</span><span data-en>Support continues until each of you is independent. And whoever wants to grow further moves on to the Grow plan.</span></p>
+      <span class="eyebrow"><span data-he>ליווי ו-Grow</span><span data-en>Support & Grow</span></span>
+      <h2><span data-he>מה כלול, ומה זה <em>Grow ×10.</em></span><span data-en>What's included, and what <em>Grow ×10</em> is.</span></h2>
+      <p class="lead"><span data-he>כל משתתפת מקבלת ליווי עד שהיא עצמאית. מי שיש לה תיאבון לגדול הרבה מעבר לזה, ממשיכה ל-Grow ×10.</span><span data-en>Every participant gets support until she is independent. Whoever has the appetite to grow far beyond that moves on to Grow ×10.</span></p>
     </div>
-    <div class="grid-3">
-      <div class="bezel support reveal"><div class="core">
-        <span class="tag"><span data-he>בין המפגשים · כלול</span><span data-en>Between sessions · included</span></span>
-        <h3><span data-he>קו וואטסאפ ייעודי</span><span data-en>A dedicated WhatsApp line</span></h3>
-        <p class="muted" style="margin:0"><span data-he>שולחות שאלה, צילום מסך או טיוטה. דויד עונה לקבוצה פעם ביום, כדי שאף אחת לא תיתקע עד המפגש הבא.</span><span data-en>Send a question, a screenshot or a draft. David answers the group once a day, so nobody stays stuck until the next session.</span></p>
+    <div class="compare">
+      <div class="bezel plan reveal"><div class="core">
+        <span class="badge"><span data-he>כלול בקורס</span><span data-en>Included in the course</span></span>
+        <h3><span data-he>ליווי עד <em>העצמאות</em></span><span data-en>Support until <em>independence</em></span></h3>
+        <dl>
+          <div><dt><span data-he>המטרה</span><span data-en>Goal</span></dt><dd><span data-he>עצמאות מלאה: כל אחת מפעילה לבד את כל מערכות ה-AI שבנינו יחד.</span><span data-en>Full independence: each of you runs every AI system we built, on her own.</span></dd></div>
+          <div><dt><span data-he>איך</span><span data-en>How</span></dt><dd><span data-he>בהתחלה דויד מחזיק לכן את היד, ומשחרר בהדרגה עד שאתן עפות לבד.</span><span data-en>At the start David holds your hand, then lets go step by step until you fly on your own.</span></dd></div>
+          <div><dt><span data-he>מה כולל</span><span data-en>Includes</span></dt><dd><span data-he>קו וואטסאפ שדויד עונה בו פעם ביום, עזרה בכל תקלה ושאלה, כל הפרומפטים והתבניות.</span><span data-en>A WhatsApp line David answers once a day, help with every issue and question, all prompts and templates.</span></dd></div>
+          <div><dt><span data-he>למי</span><span data-en>For</span></dt><dd><span data-he>לכל משתתפת.</span><span data-en>Every participant.</span></dd></div>
+          <div><dt><span data-he>מחיר</span><span data-en>Price</span></dt><dd><span data-he>כלול במחיר הקורס.</span><span data-en>Included in the course price.</span></dd></div>
+        </dl>
       </div></div>
-      <div class="bezel support reveal"><div class="core">
-        <span class="tag"><span data-he>עד העצמאות · כלול</span><span data-en>Until you're independent · included</span></span>
-        <h3><span data-he>ליווי עד ההצלחה</span><span data-en>Support until you succeed</span></h3>
-        <p class="muted" style="margin:0"><span data-he>דויד מלווה כל אחת עד שהיא מצליחה ושולטת בעצמה בכל מערכות ה-AI שבנינו יחד.</span><span data-en>David supports each of you until you succeed and run every AI system we built together on your own.</span></p>
-      </div></div>
-      <div class="bezel support reveal"><div class="core">
-        <span class="tag"><span data-he>תוכנית Grow · אופציונלית</span><span data-en>Grow plan · optional</span></span>
-        <h3><span data-he>לגדול <bdi>×5</bdi>, <bdi>×10</bdi> ומעלה</span><span data-en>Grow ×5, ×10 and beyond</span></h3>
-        <p class="muted" style="margin:0"><span data-he>אחרי הקורס, מי שרוצה מצטרפת לתוכנית Grow: תוכן ויראלי, קמפיינים וצמיחה של העסק, לפי כמה שתרצו לגדול. התוכנית והמחיר נקבעים יחד.</span><span data-en>After the course, whoever wants it joins the Grow plan: viral content, campaigns and scaling the business, as far as you want to grow. The plan and the price are set together.</span></p>
+      <div class="bezel plan grow reveal"><div class="core">
+        <span class="badge"><span data-he>אופציונלי · לטרמינייטוריות של הביזנס</span><span data-en>Optional · for business Terminators</span></span>
+        <h3>Grow <em>×10</em></h3>
+        <dl>
+          <div><dt><span data-he>מה זה</span><span data-en>What it is</span></dt><dd><span data-he>אסטרטגיות הטרמינייטור של דויד לשיווק אונליין: מה שצבר בסוכנות שלו בין 2016 ל-2020, לפני שבנה את אימפריית ה-Airbnb שלו בירושלים, ומאז 2023 ועד היום.</span><span data-en>David's online “Terminator” strategies: built at his agency from 2016 to 2020, before he created his Airbnb empire in Jerusalem, and sharpened from 2023 to today.</span></dd></div>
+          <div><dt><span data-he>המטרה</span><span data-en>Goal</span></dt><dd><span data-he>להגדיל את העסק <bdi>×5</bdi>, אחר כך <bdi>×10</bdi> ומעלה, ולהפוך את התוכן לוויראלי.</span><span data-en>Grow the business ×5, then ×10 and beyond, and make your content go viral.</span></dd></div>
+          <div><dt><span data-he>מה כולל</span><span data-en>Includes</span></dt><dd><span data-he>מפגשים אישיים 1-on-1 עם דויד, אסטרטגיית תוכן ויראלי, קמפיינים ממומנים, מכונת השגת לקוחות ותוכנית צמיחה מותאמת.</span><span data-en>Private 1-on-1 sessions with David, a viral content strategy, paid campaigns, a client-acquisition machine and a tailored growth plan.</span></dd></div>
+          <div><dt><span data-he>למי</span><span data-en>For</span></dt><dd><span data-he>למי שיש לה תיאבון לגדול, לפי הקצב שהיא בוחרת.</span><span data-en>For those with an appetite to grow, at the pace they choose.</span></dd></div>
+          <div><dt><span data-he>מחיר</span><span data-en>Price</span></dt><dd><span data-he>בנפרד, נקבע יחד לפי התוכנית.</span><span data-en>Separate, set together based on the plan.</span></dd></div>
+        </dl>
+        <a class="btn" data-wa href="https://wa.me/972584921492" target="_blank" rel="noopener"><span data-he>לדבר עם דויד על Grow</span><span data-en>Talk to David about Grow</span><span class="ico" aria-hidden="true">↗</span></a>
       </div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ PRICE ============ -->
+<!-- ============ DAVID ============ -->
+<section id="david">
+  <div class="wrap about">
+    <div class="bezel reveal"><div class="core flush"><img src="video/hd/david.webp" alt="David (Tselahya) Amor" loading="lazy" decoding="async" width="800" height="992" /></div></div>
+    <div class="reveal">
+      <span class="eyebrow"><span data-he>המנחה · DreamNova Studios, ירושלים</span><span data-en>Your instructor · DreamNova Studios, Jerusalem</span></span>
+      <h2 style="margin-block:22px 18px"><span data-he>דויד (צלחיה) <em>אמור</em></span><span data-en>David (Tselahya) <em>Amor</em></span></h2>
+      <p class="lead"><span data-he>בין 2016 ל-2020 דויד ניהל סוכנות שיווק אונליין, ואחר כך בנה אימפריית Airbnb בירושלים. עם מעט ידע טכני, הרבה תפילה בכותל ואמונה, הוא בנה מערכת שלמה של אוטומציה ויצירה ב-AI. בקורס הזה הוא נותן לכן את הדרך הקצרה: מה עובד באמת, בסדר הנכון, על העסק שלכן.</span><span data-en>From 2016 to 2020 David ran an online marketing agency, then built an Airbnb empire in Jerusalem. With little technical background, a lot of prayer at the Kotel and faith, he built a complete AI automation and creation system. In this course he gives you the short path: what really works, in the right order, on your own business.</span></p>
+      <p class="quote-block"><span data-he>״התחלתי מאפס בירושלים, עם רקע טכני קטן, הרבה תפילה ואמונה. המטרה שלי היא להעביר לכן את הכוח הזה ב-5 מפגשים ברורים ומעשיים. זה יהיה הקורס הכי יוצא דופן בחיים שלכן.״</span><span data-en>“I started from zero in Jerusalem, with a small technical background, a lot of prayer and faith. My goal is to hand you that same power in 5 clear, practical sessions. It will be the most extraordinary course of your life.”</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE (at the end, after the value is clear) ============ -->
 <section id="price">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow"><span data-he>מחיר</span><span data-en>Price</span></span>
-      <h2><span data-he>מחיר אחד, <em>ברור.</em></span><span data-en>One price, <em>clearly stated.</em></span></h2>
+      <span class="eyebrow"><span data-he>ההשקעה</span><span data-en>The investment</span></span>
+      <h2><span data-he>כל זה, <em>במחיר אחד ברור.</em></span><span data-en>All of this, <em>one clear price.</em></span></h2>
     </div>
     <div class="bezel price-card reveal" style="max-width:760px"><div class="core">
       <span class="card-label"><span class="dot"></span><span data-he>סדנת 5 המפגשים · REF. NK-2026</span><span data-en>The 5-session workshop · REF. NK-2026</span></span>
@@ -315,28 +379,15 @@
       <div class="price-row"><span class="muted"><span data-he>אצלנו</span><span data-en>With us</span></span><div class="price">1,849 ₪ <small><span data-he>למפגש</span><span data-en>/ session</span></small></div></div>
       <p class="muted" style="margin:0"><span data-he>5 מפגשים של <bdi>2.5–3</bdi> שעות, בבית הדפוס בבת ים.</span><span data-en>5 sessions of 2.5–3 hours, at the print studio in Bat Yam.</span></p>
       <ul class="ticks">
+        <li><span data-he><strong>עצמאות מלאה עם כלי ה-AI</strong>, ודויד מחזיק לכן את היד בהתחלה</span><span data-en><strong>Full independence with AI tools</strong>, with David holding your hand at the start</span></li>
         <li><span data-he><strong>10 רילס / פרסומות AI</strong> לכל משתתפת</span><span data-en><strong>10 AI Reels / ads</strong> per participant</span></li>
-        <li><span data-he><strong>אתר חדש או משודרג</strong> שבנית בעצמך, באוויר</span><span data-en><strong>A new or upgraded website</strong> you built yourself, live</span></li>
-        <li><span data-he>וואטסאפ ייעודי: דויד עונה פעם ביום בין המפגשים</span><span data-en>Dedicated WhatsApp: David answers once a day between sessions</span></li>
-        <li><span data-he><strong>ליווי של דויד עד ההצלחה והעצמאות שלכן</strong> בכל מערכות ה-AI</span><span data-en><strong>David's support until you succeed and are independent</strong> with every AI system</span></li>
+        <li><span data-he><strong>אתר חדש או משודרג + אסטרטגיית פרסום 2.0</strong></span><span data-en><strong>A new or upgraded site + an Ads 2.0 strategy</strong></span></li>
+        <li><span data-he>וואטסאפ ייעודי וליווי עד ההצלחה והעצמאות שלכן</span><span data-en>A dedicated WhatsApp line and support until you succeed and are independent</span></li>
         <li><span data-he>כל הפרומפטים, התבניות והסילבוס המלא</span><span data-en>All prompts, templates and the full syllabus</span></li>
       </ul>
-      <p class="muted" style="margin:0;font-size:14px"><span data-he>אופציונלי, בנפרד: תוכנית Grow לצמיחה, ויראליות ו-scale של העסק.</span><span data-en>Optional, separate: the Grow plan for growth, virality and scaling the business.</span></p>
+      <p class="muted" style="margin:0;font-size:14px"><span data-he>אופציונלי, בנפרד: Grow ×10, אסטרטגיות הטרמינייטור של דויד לצמיחה, ויראליות ו-scale.</span><span data-en>Optional, separate: Grow ×10, David's Terminator strategies for growth, virality and scale.</span></p>
       <a class="btn" data-wa href="https://wa.me/972584921492" target="_blank" rel="noopener" style="align-self:flex-start"><span data-he>שריינו מקום · וואטסאפ לדויד</span><span data-en>Book a spot · WhatsApp David</span><span class="ico" aria-hidden="true">↗</span></a>
     </div></div>
-  </div>
-</section>
-
-<!-- ============ DAVID ============ -->
-<section id="david">
-  <div class="wrap about">
-    <div class="bezel reveal"><div class="core flush"><img src="video/david.webp" alt="David (Tselahya) Amor" loading="lazy" decoding="async" /></div></div>
-    <div class="reveal">
-      <span class="eyebrow"><span data-he>המנחה · DreamNova Studios, ירושלים</span><span data-en>Your instructor · DreamNova Studios, Jerusalem</span></span>
-      <h2 style="margin-block:22px 18px"><span data-he>דויד (צלחיה) <em>אמור</em></span><span data-en>David (Tselahya) <em>Amor</em></span></h2>
-      <p class="lead"><span data-he>דויד התחיל עם מעט ידע טכני, הרבה תפילה בכותל ואמונה, ובנה מערכת שלמה של אוטומציה ויצירה ב-AI. בקורס הזה הוא נותן לכן את הדרך הקצרה: מה עובד באמת, בסדר הנכון, על העסק שלכן.</span><span data-en>David started with little technical background, a lot of prayer at the Kotel and faith, and built a complete AI automation and creation system. In this course he gives you the short path: what really works, in the right order, on your own business.</span></p>
-      <p class="quote-block"><span data-he>״התחלתי מאפס בירושלים, עם רקע טכני קטן, הרבה תפילה ואמונה. המטרה שלי היא להעביר לכן את הכוח הזה ב-5 מפגשים ברורים ומעשיים. זה יהיה הקורס הכי יוצא דופן בחיים שלכן.״</span><span data-en>“I started from zero in Jerusalem, with a small technical background, a lot of prayer and faith. My goal is to hand you that same power in 5 clear, practical sessions. It will be the most extraordinary course of your life.”</span></p>
-    </div>
   </div>
 </section>
 
@@ -349,15 +400,15 @@
     </div>
     <div class="faq reveal">
       <details><summary><span data-he>אני לא טכנית בכלל. זה בשבילי?</span><span data-en>I'm not technical at all. Is this for me?</span></summary>
-        <p><span data-he>כן. שני המפגשים הראשונים הם בלי קוד בכלל, והקוד בהמשך נכתב בעזרת AI, צעד אחר צעד, על המחשב שלך.</span><span data-en>Yes. The first two sessions involve no code at all, and later code is written with AI, step by step, on your own computer.</span></p></details>
+        <p><span data-he>כן. שני המפגשים הראשונים הם בלי קוד בכלל, דויד מחזיק לכן את היד בהתחלה, והקוד בהמשך נכתב בעזרת AI, צעד אחר צעד, על המחשב שלך.</span><span data-en>Yes. The first two sessions involve no code at all, David holds your hand at the start, and later code is written with AI, step by step, on your own computer.</span></p></details>
       <details><summary><span data-he>מה צריך להביא?</span><span data-en>What should I bring?</span></summary>
         <p><span data-he>מחשב נייד (נגדיר אותו יחד במפגש 3), טלפון, ותמונות של המוצרים שלך.</span><span data-en>A laptop (we set it up together in session 3), your phone, and photos of your products.</span></p></details>
       <details><summary><span data-he>הכלים עולים כסף?</span><span data-en>Do the tools cost money?</span></summary>
         <p><span data-he>חלק מהכלים חינמיים ולחלק יש מנוי חודשי. במפגש הראשון בוחרות יחד את הסט שהכי משתלם לעסק שלך.</span><span data-en>Some tools are free and some have a monthly plan. In the first session we choose together the set that makes most sense for your business.</span></p></details>
       <details><summary><span data-he>איפה ומתי?</span><span data-en>Where and when?</span></summary>
         <p><span data-he>בבית הדפוס בבת ים. את התאריכים קובעים יחד בוואטסאפ.</span><span data-en>At the print studio in Bat Yam. Dates are set together on WhatsApp.</span></p></details>
-      <details><summary><span data-he>מה קורה אחרי 5 המפגשים?</span><span data-en>What happens after the 5 sessions?</span></summary>
-        <p><span data-he>דויד ממשיך ללוות עד שכל אחת עצמאית. מי שרוצה לגדול עוד מצטרפת לתוכנית Grow האופציונלית: תוכן ויראלי, קמפיינים וצמיחה <bdi>×5</bdi>, <bdi>×10</bdi> ומעלה, עם תוכנית שנבנית יחד.</span><span data-en>David keeps supporting you until each of you is independent. Whoever wants to grow further joins the optional Grow plan: viral content, campaigns and ×5, ×10 growth and beyond, with a plan built together.</span></p></details>
+      <details><summary><span data-he>מה ההבדל בין הליווי הכלול ל-Grow ×10?</span><span data-en>What's the difference between the included support and Grow ×10?</span></summary>
+        <p><span data-he>הליווי הכלול נמשך עד שאת עצמאית ושולטת במערכות. Grow ×10 הוא מסלול אופציונלי עם אסטרטגיות הטרמינייטור של דויד, למי שרוצה להגדיל את העסק <bdi>×5</bdi>, <bdi>×10</bdi> ומעלה, עם מפגשים אישיים, קמפיינים ותוכן ויראלי.</span><span data-en>The included support lasts until you're independent and run the systems yourself. Grow ×10 is an optional track with David's Terminator strategies, for those who want to grow the business ×5, ×10 and beyond, with private sessions, campaigns and viral content.</span></p></details>
     </div>
   </div>
 </section>
@@ -384,51 +435,143 @@
 </footer>
 
 <div class="sticky-cta">
-  <span class="mono" dir="ltr">1,849 ₪ <span data-he>/ מפגש</span><span data-en>/ session</span></span>
+  <span class="sticky-txt"><span data-he>עצמאות ב-AI + 10 רילס</span><span data-en>AI independence + 10 Reels</span></span>
   <a class="btn sm" data-wa href="https://wa.me/972584921492" target="_blank" rel="noopener"><span data-he>שריינו מקום</span><span data-en>Book a spot</span><span class="ico" aria-hidden="true">↗</span></a>
 </div>
 
 <script src="assets/nekuda.js"></script>
 <script>
-/* ---------- The film: one 57s file, 7 chapters = cut points measured on the file (0/8/16/24/34/44/54 s) ---------- */
+/* ---------- The film: one 57 s file; chapters = cut points measured on the file ---------- */
 (function () {
   var CH = [
-    { t: 0,  he: 'פתיחה', en: 'Opening' },
+    { t: 0,  he: 'פתיחה',  en: 'Opening' },
     { t: 8,  he: 'מפגש 1', en: 'Session 1' },
     { t: 16, he: 'מפגש 2', en: 'Session 2' },
     { t: 24, he: 'מפגש 3', en: 'Session 3' },
     { t: 34, he: 'מפגש 4', en: 'Session 4' },
     { t: 44, he: 'מפגש 5', en: 'Session 5' },
-    { t: 54, he: 'סיום', en: 'Finale' }
+    { t: 54, he: 'סיום',   en: 'Finale' }
   ];
-  var player = document.getElementById('player'), box = document.getElementById('chapters');
+  var END = 57.03;
+  var player = document.getElementById('player'), seg = document.getElementById('seg'), rail = document.getElementById('rail');
   var cur = 0;
+
+  CH.forEach(function (c, i) {
+    var len = (i + 1 < CH.length ? CH[i + 1].t : END) - c.t;
+    var s = document.createElement('button');
+    s.type = 'button'; s.style.flex = len + ' 1 0'; s.innerHTML = '<i></i>';
+    s.addEventListener('click', function () { seek(c.t); });
+    seg.appendChild(s);
+  });
   function render() {
     var L = NK.lang();
-    box.innerHTML = '';
+    rail.innerHTML = '';
     CH.forEach(function (c, i) {
       var b = document.createElement('button');
       b.type = 'button';
       b.setAttribute('aria-current', String(i === cur));
-            b.innerHTML = '<img src="video/ch_' + (i + 1) + '.webp" alt="" width="480" height="360"><span><b>' + String(i + 1).padStart(2, '0') + '</b>' + c[L] + '</span>';
-      b.addEventListener('click', function () { seek(c.t, false); });
-      box.appendChild(b);
+      b.innerHTML = '<img src="video/ch_' + (i + 1) + '.webp" alt="" width="640" height="360" decoding="async"><span class="meta"><b>' + String(i + 1).padStart(2, '0') + '</b>' + c[L] + '</span>';
+      b.addEventListener('click', function () { seek(c.t); });
+      rail.appendChild(b);
     });
+    [].forEach.call(seg.children, function (s, i) { s.setAttribute('aria-label', CH[i][L]); });
   }
-  function seek(t, scroll) {
-    if (scroll) document.getElementById('film').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  function seek(t) {
     var go = function () { player.currentTime = t; player.play().catch(function () {}); };
     if (player.readyState >= 1) { go(); } else { player.addEventListener('loadedmetadata', go, { once: true }); player.load(); }
   }
-  player.addEventListener('timeupdate', function () {
-    var i = 0; CH.forEach(function (c, k) { if (player.currentTime >= c.t - 0.05) i = k; });
-    if (i !== cur) { cur = i; [].forEach.call(box.children, function (b, k) { b.setAttribute('aria-current', String(k === cur)); }); }
-  });
-  document.querySelectorAll('[data-seek]').forEach(function (b) {
-    b.addEventListener('click', function () { seek(+b.getAttribute('data-seek'), true); });
-  });
+  function sync() {
+    var now = player.currentTime, i = 0;
+    CH.forEach(function (c, k) { if (now >= c.t - 0.05) i = k; });
+    [].forEach.call(seg.children, function (s, k) {
+      var a = CH[k].t, b = k + 1 < CH.length ? CH[k + 1].t : END;
+      s.firstChild.style.width = Math.max(0, Math.min(1, (now - a) / (b - a))) * 100 + '%';
+    });
+    if (i !== cur) {
+      cur = i;
+      [].forEach.call(rail.children, function (b, k) { b.setAttribute('aria-current', String(k === cur)); });
+      if (!player.paused) rail.children[cur].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    }
+  }
+  var raf;
+  function loop() { sync(); if (!player.paused) raf = requestAnimationFrame(loop); }
+  player.addEventListener('play', function () { cancelAnimationFrame(raf); loop(); });
+  player.addEventListener('seeked', sync);
+  player.addEventListener('pause', sync);
   render();
   document.addEventListener('nk:lang', render);
+})();
+
+/* ---------- Sessions: animate the overlay when a card enters the screen; compact it while playing ---------- */
+(function () {
+  var cards = [].slice.call(document.querySelectorAll('.sess'));
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('io');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('lit'); io.unobserve(e.target); } });
+    }, { threshold: 0.35 });
+    cards.forEach(function (c) { io.observe(c); });
+  }
+  cards.forEach(function (c) {
+    var v = c.querySelector('video');
+    v.addEventListener('play', function () { c.classList.add('is-playing'); });
+    ['pause', 'ended'].forEach(function (ev) { v.addEventListener(ev, function () { c.classList.remove('is-playing'); }); });
+  });
+})();
+
+/* ---------- Points of light (נקודה): drifting gold dots, constellation near the pointer ---------- */
+(function () {
+  var cv = document.getElementById('lights'); if (!cv || !cv.getContext) return;
+  var ctx = cv.getContext('2d');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W, H, pts = [], mouse = { x: -1e4, y: -1e4 }, lastY = window.scrollY, raf = 0;
+  function make(anywhere) {
+    return { x: Math.random() * W, y: anywhere ? Math.random() * H : H + 8, r: Math.random() * 1.5 + 0.4,
+      vx: (Math.random() - 0.5) * 0.12, vy: -(Math.random() * 0.22 + 0.05), tw: Math.random() * 6.28, ts: Math.random() * 0.02 + 0.006 };
+  }
+  function size() {
+    var dpr = 1;
+    W = window.innerWidth; H = window.innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.round(Math.min(72, W * H / 20000));
+    while (pts.length < n) pts.push(make(true));
+    pts.length = n;
+  }
+  function draw(step) {
+    var dy = window.scrollY - lastY; lastY = window.scrollY;
+    ctx.clearRect(0, 0, W, H);
+    var near = [];
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i];
+      if (step) {
+        p.x += p.vx; p.y += p.vy - dy * 0.12 * p.r; p.tw += p.ts;
+        if (p.y < -12 || p.y > H + 12) { var q = make(false); if (dy < 0) q.y = -6; pts[i] = p = q; }
+        if (p.x < -10) p.x = W + 10; else if (p.x > W + 10) p.x = -10;
+      }
+      var a = 0.22 + 0.42 * (0.5 + 0.5 * Math.sin(p.tw));
+      var mx = p.x - mouse.x, my = p.y - mouse.y, d = Math.sqrt(mx * mx + my * my);
+      if (d < 150) { a += (1 - d / 150) * 0.55; near.push(p); }
+      ctx.fillStyle = 'rgba(229,200,120,' + a.toFixed(3) + ')';
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+    }
+    ctx.lineWidth = 0.6;
+    for (var j = 0; j < near.length; j++) for (var k = j + 1; k < near.length; k++) {
+      var ax = near[j].x - near[k].x, ay = near[j].y - near[k].y, dd = Math.sqrt(ax * ax + ay * ay);
+      if (dd < 120) { ctx.strokeStyle = 'rgba(201,169,97,' + ((1 - dd / 120) * 0.35).toFixed(3) + ')'; ctx.beginPath(); ctx.moveTo(near[j].x, near[j].y); ctx.lineTo(near[k].x, near[k].y); ctx.stroke(); }
+    }
+  }
+  var odd = false; /* 30 fps is plenty for slow drifting dots */
+  function loop() { odd = !odd; if (odd) draw(true); raf = requestAnimationFrame(loop); }
+  function start() { if (!raf && !reduce) raf = requestAnimationFrame(loop); }
+  function stop() { cancelAnimationFrame(raf); raf = 0; }
+  window.addEventListener('pointermove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+  window.addEventListener('pointerleave', function () { mouse.x = mouse.y = -1e4; });
+  window.addEventListener('resize', function () { size(); draw(false); });
+  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+  size(); draw(false);
+  /* start drifting only once the page has loaded, so it never competes with first paint */
+  var go = function () { setTimeout(start, 1200); };
+  document.readyState === 'complete' ? go() : window.addEventListener('load', go, { once: true });
 })();
 </script>
 </body>
