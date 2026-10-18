@@ -17,9 +17,8 @@ Site de vente du cours de Bat Yam (5 séances, 1,849 ₪ par séance). Il est bi
 
 Cette version est conservée sur la branche orpheline `claude/nekuda-michal-claude`. Elle n'a aucun historique commun avec le `main` de Gemini et n'a pas de PR.
 
-## Mettre en ligne (GitHub Pages)
+## En ligne
 
-1. Créer le dépôt vide `CodeNoLimits/nekuda-michal-claude` sur github.com.
-2. Dans une session Claude Code : « pousse la branche `claude/nekuda-michal-claude` comme `main` du nouveau repo et active Pages ».
+https://codenolimits.github.io/nekuda-academy/ (servi depuis `CodeNoLimits/CodeNoLimits.github.io`, dossier `nekuda-academy/`). Procédure de mise à jour, état et règles : **`HANDOVER.md`**.
 
 Test local : `python3 -m http.server` puis http://localhost:8000
