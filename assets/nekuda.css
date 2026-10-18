@@ -360,3 +360,20 @@ html[lang="he"] [data-en], html[lang="en"] [data-he] { display: none !important;
 .support .core { display: flex; flex-direction: column; gap: 12px; }
 .support .core .tag { font-family: var(--f-mono); font-size: 11px; color: var(--gold); letter-spacing: .14em; }
 .quote-block { font-family: var(--f-display); font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35; color: var(--text); margin: 24px 0 0; border-inline-start: 2px solid var(--gold); padding-inline-start: 18px; }
+
+/* before / after */
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.ba > * { min-width: 0; }
+.ba .tag { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; color: var(--gold); }
+[dir="rtl"] .ba .tag { font-family: var(--f-body); font-size: 13px; letter-spacing: 0; }
+.ba-list { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 12px; }
+.ba-list li { position: relative; padding-inline-start: 28px; font-size: 16px; }
+.ba-list li::before { position: absolute; inset-inline-start: 0; top: 0; font-size: 14px; }
+.ba-list.before li { color: var(--text-muted); }
+.ba-list.before li::before { content: "✕"; color: var(--text-muted); }
+.ba-list.after li::before { content: "✦"; color: var(--gold); }
+@media (max-width: 760px) { .ba { grid-template-columns: 1fr; } }
+.proof-card .use { margin: 0; padding: 10px 4px 4px; border-top: 1px solid rgba(201,169,97,.14); font-size: 14px; color: var(--text-muted); }
+/* Hebrew has no letter-spaced mono labels: use the body face */
+[dir="rtl"] .support .tag, [dir="rtl"] .step .num, [dir="rtl"] .card-label { font-family: var(--f-body); letter-spacing: 0; font-size: 13px; }
+.offer { align-items: start; }

@@ -10,6 +10,13 @@ Note de contrôle pour David. La page publique est en hébreu (RTL, langue par d
 - **Retirés parce qu'ils brouillaient le message** : la sphère 3D, le spot /brag, le carrousel produits et les flip cards. On peut les remettre si tu veux.
 - La version verticale du film n'est pas utilisée : c'est encore l'ancien montage (coffret noir et or).
 
+## v2.1 : ce que j'ai repris de la discussion Gemini 4 / Antigravity
+
+Le lien de la session Antigravity n'est pas lisible depuis le cloud (le proxy refuse `antigravity.google.com`, il faut ton compte Google, et la session était hors ligne). Le contexte a été lu dans la page que Gemini a publiée (`index.html` du commit `10c56bd`).
+
+- **Repris** : ta citation à la première personne (« התחלתי מאפס… »), un cas d'usage concret par produit (bougie → 3 Reels 9:16, cartes → « הקלף היומי » 48 jours, Birkat Hashem → aperçu du verset + PDF, coffrets cadeaux → prospection d'organisations, d'écoles et de comités d'entreprise avec devis PDF), le bloc avant/après, la pratique uniquement sur leurs propres produits, et le respect des textes sacrés.
+- **Non repris** : « מפגש ועידה » / séance conférence (9 occurrences chez Gemini, alors que ta phrase s'arrêtait sur ce mot), « accompagnement inclus dans le parcours » (cela change le prix), le chiffre « 15 000 à 25 000 ₪ en agence » (non vérifiable), et l'envoi automatique de posts (tout passe par une validation humaine).
+
 ## Lecture du prix (à corriger ici si besoin)
 
 - **Ateliers : 1,849 ₪ par séance**, 5 séances de 2h30 à 3h, dans l'imprimerie à Bat Yam.
