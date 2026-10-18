@@ -14,7 +14,7 @@
   --ok: #4ade80;
 
   --f-display: 'Playfair Display', 'Frank Ruhl Libre', Georgia, serif;
-  --f-body: 'Heebo', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --f-body: 'Heebo', system-ui, -apple-system, sans-serif;
   --f-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --gutter: clamp(16px, 4vw, 48px);
@@ -274,7 +274,7 @@ html[lang="he"] [data-en], html[lang="en"] [data-he] { display: none !important;
 .deliv { margin-top: 18px; padding: 14px 16px; border-radius: 14px; background: var(--gold-glow); border: 1px solid var(--border); font-size: 15px; }
 .rule { margin-top: 12px; padding: 12px 16px; border-radius: 14px; border: 1px dashed rgba(201,169,97,.4); font-size: 14px; color: var(--text-muted); }
 .prompts { display: grid; gap: 12px; margin-top: 22px; }
-.prompts h4 { margin: 6px 0 0; font: 500 12px var(--f-mono); letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+.prompts .prompts-h { margin: 6px 0 0; font: 500 12px var(--f-mono); letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
 .prompt { border: 1px solid var(--border); border-radius: 16px; background: rgba(0,0,0,.35); overflow: hidden; }
 .prompt header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 10px; padding-inline: 16px 10px; border-bottom: 1px solid rgba(201,169,97,.12); }
 .prompt header .card-label { font-size: 10px; }
@@ -377,3 +377,14 @@ html[lang="he"] [data-en], html[lang="en"] [data-he] { display: none !important;
 /* Hebrew has no letter-spaced mono labels: use the body face */
 [dir="rtl"] .support .tag, [dir="rtl"] .step .num, [dir="rtl"] .card-label { font-family: var(--f-body); letter-spacing: 0; font-size: 13px; }
 .offer { align-items: start; }
+
+/* value anchor in the price card */
+.value { margin: 0; display: grid; gap: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.value > div { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 16px; background: rgba(255,255,255,.02); }
+.value > div + div { border-top: 1px solid var(--border); }
+.value dt { font-size: 14px; color: var(--text-muted); }
+.value dd { margin: 0; font-family: var(--f-mono); font-size: 18px; color: var(--text); white-space: nowrap; }
+.value dd small { font-size: 12px; color: var(--text-muted); }
+.price-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.tagline { font-family: var(--f-display); font-style: italic; color: var(--gold); font-size: clamp(18px, 2vw, 22px); margin: 22px 0 0; }
+@media (max-width: 560px) { .value > div { flex-direction: column; align-items: flex-start; gap: 4px; } }

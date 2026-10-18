@@ -6,7 +6,7 @@
 
   var WA = 'https://wa.me/972584921492';
   var WA_TEXT = {
-    he: 'שלום דוד, ראיתי את התוכנית של Nekuda AI Academy ואשמח לשריין מקום ולקבל פרטים 🙏',
+    he: 'שלום דויד, ראיתי את התוכנית של Nekuda AI Academy ואשמח לשריין מקום ולקבל פרטים 🙏',
     en: 'Hi David, I saw the Nekuda AI Academy program and would love to book a spot and get the details 🙏'
   };
 

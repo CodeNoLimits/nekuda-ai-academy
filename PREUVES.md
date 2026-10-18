@@ -10,6 +10,15 @@ Note de contrôle pour David. La page publique est en hébreu (RTL, langue par d
 - **Retirés parce qu'ils brouillaient le message** : la sphère 3D, le spot /brag, le carrousel produits et les flip cards. On peut les remettre si tu veux.
 - La version verticale du film n'est pas utilisée : c'est encore l'ancien montage (coffret noir et or).
 
+## v3 (publication)
+
+- **URL publique** : https://codenolimits.github.io/nekuda-academy/ (dossier `nekuda-academy/` du repo `CodeNoLimits/CodeNoLimits.github.io`, seulement les fichiers du site, sans ces notes internes).
+- **Nom** : דויד (צלחיה) אמור / David (Tselahya) Amor partout. 0 « דוד » restant, 0 « עמור ».
+- **Valeur** (validée par David le 18/10) : un cours de ce niveau en académie vaut environ 15 000 ₪ par participante, et plus de 25 000 ₪ avec un coach privé et un accompagnement jusqu'au succès et à l'autonomie. L'accompagnement jusqu'à l'autonomie est inclus. Le plan **Grow** (viralité, scale ×5, ×10 et au-delà) est optionnel ; son plan et son prix se décident ensemble.
+- **Signature** : « DreamNova · the sky is the limit. » et `DreamNova.studio` en bas de page, en texte. Je n'ai pas mis de lien parce que le domaine n'est pas joignable depuis le cloud pour vérifier qu'il répond.
+- **Lighthouse mobile** (Google Fonts bloqué pour simuler un CDN rapide) : landing 99 / 100 / 100 / 100 (perf / a11y / bonnes pratiques / SEO), LCP 2,0 s, TBT 0 ms, CLS 0. Syllabus 100 / 100 / 100 / 100. Les seuls avertissements restants concernent la compression et le cache du serveur de test, que GitHub Pages gère lui-même.
+- **Images** passées en WebP (miniatures 160 px pour les vignettes produits), lazy-loading sous la ligne de flottaison. Médias inutilisés supprimés.
+
 ## v2.1 : ce que j'ai repris de la discussion Gemini 4 / Antigravity
 
 Le lien de la session Antigravity n'est pas lisible depuis le cloud (le proxy refuse `antigravity.google.com`, il faut ton compte Google, et la session était hors ligne). Le contexte a été lu dans la page que Gemini a publiée (`index.html` du commit `10c56bd`).
