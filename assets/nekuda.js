@@ -1,4 +1,4 @@
-/* NEKUDA × DREAMNOVA — shared runtime: language (HE default / EN), reveal, flip, copy, video helpers */
+/* NEKUDA × DREAMNOVA — shared runtime: language (HE default / EN), reveal, copy, video helpers */
 (function () {
   'use strict';
   var root = document.documentElement;
@@ -48,15 +48,6 @@
     reveals.forEach(function (el) { io.observe(el); });
   }
   setTimeout(function () { reveals.forEach(show); }, 400);
-
-  /* ---------- Flip cards: tap / keyboard ---------- */
-  document.querySelectorAll('.flip').forEach(function (card) {
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('role', 'button');
-    function toggle(e) { if (e.target.closest('a, video, button')) return; card.classList.toggle('is-flipped'); }
-    card.addEventListener('click', toggle);
-    card.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); } });
-  });
 
   /* ---------- Videos: one at a time ---------- */
   document.addEventListener('play', function (e) {

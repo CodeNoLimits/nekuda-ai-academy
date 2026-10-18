@@ -2,9 +2,9 @@
 
 Site de vente du cours de Bat Yam (5 séances, 1,849 ₪ par séance). Il est bilingue : hébreu RTL par défaut, et anglais via le bouton `EN` ou l'URL `?lang=en`.
 
-- `index.html` : landing page (film + chapitres, livrables, cas milamila.co.il, sphère 3D, programme, prix, FAQ, CTA WhatsApp)
+- `index.html` : landing page (film 57 s dont les chapitres sont les séances, offre en un coup d'œil, 5 séances, preuve milamila.co.il, accompagnement, prix, FAQ, CTA WhatsApp)
 - `cours/index.html` : syllabus heure par heure, prompts copiables, machine YouTube de la séance 5
-- `assets/nekuda.css`, `assets/nekuda.js` : design system et runtime partagés (langue, reveal, flip, copie)
+- `assets/nekuda.css`, `assets/nekuda.js` : design system et runtime partagés (langue, reveal, copie)
 - `PREUVES.md` : mesures chiffrées · `PROMPTS.md` : règles de fabrication vidéo
 
 ## Les autres versions, à ne pas pousser depuis ici

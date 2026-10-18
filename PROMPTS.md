@@ -21,16 +21,12 @@ Les prompts élèves (copiables en 1 clic) sont dans `cours/index.html`. Ce fich
 Animate this exact product photo. Keep the product, its shape and all printed text completely unchanged — do not redraw any letters. Slow 15° orbit, soft warm light, gentle bokeh. 6 seconds, 9:16. No added text.
 ```
 
-## Clips de cette version et leur source
+## Vidéos de cette version et leur source
 
 | Fichier | Source | Contenu |
 |---|---|---|
+| `video/film.mp4` | repo Gemini, commit `10c56bd` (`final_nekuda_trailer.mp4`) | film 57 s, 7 plans, sous-titres HE/EN |
 | `video/annex_01.mp4` | upload David `Man_holding_candle_talking_to…134923` (1080p) | bougie « HaEsh Sheli », studio |
 | `video/annex_02.mp4` | upload `Man_presenting_product_box…` | coffret + cartes flottantes |
 | `video/annex_03.mp4` | upload `Man_holding_name-verse_print…` | cadre « Birkat Hashem » |
-| `video/annex_04.mp4` | uploads `…candle_talking_to…134854` + `…candle_on_Moon…` (montés, ré-encodés) | studio + final lunaire |
-| `video/session_03_train.mp4` | upload `Man_walking_on_train_platform…` | quai de gare, coffret באורם של צדיקים |
-| `video/session_04_batyam.mp4` | upload `Man_walking_into_studio…` | promenade de Bat Yam |
-| `video/session_05_moon.mp4` | upload `Man_walking_on_the_Moon…` | marche sur la Lune, la Terre au fond |
-
-Le film complet, les 7 séquences et `/brag` ne sont **pas copiés** : la page les lit directement sur `https://codenolimits.github.io/nekuda-ai-academy/video/`, ce qui n'écrit rien dans ce dépôt.
+| `video/ch_1…7.jpg` | images extraites du film (sous-titres rognés) | vignettes des chapitres |
