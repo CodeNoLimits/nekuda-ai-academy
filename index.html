@@ -1324,8 +1324,8 @@
   }
   .fade-up {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.75s var(--spring), transform 0.75s var(--spring);
+    transform: translateY(16px);
+    transition: opacity 0.45s var(--spring), transform 0.45s var(--spring);
   }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
@@ -1357,12 +1357,12 @@
 
   @media (max-width: 720px) {
     .container, .narrow { padding: 0 16px; }
-    nav.top { top: 10px; padding: 0 10px; }
-    nav.top .inner { padding: 8px 12px; gap: 8px; }
-    nav.top .brand { font-size: 0.82rem; }
-    nav.top .brand .he { display: none; }
-    nav.top a.cta { font-size: 0.72rem; padding: 5px 5px 5px 10px; }
-    nav.top a.cta .cta-circle { width: 20px; height: 20px; }
+    nav.top { top: 10px; padding: 0 12px; }
+    nav.top .inner { padding: 7px 10px 7px 12px; gap: 8px; }
+    nav.top .brand { font-size: 0.84rem; gap: 8px; }
+    nav.top .brand .sep,
+    nav.top .brand .dn-sub { display: none; }
+    nav.top a.cta { display: none; }
 
     .hero { min-height: auto; padding: 6rem 0 3rem; }
     .hero-meta { grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -1399,9 +1399,9 @@
     <a href="#" class="brand">
       <img src="assets/milamila/logo.png" alt="נקודה למחשבה" />
       <span class="he">נקודה למחשבה</span>
-      <span>Nekuda AI</span>
+      <span class="dn-sub">Nekuda AI</span>
       <span class="sep">×</span>
-      <span>DreamNova Studios</span>
+      <span class="dn-sub">DreamNova Studios</span>
     </a>
 
     <div class="nav-links">
@@ -1439,8 +1439,8 @@
     </h1>
 
     <p class="sub">
-      <span data-fr>En 5 séances avec David : <strong>10 Reels/publicités vidéo IA</strong> et <strong>1 nouveau site web</strong> (ou <em>milamila.co.il</em> entièrement modernisé).</span>
-      <span data-he>ב-5 מפגשים עם דוד: <strong>10 רילס/סרטוני פרסומת AI</strong> ו<strong>אתר אינטרנט חדש</strong> (או שדרוג מלא ל-<em>milamila.co.il</em>).</span>
+      <span data-fr>En 5 séances avec David : <strong>10 Reels / publicités vidéo IA</strong> et <strong>1 nouveau site web</strong> (ou <strong>milamila.co.il</strong> entièrement modernisé).</span>
+      <span data-he>ב-5 מפגשים עם דוד: <strong>10 רילס / סרטוני פרסומת AI</strong> ו<strong>אתר אינטרנט חדש</strong> (או שדרוג מלא ל-<strong>milamila.co.il</strong>).</span>
     </p>
 
     <div class="ctas">
@@ -2492,11 +2492,11 @@ function switchMainFormat(mode) {
     lastScroll = cur;
   }, { passive: true });
 
-  // 5. Counter animation on .stat / .big / .invest-price .main
-  const counterEls = document.querySelectorAll('.audit-card .stat, .pack-totals .big, .invest-price .main');
+  // 5. Counter animation on .stat / .big
+  const counterEls = document.querySelectorAll('.audit-card .stat, .pack-totals .big');
   const animateCounter = (el) => {
     const raw = el.textContent.trim();
-    const m = raw.match(/^([\d\s\u00a0]+)(.*)$/);
+    const m = raw.match(/^(\d[\d\s\u00a0]*\d|\d+)(.*)$/);
     if (!m) return;
     const numStr = m[1].replace(/[\s\u00a0]/g, '');
     const target = parseInt(numStr, 10);
@@ -2544,8 +2544,8 @@ function switchMainFormat(mode) {
         fadeObs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('section, .pack-card, .audit-card, .method-card, .cal-row, .pos-card, .phase, .pipe-step, .bezel-shell').forEach(el => {
+  }, { threshold: 0.01, rootMargin: '0px 0px 100px 0px' });
+  document.querySelectorAll('.pack-card, .audit-card, .method-card, .cal-row, .pos-card, .phase, .pipe-step, .bezel-shell').forEach(el => {
     el.classList.add('fade-up');
     fadeObs.observe(el);
   });
