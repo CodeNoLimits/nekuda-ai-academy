@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Syllabus & Cahier Pratique — Nekuda AI Academy (5 Séances × 2h30-3h) | דפוס נקודה בת ים</title>
+<meta name="description" content="Manuel de cours complet et cahier d'exercices des 5 séances Nekuda AI Academy pour Michal, Gemma et leurs amies à Bat Yam.">
+<link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600;700;800&family=Fragment+Mono:ital@0;1&family=Heebo:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #070b14;
+  --bg2: #0b1222;
+  --bg3: #101a30;
+  --gold: #e6c36a;
+  --gold-bright: #f7dfa0;
+  --gold-dim: #b5923b;
+  --cyan: #22d3ee;
+  --line: rgba(230, 195, 106, 0.18);
+  --line-cyan: rgba(34, 211, 238, 0.25);
+  --ink: #f0f4fc;
+  --ink-soft: #b6c2d9;
+  --ink-faint: #7c8ba6;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Outfit', system-ui, sans-serif;
+  --mono: 'Fragment Mono', monospace;
+}
+body.he {
+  --serif: 'Frank Ruhl Libre', serif;
+  --sans: 'Heebo', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+}
+[data-he] { display: none !important; }
+body.he [data-fr] { display: none !important; }
+body.he [data-he] { display: revert !important; }
+
+h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.18; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(7, 11, 20, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+nav .nav-in {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-weight: 700;
+}
+.brand img { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--gold); }
+.lang-switch {
+  display: inline-flex;
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+}
+.lang-switch button {
+  background: transparent;
+  border: none;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.lang-switch button.active {
+  background: var(--gold);
+  color: #111;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-dim)); color: #111; border: none; }
+.btn-cyan { background: rgba(34, 211, 238, 0.12); border-color: var(--cyan); color: var(--cyan); }
+
+header.hero {
+  padding: 130px 0 60px;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(230, 195, 106, 0.15), transparent 65%), var(--bg2);
+  border-bottom: 1px solid var(--line);
+}
+header.hero h1 { font-size: clamp(2rem, 4.8vw, 3.4rem); margin: 14px auto; max-width: 880px; }
+header.hero h1 em { color: var(--gold); font-style: normal; }
+header.hero p { color: var(--ink-soft); max-width: 720px; margin: 0 auto 24px; font-size: 1.08rem; }
+
+.workbook-section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
+.wb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.wb-badge {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid var(--line-cyan);
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+.wb-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 24px;
+}
+.wb-card {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px;
+}
+.wb-card h3 { color: var(--gold); font-size: 1.25rem; margin-bottom: 14px; }
+.wb-list { list-style: none; display: grid; gap: 12px; }
+.wb-list li {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.wb-list li strong { color: var(--ink); display: block; margin-bottom: 3px; }
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.checklist input[type="checkbox"] {
+  accent-color: var(--gold);
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+pre.code-block {
+  margin-top: 14px;
+  background: #04070e;
+  border: 1px solid var(--line-cyan);
+  border-radius: 12px;
+  padding: 14px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: #a5f3fc;
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+}
+footer { padding: 44px 0; text-align: center; color: var(--ink-faint); font-size: 0.9rem; }
+@media (max-width: 860px) { .wb-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="../" class="brand">
+      <img src="../assets/logo.png" alt="Logo">
+      <span>Nekuda <span style="color:var(--gold)">Syllabus & Workbook</span></span>
+    </a>
+    <div style="display:flex;gap:10px;align-items:center">
+      <div class="lang-switch">
+        <button type="button" id="btnFr" class="active" onclick="setLanguage('fr')">🇫🇷 FR</button>
+        <button type="button" id="btnHe" onclick="setLanguage('he')">🇮🇱 עברית</button>
+      </div>
+      <a href="../" class="btn btn-cyan">
+        <span data-fr>← Retour au Site Principal</span><span data-he>→ חזרה לעמוד הראשי</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="wb-badge">📚 <span data-fr>CAHIER D'EXERCICES & SYLLABUS INTÉGRAL · 5 SÉANCES (15 HEURES)</span><span data-he>סילבוס מלא וחוברת עבודה מעשית · 5 מפגשים (15 שעות)</span></span>
+    <h1>
+      <span data-fr>Le Manuel de Cours de <em>Michal, Gemma & leurs Amies</em> à Bat Yam.</span>
+      <span data-he>חוברת הקורס של <em>מיכל, ג׳מה והחברות</em> בדפוס נקודה בת ים.</span>
+    </h1>
+    <p>
+      <span data-fr>Cochez vos étapes à chaque séance. Ce cahier contient le plan détaillé minute par minute, les exercices pratiques sur les produits de <code>nekudap.co.il</code> et les scripts d'automatisation.</span>
+      <span data-he>סמנו וי על כל משימה שאתן משלימות במפגשים. כאן נמצא הפירוט המלא של כל 5 המפגשים, התרגילים על מוצרי דפוס נקודה ותבניות הקוד והאוטומציה.</span>
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <button type="button" class="btn btn-gold" onclick="window.print()">
+        🖨️ <span data-fr>Imprimer ce Cahier chez Nekuda Print</span><span data-he>הדפסת חוברת הקורס בדפוס נקודה</span>
+      </button>
+      <a href="../#trailer" class="btn btn-cyan">
+        🎬 <span data-fr>Revoir le Trailer 54s (7 Chapitres)</span><span data-he>צפייה בטריילר 54 השניות</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- SÉANCE 1 -->
+  <section class="workbook-section" id="s1">
+    <div class="wb-header">
+      <h2><span data-fr>Séance 1 — Qu'est-ce que l'IA ? Outils de Base & Écosystème</span><span data-he>מפגש 1 — מה זה AI? כלי הבסיס והיכרות עם כל האקוסיסטם</span></h2>
+      <span class="wb-badge">⏱ 2h30 – 3h00 · SÉANCE 01/05</span>
+    </div>
+    <div class="wb-grid">
+      <div class="wb-card">
+        <h3><span data-fr>Plan de travail détaillé</span><span data-he>תוכנית עבודה מפורטת למפגש 1</span></h3>
+        <ul class="wb-list">
+          <li>
+            <strong>1. Gemini + Google Flow (45 min)</strong>
+            <span data-fr>Comprendre comment Google Flow révolutionne la vidéo IA sans code. Création du premier projet collectif pour le studio de Bat Yam.</span>
+            <span data-he>איך Google Flow מאפשר ליצור סרטונים קולנועיים ללא קוד. פתיחת פרויקט ראשון משותף לסטודיו בבת ים.</span>
+          </li>
+          <li>
+            <strong>2. Claude, Claude Code, Artefacts & Automations (50 min)</strong>
+            <span data-fr>Activer les Artefacts dans Claude pour créer instantanément des maquettes de pages, des nuanciers d'imprimerie et des calculateurs de prix. Introduction à Claude Code.</span>
+            <span data-he>הפעלת Artifacts ב-Claude ליצירה מיידית של דפי נחיתה, מניפות צבעים לדפוס ומחשבוני הצעות מחיר. היכרות ראשונה עם Claude Code.</span>
+          </li>
+          <li>
+            <strong>3. Aperçu d'Antigravity + Grok & GrokBot (40 min)</strong>
+            <span data-fr>Découvrir comment Antigravity coordonne plusieurs agents autonomes. Utiliser Grok comme assistant ultra-rapide et GrokBot pour exécuter des tâches directes.</span>
+            <span data-he>הצצה ל-Antigravity (תיאום בין מספר סוכני AI במקביל). שימוש ב-Grok כעובד מהיר במיוחד וב-GrokBot למשימות מיידיות.</span>
+          </li>
+          <li>
+            <strong>4. Gemini / Grok Imagine pour Images & Vidéos (45 min)</strong>
+            <span data-fr>Générer 10 visuels de haute précision (textures papier, dorure à chaud, packagings cosmétiques/alimentaires, décors Bat Yam) et les animer en vidéo.</span>
+            <span data-he>יצירת 10 תמונות ברמת סטודיו (טקסטורות נייר, השבחות פויל זהב, אריזות ממותגות ונופי בת ים) והנפשתן לווידאו.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="wb-card">
+        <h3><span data-fr>Checklist Participante (Séance 1)</span><span data-he>צ׳ק-ליסט למשתתפת (מפגש 1)</span></h3>
+        <div class="checklist">
+          <label><input type="checkbox" checked> <span><span data-fr>Accès Gemini & Google Flow testé</span><span data-he>חיבור פעיל ל-Gemini ו-Google Flow</span></span></label>
+          <label><input type="checkbox" checked> <span><span data-fr>1er Artefact interactif créé dans Claude</span><span data-he>יצירת Artifact אינטראקטיבי ראשון ב-Claude</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Démonstration Antigravity & Claude Code comprise</span><span data-he>הבנת איך Claude Code ו-Antigravity עובדים</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>5 images HD générées avec Grok Imagine</span><span data-he>יצירת 5 תמונות HD ב-Grok Imagine</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>2 clips vidéo générés dans Google Flow</span><span data-he>יצירת 2 קליפים ראשונים ב-Google Flow</span></span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉANCE 2 -->
+  <section class="workbook-section" id="s2">
+    <div class="wb-header">
+      <h2><span data-fr>Séance 2 — Google Flow Poussé, Produits Nekuda, Site Mockup & 4 Shorts</span><span data-he>מפגש 2 — Google Flow מתקדם, מוצרי דפוס נקודה, אתר מוקאפ ו-4 Shorts</span></h2>
+      <span class="wb-badge">⏱ 2h30 – 3h00 · SÉANCE 02/05</span>
+    </div>
+    <div class="wb-grid">
+      <div class="wb-card">
+        <h3><span data-fr>Plan de travail détaillé</span><span data-he>תוכנית עבודה מפורטת למפגש 2</span></h3>
+        <ul class="wb-list">
+          <li>
+            <strong>1. Google Flow Avancé Sans Code (45 min)</strong>
+            <span data-fr>Importation des photos réelles de vos produits imprimés comme "Ingredients" dans Flow pour conserver le logo et le produit exact tout en créant un décor cinéma autour.</span>
+            <span data-he>העלאת תמונות מוצרים אמיתיים מבית הדפוס כ-Ingredients לתוך Flow כדי לשמור על הלוגו והמוצר המדויק בתוך סצנה קולנועית.</span>
+          </li>
+          <li>
+            <strong>2. Sublimation des Produits Nekuda Print (45 min)</strong>
+            <span data-fr>Travail sur les cartes de visite dorure/embossage (<code>כרטיסי ביקור פויל</code>), cahiers à spirale (<code>מחברות ממותגות</code>), aimants, enveloppes et découpes (<code>חיתוך צורני</code>).</span>
+            <span data-he>יצירת פרסומות וידאו לכרטיסי ביקור עם פויל והבלטה, מחברות ספירלה ממותגות, מגנטים, מעטפות וחיתוך צורני.</span>
+          </li>
+          <li>
+            <strong>3. Templates de Sites Internet Connectables (40 min)</strong>
+            <span data-fr>Personnalisation du template web de chaque participante (couleurs, typographie hébreu/français, sections produits, vidéo d'accueil).</span>
+            <span data-he>התאמה אישית של תבנית האתר לכל משתתפת (צבעים, פונטים בעברית, קטלוג מוצרים וסרטון פתיחה).</span>
+          </li>
+          <li>
+            <strong>4. Production : 1 Site Mockup + 4 Shorts / Reels chacune (50 min)</strong>
+            <span data-fr>Chaque participante finalise son site mockup et exporte ses 4 premières vidéos verticales 9:16 prêtes pour les réseaux.</span>
+            <span data-he>כל משתתפת מסיימת את אתר המוקאפ שלה ומייצאת 4 סרטוני Shorts/Reels אנכיים (9:16) מוכנים לפרסום.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="wb-card">
+        <h3><span data-fr>Checklist Participante (Séance 2)</span><span data-he>צ׳ק-ליסט למשתתפת (מפגש 2)</span></h3>
+        <div class="checklist">
+          <label><input type="checkbox"> <span><span data-fr>Short #1 : Carte de visite dorure Or (9:16)</span><span data-he>סרטון #1: כרטיס ביקור פויל זהב (9:16)</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Short #2 : Cahier à spirale griffé Bat Yam (9:16)</span><span data-he>סרטון #2: מחברת ספירלה ממותגת (9:16)</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Short #3 : Packaging / Stickers découpe (9:16)</span><span data-he>סרטון #3: חיתוך צורני ומדבקות (9:16)</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Short #4 : Coulisses du Studio Nekuda (9:16)</span><span data-he>סרטון #4: מאחורי הקלעים בסטודיו (9:16)</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Site Mockup personnel validé sur ordinateur</span><span data-he>אתר מוקאפ אישי מוכן ומעוצב</span></span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉANCE 3 -->
+  <section class="workbook-section" id="s3">
+    <div class="wb-header">
+      <h2><span data-fr>Séance 3 — Automatisations, Réseaux Sociaux, Vrai Site Live & Documents PDF Auto</span><span data-he>מפגש 3 — אוטומציות, רשתות חברתיות, אתר חי באוויר והפקת מסמכים אוטומטית</span></h2>
+      <span class="wb-badge">⏱ 2h30 – 3h00 · SÉANCE 03/05</span>
+    </div>
+    <div class="wb-grid">
+      <div class="wb-card">
+        <h3><span data-fr>Plan de travail & Fonction Devis Automatique</span><span data-he>תוכנית עבודה ופונקציית הצעת מחיר אוטומטית</span></h3>
+        <ul class="wb-list">
+          <li>
+            <strong>1. Setup Complet de l'Ordinateur (45 min)</strong>
+            <span data-fr>Installation de Claude Code, Git, GitHub et Vercel sur chaque poste de travail du studio à Bat Yam.</span>
+            <span data-he>התקנת Claude Code, חיבור ל-GitHub ו-Vercel והגדרת תיקיות העבודה על כל מחשב בסטודיו.</span>
+          </li>
+          <li>
+            <strong>2. Mise en Production du Vrai Site (45 min)</strong>
+            <span data-fr>Déploiement en ligne avec URL HTTPS publique, vérification mobile iPhone/Android et bouton WhatsApp direct.</span>
+            <span data-he>העלאת האתר לאוויר עם כתובת אמיתית (HTTPS), בדיקה בנייד וחיבור ישיר לוואטסאפ.</span>
+          </li>
+          <li>
+            <strong>3. Fonctions de Code pour Générer des Documents en Automatique (45 min)</strong>
+            <span data-fr>Création du générateur automatique de devis PDF (<code>הצעות מחיר</code>), bons d'impression et catalogues clients.</span>
+            <span data-he>בניית פונקציית קוד שמייצרת אוטומטית הצעות מחיר ב-PDF, הזמנות עבודה וקטלוגים ממותגים.</span>
+          </li>
+          <li>
+            <strong>4. Connexion Réseaux Sociaux & Auto-Post (45 min)</strong>
+            <span data-fr>Relier Instagram, TikTok, Facebook et YouTube Shorts pour planifier et publier les créations automatiquement.</span>
+            <span data-he>חיבור הרשתות החברתיות (אינסטגרם, פייסבוק, טיקטוק, יוטיוב) לתזמון ופרסום אוטומטי של התוכן.</span>
+          </li>
+        </ul>
+        <pre class="code-block">// Exemple de fonction générée avec Claude Code en Séance 3 :
+function generateNekudaQuote({ client, product, quantity, finish, unitPriceILS }) {
+  const subtotal = quantity * unitPriceILS;
+  const vat = Math.round(subtotal * 0.18); // מע"מ 18%
+  const total = subtotal + vat;
+  return {
+    studio: "דפוס נקודה · nekudap.co.il · 03-6814430",
+    client, product, quantity, finish,
+    subtotalILS: `${subtotal} ₪`,
+    vatILS: `${vat} ₪`,
+    totalILS: `${total} ₪`,
+    status: "READY_FOR_PDF_AND_WHATSAPP"
+  };
+}</pre>
+      </div>
+      <div class="wb-card">
+        <h3><span data-fr>Checklist Participante (Séance 3)</span><span data-he>צ׳ק-ליסט למשתתפת (מפגש 3)</span></h3>
+        <div class="checklist">
+          <label><input type="checkbox"> <span><span data-fr>Claude Code installé & fonctionnel sur l'ordinateur</span><span data-he>Claude Code מותקן ועובד על המחשב</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Vrai site déployé en ligne (HTTP 200 vérifié)</span><span data-he>האתר האישי באוויר עם קישור חי (HTTP 200)</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Générateur automatique de devis PDF testé</span><span data-he>מחולל הצעות מחיר אוטומטי ב-PDF עובד</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Flux de publication réseaux sociaux branché</span><span data-he>חיבור פרסום אוטומטי לרשתות החברתיות</span></span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉANCE 4 -->
+  <section class="workbook-section" id="s4">
+    <div class="wb-header">
+      <h2><span data-fr>Séance 4 — Films Automatisés A-Z, Browser Automation & Prospection Client</span><span data-he>מפגש 4 — סרטים אוטומטיים מקצה לקצה, אוטומציית דפדפן וגיוס לקוחות</span></h2>
+      <span class="wb-badge">⏱ 2h30 – 3h00 · SÉANCE 04/05</span>
+    </div>
+    <div class="wb-grid">
+      <div class="wb-card">
+        <h3><span data-fr>Plan de travail détaillé</span><span data-he>תוכנית עבודה מפורטת למפגש 4</span></h3>
+        <ul class="wb-list">
+          <li>
+            <strong>1. Films Automatisés de Bout en Bout (60 min)</strong>
+            <span data-fr>Assemblage automatique d'un film publicitaire multi-scènes (script → voix-off → clips Flow/Imagine → montage FFmpeg → sous-titres RTL).</span>
+            <span data-he>בניית צנרת אוטומטית להפקת סרט פרסומת שלם (תסריט ← קריינות ← שוטים ← עריכת וידאו אוטומטית ← כתוביות בעברית).</span>
+          </li>
+          <li>
+            <strong>2. Automatisation des Navigateurs — Browser Automation (55 min)</strong>
+            <span data-fr>Piloter Chrome automatiquement pour collecter des informations, mettre à jour le catalogue web ou tester les formulaires sans intervention manuelle.</span>
+            <span data-he>הפעלת דפדפן אוטומטי שמבצע משימות חוזרות: איסוף נתונים, עדכון מוצרים באתר ובדיקת טפסים אוטומטית.</span>
+          </li>
+          <li>
+            <strong>3. Prospection Client Reliée à Claude Code (65 min)</strong>
+            <span data-fr>Construire le pipeline qui identifie les commerces et entreprises de Bat Yam / Gush Dan, prépare une proposition visuelle sur-mesure et centralise le suivi.</span>
+            <span data-he>בניית מערכת שמאתרת עסקים בבת ים וגוש דן, מכינה עבורם הדמיה מותאמת אישית ומחברת את הכל ל-Claude Code.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="wb-card">
+        <h3><span data-fr>Checklist Participante (Séance 4)</span><span data-he>צ׳ק-ליסט למשתתפת (מפגש 4)</span></h3>
+        <div class="checklist">
+          <label><input type="checkbox"> <span><span data-fr>1 film publicitaire de 30-60s monté de bout en bout</span><span data-he>סרט פרסומת שלם (30–60 שנ׳) שהופק מקצה לקצה</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>1 scénario Browser Automation exécuté avec succès</span><span data-he>תהליך אוטומציית דפדפן עובד</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Liste de 20 prospects locaux enrichie par Claude Code</span><span data-he>רשימת 20 לקוחות פוטנציאליים עם הצעה מותאמת</span></span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÉANCE 5 -->
+  <section class="workbook-section" id="s5">
+    <div class="wb-header">
+      <h2><span data-fr>Séance 5 — Workflow de A à Z, Machine Auto-Améliorante (YouTube) & Contact David</span><span data-he>מפגש 5 — תהליך מלא מא׳ עד ת׳, מכונת למידה מיוטיוב וקשר ישיר לדוד</span></h2>
+      <span class="wb-badge">⏱ 2h30 – 3h00 · SÉANCE 05/05</span>
+    </div>
+    <div class="wb-grid">
+      <div class="wb-card">
+        <h3><span data-fr>Plan de travail détaillé</span><span data-he>תוכנית עבודה מפורטת למפגש 5</span></h3>
+        <ul class="wb-list">
+          <li>
+            <strong>1. Résumé & Workflow Complet de A à Z (50 min)</strong>
+            <span data-fr>Orchestrer toute la chaîne de valeur en un seul cockpit quotidien pour l'imprimerie et le studio créatif.</span>
+            <span data-he>חיבור כל מה שלמדנו לתהליך עבודה יומי מהיר ופשוט שמייצר תוכן, אתרים והצעות מחיר.</span>
+          </li>
+          <li>
+            <strong>2. Machine de Prospection & Veille Auto-Améliorante YouTube (55 min)</strong>
+            <span data-fr>Comment analyser automatiquement les meilleures chaînes YouTube IA & Design, récupérer leurs transcripts et mettre à jour vos prompts et compétences chaque semaine.</span>
+            <span data-he>ניתוח אוטומטי של ערוצי היוטיוב הטובים בעולם, חילוץ תמלולים והפיכת כל חידוש ב-AI לכלי עבודה בדפוס נקודה.</span>
+          </li>
+          <li>
+            <strong>3. Soutenance & Lancement + Ligne Directe avec David de Jérusalem (75 min)</strong>
+            <span data-fr>Validation finale de chaque projet individuel et ouverture du canal direct permanent avec David Amor (DreamNova Jérusalem).</span>
+            <span data-he>השקת הפרויקט האישי של כל משתתפת ופתיחת ערוץ התקשורת הישיר עם דוד אמור בירושלים להמשך ליווי וצמיחה.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="wb-card">
+        <h3><span data-fr>Checklist Finale de Certification</span><span data-he>צ׳ק-ליסט סיום והסמכה</span></h3>
+        <div class="checklist">
+          <label><input type="checkbox"> <span><span data-fr>Workflow complet A-Z maîtrisé en autonomie</span><span data-he>שליטה מלאה בתהליך העבודה מא׳ ועד ת׳</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Radar YouTube Outlier configuré</span><span data-he>מערכת ניתוח ערוצי יוטיוב מוגדרת</span></span></label>
+          <label><input type="checkbox"> <span><span data-fr>Contact direct WhatsApp avec David (Jérusalem) actif</span><span data-he>קשר ישיר בוואטסאפ מול דוד בירושלים</span></span></label>
+        </div>
+        <div style="margin-top:18px">
+          <a href="https://wa.me/972584921492?text=%D7%94%D7%99%D7%99%20%D7%93%D7%95%D7%93%2C%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%20%D7%91%D7%97%D7%95%D7%91%D7%A8%D7%AA%20%D7%94%D7%A7%D7%95%D7%A8%D7%A1%20%D7%A9%D7%9C%20Nekuda%20AI%20Academy!" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">
+            💬 <span data-fr>Contacter David (Jérusalem) en 1 Clic</span><span data-he>שיחה ישירה עם דוד מירושלים</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>בס״ד · Nekuda AI Academy — דפוס נקודה בת ים × DreamNova ירושלים · <a href="../" style="color:var(--gold)">Retour à l'accueil</a></p>
+  </div>
+</footer>
+
+<script>
+function setLanguage(lang) {
+  const isHe = lang === 'he';
+  document.body.classList.toggle('he', isHe);
+  document.documentElement.lang = isHe ? 'he' : 'fr';
+  document.documentElement.dir = isHe ? 'rtl' : 'ltr';
+  document.getElementById('btnFr').classList.toggle('active', !isHe);
+  document.getElementById('btnHe').classList.toggle('active', isHe);
+  try { localStorage.setItem('nekuda_lang', lang); } catch (e) {}
+}
+(function() {
+  let saved = new URLSearchParams(location.search).get('lang');
+  if (!saved) { try { saved = localStorage.getItem('nekuda_lang'); } catch (e) {} }
+  if (saved === 'he' || saved === 'fr') setLanguage(saved);
+})();
+</script>
+</body>
+</html>

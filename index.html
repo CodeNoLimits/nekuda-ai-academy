@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nekuda AI Academy — דפוס נקודה × DreamNova | Michal, Gemma & Studio Bat Yam</title>
+<meta name="description" content="Formation IA sur-mesure en 5 séances (2h30-3h) pour Michal, Gemma et leurs amies à l'imprimerie Nekuda (דפוס נקודה - nekudap.co.il) à Bat Yam. Google Flow, Claude Code, Antigravity, Grok Imagine, sites live et automatisations.">
+<meta property="og:title" content="Nekuda AI Academy — דפוס נקודה × DreamNova (Bat Yam · Jérusalem)">
+<meta property="og:description" content="Du papier imprimé à Bat Yam jusqu'à la Lune : 5 séances intensives pour transformer l'imprimerie et le studio créatif avec l'IA.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600;700;800&family=Fragment+Mono:ital@0;1&family=Heebo:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #070b14;
+  --bg2: #0b1222;
+  --bg3: #101a30;
+  --bg4: #162340;
+  --gold: #e6c36a;
+  --gold-bright: #f7dfa0;
+  --gold-dim: #b5923b;
+  --cyan: #22d3ee;
+  --cyan-dim: rgba(34, 211, 238, 0.14);
+  --rose: #f43f5e;
+  --emerald: #10b981;
+  --ink: #f0f4fc;
+  --ink-soft: #b6c2d9;
+  --ink-faint: #7c8ba6;
+  --line: rgba(230, 195, 106, 0.18);
+  --line-cyan: rgba(34, 211, 238, 0.25);
+  --glass: rgba(11, 18, 34, 0.78);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --mono: 'Fragment Mono', monospace;
+}
+
+body.he {
+  --serif: 'Frank Ruhl Libre', serif;
+  --sans: 'Heebo', system-ui, -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle film grain & ambient glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(230, 195, 106, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(34, 211, 238, 0.07), transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(244, 63, 94, 0.05), transparent 45%);
+}
+
+[data-he] { display: none !important; }
+body.he [data-fr] { display: none !important; }
+body.he [data-he] { display: revert !important; }
+
+h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.15; font-weight: 600; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+section { padding: 92px 0; position: relative; scroll-margin-top: 74px; }
+.alt { background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+/* Progress Bar */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--cyan), var(--rose));
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(7, 11, 20, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+nav .nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.brand img.brand-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  object-fit: cover;
+}
+.brand-text span.gold { color: var(--gold); }
+.brand-text small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: var(--cyan);
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lang-switch {
+  display: inline-flex;
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+.lang-switch button {
+  background: transparent;
+  border: none;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 6px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.lang-switch button.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  color: #111;
+  box-shadow: 0 4px 14px rgba(230, 195, 106, 0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.96rem;
+  cursor: pointer;
+  transition: all 0.35s var(--ease);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.btn-sm { padding: 9px 18px; font-size: 0.84rem; }
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  color: #0e1118;
+  box-shadow: 0 8px 28px rgba(230, 195, 106, 0.22);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(230, 195, 106, 0.38);
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+}
+.btn-cyan {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.btn-cyan:hover {
+  background: var(--cyan);
+  color: #071018;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.3);
+}
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Section typography */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+.sec-title {
+  font-size: clamp(1.85rem, 4.2vw, 3rem);
+  margin-bottom: 16px;
+}
+.sec-title em {
+  color: var(--gold);
+  font-style: italic;
+}
+.sec-title span.cyan { color: var(--cyan); }
+.sec-sub {
+  color: var(--ink-soft);
+  max-width: 760px;
+  font-size: 1.08rem;
+}
+
+/* Hero */
+.hero {
+  padding: 130px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 85% 55% at 50% -5%, rgba(230, 195, 106, 0.16), transparent 65%),
+    radial-gradient(ellipse 60% 45% at 85% 30%, rgba(34, 211, 238, 0.1), transparent 60%),
+    var(--bg);
+}
+.hero-top-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.83rem;
+  color: var(--gold);
+}
+.pill.cyan {
+  border-color: var(--line-cyan);
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.06);
+}
+.hero-header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 42px;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5.4vw, 4.1rem);
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+.hero h1 em {
+  color: var(--gold);
+  font-style: normal;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p.lead {
+  color: var(--ink-soft);
+  font-size: clamp(1.04rem, 1.8vw, 1.24rem);
+  max-width: 780px;
+  margin: 0 auto 30px;
+}
+.hero .cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cinema Hero Video & 7-Chapter Interactive Storyboard */
+.cinema-shell {
+  margin-top: 44px;
+  border: 1px solid rgba(230, 195, 106, 0.32);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(16, 26, 48, 0.9), rgba(7, 11, 20, 0.96));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.65), 0 0 40px rgba(230, 195, 106, 0.08);
+  overflow: hidden;
+}
+.cinema-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--line);
+}
+.cinema-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cinema-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.cinema-dots .d-red { background: #f43f5e; }
+.cinema-dots .d-gold { background: #e6c36a; }
+.cinema-dots .d-cyan { background: #22d3ee; }
+.cinema-title-bar {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 10px var(--emerald);
+  display: inline-block;
+}
+.cinema-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 540px;
+  background: #04070e;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cinema-stage video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Interactive Storyboard Fallback Stage */
+.storyboard-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.45s var(--ease);
+}
+.storyboard-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.sb-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 35%, rgba(230, 195, 106, 0.22), rgba(7, 11, 20, 0.92));
+  transition: background 0.6s var(--ease);
+}
+.sb-visual-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.sb-top {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sb-badge {
+  background: rgba(7, 11, 20, 0.82);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  backdrop-filter: blur(8px);
+}
+.sb-timecode {
+  background: rgba(7, 11, 20, 0.82);
+  border: 1px solid var(--line-cyan);
+  color: var(--cyan);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.sb-center {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 760px;
+  margin: auto;
+  padding: 22px 28px;
+  background: rgba(7, 11, 20, 0.76);
+  border: 1px solid rgba(230, 195, 106, 0.28);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+}
+.sb-chap-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+.sb-chap-title {
+  font-size: clamp(1.35rem, 2.8vw, 2.1rem);
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+}
+.sb-chap-desc {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+}
+.sb-voice-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--cyan);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+.sb-bottom {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sb-progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sb-progress-fill {
+  height: 100%;
+  width: 14%;
+  background: linear-gradient(90deg, var(--gold), var(--cyan));
+  transition: width 0.25s linear;
+}
+.sb-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 7 Chapters Scrubber Bar */
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid var(--line);
+  background: rgba(7, 11, 20, 0.9);
+}
+.chap-btn {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--line);
+  padding: 14px 10px;
+  text-align: left;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body.he .chap-btn {
+  text-align: right;
+  border-right: none;
+  border-left: 1px solid var(--line);
+}
+.chap-btn:last-child { border-right: none; border-left: none; }
+.chap-btn:hover, .chap-btn.active {
+  background: rgba(230, 195, 106, 0.12);
+  color: var(--ink);
+}
+.chap-btn.active {
+  box-shadow: inset 0 3px 0 var(--gold);
+}
+.chap-btn .c-time {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--cyan);
+}
+.chap-btn .c-name {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--gold);
+}
+.chap-btn .c-sub {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  line-height: 1.3;
+}
+
+/* Proof stats */
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+.proof-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 18px;
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+.proof-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+.proof-card b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.proof-card small {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+/* Ecosystem Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+.tool-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.35s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.tool-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+.tool-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid var(--line-cyan);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.tool-card h3 {
+  font-size: 1.22rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.tool-card p {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+
+/* 5 Sessions Master Curriculum */
+.session-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 34px 0 24px;
+}
+.session-tab-btn {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.session-tab-btn:hover, .session-tab-btn.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  color: #111;
+  border-color: var(--gold);
+}
+
+.sessions-stack {
+  display: grid;
+  gap: 22px;
+}
+.session-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(16, 26, 48, 0.55), rgba(11, 18, 34, 0.85));
+  overflow: hidden;
+  transition: border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.session-card:hover {
+  border-color: rgba(230, 195, 106, 0.45);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35);
+}
+.session-card summary {
+  cursor: pointer;
+  padding: 26px 30px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.session-card summary::-webkit-details-marker { display: none; }
+.sc-head-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.sc-num {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(230, 195, 106, 0.2), rgba(34, 211, 238, 0.12));
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.sc-title-wrap h3 {
+  font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.sc-title-wrap p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+.sc-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sc-duration {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid var(--line-cyan);
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.sc-body {
+  padding: 0 30px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.sc-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+.sc-step {
+  background: rgba(7, 11, 20, 0.65);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+.sc-step .t-slot {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+}
+.sc-step h4 {
+  font-size: 1.04rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.sc-step p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.sc-deliverable-bar {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, rgba(230, 195, 106, 0.14), rgba(34, 211, 238, 0.1));
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.sc-deliverable-bar strong {
+  color: var(--gold-bright);
+  font-size: 0.95rem;
+}
+.sc-deliverable-bar span.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sc-deliverable-bar .chip {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  background: rgba(7, 11, 20, 0.75);
+  color: var(--cyan);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line-cyan);
+}
+
+/* Cas Pratique Imprimerie Nekuda Bat Yam */
+.nekuda-case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 42px;
+}
+.case-panel {
+  border: 1px solid rgba(230, 195, 106, 0.3);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(16, 26, 48, 0.8), rgba(7, 11, 20, 0.95));
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.case-before-after {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+}
+.case-before-after img {
+  width: 120px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+/* Interactive 3D Foil Card Simulator */
+.foil-stage {
+  perspective: 900px;
+  padding: 24px;
+  background: radial-gradient(circle at center, rgba(230, 195, 106, 0.14), rgba(4, 7, 14, 0.9));
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.foil-card-3d {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1.75 / 1;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #101420 0%, #1a2136 50%, #0b0e17 100%);
+  border: 1.5px solid var(--gold);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 25px rgba(230, 195, 106, 0.2);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, border-color 0.3s ease;
+  cursor: grab;
+}
+.foil-shimmer {
+  position: absolute;
+  inset: -60%;
+  background: linear-gradient(115deg, transparent 35%, rgba(230, 195, 106, 0.38) 48%, rgba(255, 255, 255, 0.55) 50%, rgba(34, 211, 238, 0.32) 52%, transparent 65%);
+  pointer-events: none;
+  transform: translateX(-30%) rotate(12deg);
+  transition: transform 0.2s ease-out;
+}
+.foil-card-brand {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+  text-shadow: 0 2px 12px rgba(230, 195, 106, 0.5);
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 2;
+}
+.foil-card-sub {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--cyan);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+.foil-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  position: relative;
+  z-index: 2;
+}
+.foil-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.foil-controls input {
+  flex: 1;
+  min-width: 160px;
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 13px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+
+/* Spiral Notebook Configurator & Quote Preview */
+.notebook-sim {
+  padding: 22px;
+  background: rgba(7, 11, 20, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  display: grid;
+  gap: 14px;
+}
+.nb-controls-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.nb-controls-row select, .nb-controls-row input {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+}
+.quote-preview-box {
+  background: linear-gradient(135deg, rgba(230, 195, 106, 0.1), rgba(34, 211, 238, 0.08));
+  border: 1px dashed var(--gold);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 0.88rem;
+}
+.quote-preview-box .q-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--gold);
+}
+.quote-preview-box .q-price {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+
+/* Prompt Center */
+.prompt-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 28px 0;
+}
+.pf-btn {
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.pf-btn.active, .pf-btn:hover {
+  background: var(--cyan);
+  color: #061018;
+  border-color: var(--cyan);
+}
+.prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+.prompt-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(16, 26, 48, 0.6);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+.prompt-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.prompt-engine {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(230, 195, 106, 0.14);
+  color: var(--gold);
+  border: 1px solid var(--line);
+}
+.prompt-engine.grok {
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--cyan);
+  border-color: var(--line-cyan);
+}
+.prompt-box {
+  background: #050912;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: #d3deef;
+  line-height: 1.55;
+  direction: ltr;
+  text-align: left;
+}
+.copy-btn {
+  width: 100%;
+  background: rgba(230, 195, 106, 0.12);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.copy-btn:hover, .copy-btn.copied {
+  background: var(--gold);
+  color: #111;
+}
+
+/* YouTube Outlier Section */
+.yt-table-wrap {
+  margin-top: 32px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(11, 18, 34, 0.75);
+}
+table.yt-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+body.he table.yt-table { text-align: right; }
+table.yt-table th, table.yt-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+table.yt-table th {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Contact & David Jerusalem Section */
+.david-contact-box {
+  border: 1px solid var(--gold);
+  border-radius: 26px;
+  padding: 44px;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(230, 195, 106, 0.18), transparent 55%),
+    linear-gradient(180deg, rgba(16, 26, 48, 0.9), rgba(7, 11, 20, 0.96));
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+.david-profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.david-profile img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--gold);
+  color: #0c1017;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  opacity: 0;
+  transition: all 0.35s var(--ease);
+  pointer-events: none;
+}
+#toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 48px 0;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .chapters-grid { grid-template-columns: repeat(2, 1fr); }
+  .proof-grid { grid-template-columns: repeat(2, 1fr); }
+  .nekuda-case-grid { grid-template-columns: 1fr; }
+  .david-contact-box { grid-template-columns: 1fr; padding: 28px; }
+}
+@media (max-width: 600px) {
+  section { padding: 64px 0; }
+  .hero { padding: 108px 0 56px; }
+  .chapters-grid { grid-template-columns: 1fr; }
+  .sc-Timeline { grid-template-columns: 1fr; }
+  .nb-controls-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="assets/logo.png" alt="DreamNova × Nekuda" class="brand-logo">
+      <div class="brand-text">
+        Nekuda <span class="gold">AI Academy</span>
+        <small><span data-fr>דפוס נקודה · Bat Yam × Jérusalem</span><span data-he>דפוס נקודה בת ים × DreamNova ירושלים</span></small>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#trailer"><span data-fr>Film 54s</span><span data-he>סרטון 54 שנ׳</span></a>
+      <a href="#programme"><span data-fr>Les 5 Séances</span><span data-he>5 המפגשים</span></a>
+      <a href="#cas-nekuda"><span data-fr>Cas Nekuda Print</span><span data-he>פרקטיקום דפוס נקודה</span></a>
+      <a href="#prompts"><span data-fr>Prompt Studio</span><span data-he>מרכז פרומפטים</span></a>
+      <a href="#youtube-machine"><span data-fr>Machine YouTube</span><span data-he>מנוע יוטיוב</span></a>
+      <a href="cours/"><span data-fr>Syllabus Complet</span><span data-he>סילבוס מלא</span></a>
+    </div>
+
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language Switcher">
+        <button type="button" id="btnFr" class="active" onclick="setLanguage('fr')">🇫🇷 FR</button>
+        <button type="button" id="btnHe" onclick="setLanguage('he')">🇮🇱 עברית</button>
+      </div>
+      <a href="#contact-david" class="btn btn-gold btn-sm">
+        <span data-fr>Contact David</span><span data-he>דברו עם דוד</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ 01 · HERO + 54s 7-CHAPTER TRAILER PLAYER ══ -->
+<header class="hero" id="trailer">
+  <div class="wrap">
+    <div class="hero-top-badges">
+      <span class="pill">✨ <span data-fr>Programme Exclusif : Michal, Gemma & leurs 2–4 amies</span><span data-he>תוכנית בוטיק: מיכל, ג׳מה ו-2 עד 4 חברות</span></span>
+      <span class="pill cyan">🖨️ <span data-fr>Studio & Imprimerie Nekuda · Bat Yam (nekudap.co.il)</span><span data-he>דפוס נקודה וסטודיו לעיצוב · בת ים (nekudap.co.il)</span></span>
+    </div>
+
+    <div class="hero-header">
+      <h1>
+        <span data-fr>Du papier imprimé à Bat Yam<br>jusqu'à <em>l'Agence IA sur la Lune</em>.</span>
+        <span data-he>מהדפוס בבת ים<br>ועד <em>לסוכנות AI על הירח</em>.</span>
+      </h1>
+      <p class="lead">
+        <span data-fr>5 séances intensives de 2h30 à 3h créées sur-mesure pour <strong>Michal, Gemma et leurs amies</strong>. Maîtrisez <strong>Google Flow, Claude Code, Antigravity, Grok Imagine & les automatisations</strong> pour transformer chaque carte de visite, cahier griffé, site web et campagne vidéo en machine à clients.</span>
+        <span data-he>5 מפגשים מעשיים (2.5 עד 3 שעות למפגש) שנבנו במיוחד עבור <strong>מיכל, ג׳מה והחברות</strong> בדפוס נקודה. שליטה מלאה ב-<strong>Google Flow, Claude Code, Antigravity, Grok Imagine ואוטומציות</strong> — מהפקת סרטונים ועד אתרים חיים, הצעות מחיר אוטומטיות וגיוס לקוחות.</span>
+      </p>
+      <div class="cta-row">
+        <a href="#programme" class="btn btn-gold">
+          <span data-fr>Explorer les 5 Séances (15h) →</span><span data-he>לגלות את 5 המפגשים (15 שעות) ←</span>
+        </a>
+        <a href="#cas-nekuda" class="btn btn-cyan">
+          <span data-fr>Cas Pratique Nekuda (Cartes & Cahiers 3D)</span><span data-he>הדגמה חיה: כרטיסי ביקור ומחברות ב-AI</span>
+        </a>
+        <a href="cours/" class="btn btn-ghost">
+          <span data-fr>Ouvrir le Cahier de Cours Complet</span><span data-he>פתיחת חוברת הקורס המלאה</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- HERO VIDEO PLAYER (54s · 7 CHAPTERS) -->
+    <div class="cinema-shell">
+      <div class="cinema-topbar">
+        <div class="cinema-dots">
+          <span class="d-red"></span>
+          <span class="d-gold"></span>
+          <span class="d-cyan"></span>
+          <strong style="margin-inline-start:8px;font-size:.84rem;color:var(--gold)">
+            <span data-fr>TRAILER OFFICIEL · 54 SECONDES · 7 CHAPITRES</span>
+            <span data-he>טריילר רשמי · 54 שניות · 7 פרקים</span>
+          </strong>
+        </div>
+        <div class="cinema-title-bar">
+          <span class="status-dot"></span>
+          <span id="playerModeLabel">
+            <span data-fr>Kotel → Ben Yehuda → Tachana Merkazit → Train → Bat Yam → Studio Nekuda → Lune</span>
+            <span data-he>כותל ← בן יהודה ← תחנה מרכזית ← רכבת ← בת ים ← דפוס נקודה ← הירח</span>
+          </span>
+          <button type="button" class="btn btn-ghost btn-sm" style="padding:4px 12px;font-size:.74rem" onclick="toggleStoryboardMode()">
+            <span data-fr>🎞️ Mode Storyboard Interactif</span><span data-he>🎞️ מצב סטוריבורד אינטראקטיבי</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cinema-stage" id="cinemaStage">
+        <video id="heroVideo" controls playsinline preload="metadata" poster="assets/david_poster.jpg">
+          <source src="../video/final_nekuda_trailer.mp4" type="video/mp4">
+          <source src="video/final_nekuda_trailer.mp4" type="video/mp4">
+        </video>
+
+        <!-- Interactive 7-Chapter Storyboard Fallback / Companion Overlay -->
+        <div class="storyboard-overlay" id="storyboardOverlay">
+          <div class="sb-backdrop" id="sbBackdrop"></div>
+          <div class="sb-visual-canvas" id="sbCanvas"></div>
+
+          <div class="sb-top">
+            <span class="sb-badge" id="sbChapterBadge">CHAPITRE 01 / 07 · JÉRUSALEM</span>
+            <span class="sb-timecode" id="sbTimecode">00:00 / 00:54</span>
+          </div>
+
+          <div class="sb-center">
+            <div class="sb-chap-icon" id="sbIcon">🕊️</div>
+            <h3 class="sb-chap-title" id="sbTitle">1. Le Kotel (0:00 – 0:08) · L'Étincelle à Jérusalem</h3>
+            <p class="sb-chap-desc" id="sbDesc">
+              Devant les pierres dorées du Kotel à Jérusalem, David ouvre le canal créatif : la tradition millénaire de l'écrit rencontre l'intelligence artificielle post-quantique.
+            </p>
+            <div class="sb-voice-quote" id="sbQuote">
+              « Tout commence par une lettre, un point — Nekuda — à Jérusalem, avant de traverser Israël jusqu'à Bat Yam… »
+            </div>
+          </div>
+
+          <div class="sb-bottom">
+            <div class="sb-progress-track" onclick="scrubStoryboard(event)">
+              <div class="sb-progress-fill" id="sbProgressFill"></div>
+            </div>
+            <div class="sb-controls">
+              <div style="display:flex;gap:8px;align-items:center">
+                <button type="button" class="btn btn-gold btn-sm" id="sbPlayBtn" onclick="toggleStoryboardPlay()">
+                  ▶ <span data-fr>Lancer la simulation 54s</span><span data-he>הפעל סימולציית 54 שנ׳</span>
+                </button>
+                <button type="button" class="btn btn-ghost btn-sm" onclick="stepChapter(-1)">⏮</button>
+                <button type="button" class="btn btn-ghost btn-sm" onclick="stepChapter(1)">⏭</button>
+              </div>
+              <button type="button" class="btn btn-cyan btn-sm" onclick="tryPlayNativeVideo()">
+                <span data-fr>🎬 Basculer sur le lecteur MP4 (`final_nekuda_trailer.mp4`)</span>
+                <span data-he>🎬 מעבר לנגן הווידאו (`final_nekuda_trailer.mp4`)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Chapter Buttons -->
+      <div class="chapters-grid" id="chaptersGrid">
+        <button type="button" class="chap-btn active" onclick="selectChapter(0)">
+          <span class="c-time">00:00 – 00:08</span>
+          <span class="c-name"><span data-fr>1. Le Kotel</span><span data-he>1. הכותל המערבי</span></span>
+          <span class="c-sub"><span data-fr>La source & l'étincelle</span><span data-he>הניצוץ בירושלים</span></span>
+        </button>
+        <button type="button" class="chap-btn" onclick="selectChapter(1)">
+          <span class="c-time">00:08 – 00:16</span>
+          <span class="c-name"><span data-fr>2. Ben Yehuda</span><span data-he>2. בן יהודה</span></span>
+          <span class="c-sub"><span data-fr>Énergie & prompts live</span><span data-he>אנרגיה ופרומפטים</span></span>
+        </button>
+        <button type="button" class="chap-btn" onclick="selectChapter(2)">
+          <span class="c-time">00:16 – 00:23</span>
+          <span class="c-name"><span data-fr>3. Tachana Merkazit</span><span data-he>3. תחנה מרכזית</span></span>
+          <span class="c-sub"><span data-fr>Portail vers la côte</span><span data-he>היציאה מירושלים</span></span>
+        </button>
+        <button type="button" class="chap-btn" onclick="selectChapter(3)">
+          <span class="c-time">00:23 – 00:31</span>
+          <span class="c-name"><span data-fr>4. Le Train Rapide</span><span data-he>4. הרכבת המהירה</span></span>
+          <span class="c-sub"><span data-fr>Claude Code à 160 km/h</span><span data-he>בונים ב-160 קמ״ש</span></span>
+        </button>
+        <button type="button" class="chap-btn" onclick="selectChapter(4)">
+          <span class="c-time">00:31 – 00:39</span>
+          <span class="c-name"><span data-fr>5. Bat Yam</span><span data-he>5. חוף בת ים</span></span>
+          <span class="c-sub"><span data-fr>Arrivée face à la mer</span><span data-he>הגעה לעיר החוף</span></span>
+        </button>
+        <button type="button" class="chap-btn" onclick="selectChapter(5)">
+          <span class="c-time">00:39 – 00:47</span>
+          <span class="c-name"><span data-fr>6. Studio Nekuda</span><span data-he>6. דפוס נקודה</span></span>
+          <span class="c-sub"><span data-fr>Michal, Gemma & Print IA</span><span data-he>מיכל, ג׳מה והדפוס</span></span>
+        </button>
+        <button type="button" class="chap-btn" onclick="selectChapter(6)">
+          <span class="c-time">00:47 – 00:54</span>
+          <span class="c-name"><span data-fr>7. La Lune</span><span data-he>7. נחיתה על הירח</span></span>
+          <span class="c-sub"><span data-fr>Nekuda dans les étoiles</span><span data-he>ממריאות לחלל</span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- PROOF BAR -->
+    <div class="proof-grid">
+      <div class="proof-card">
+        <b>5 × 3h</b>
+        <small><span data-fr>Séances intensives (2h30 à 3h) orientées 100% résultats</span><span data-he>מפגשים מעשיים (2.5–3 שעות) ממוקדי תוצאות בשטח</span></small>
+      </div>
+      <div class="proof-card">
+        <b>4–6</b>
+        <small><span data-fr>Participantes : Michal, Gemma & leurs 2 à 4 amies</span><span data-he>משתתפות: מיכל, ג׳מה ו-2 עד 4 חברות בסטודיו</span></small>
+      </div>
+      <div class="proof-card">
+        <b>1 Site + 4 Shorts</b>
+        <small><span data-fr>Créés dès la Séance 2 par chaque participante</span><span data-he>אתר חי + 4 סרטוני Reels/Shorts לכל משתתפת כבר במפגש 2</span></small>
+      </div>
+      <div class="proof-card">
+        <b>A → Z</b>
+        <small><span data-fr>Print, Web, Devis PDF auto, Films IA & Prospection</span><span data-he>דפוס, אתרים, הצעות מחיר אוטומטיות, סרטים וגיוס לקוחות</span></small>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ 02 · ÉCOSYSTÈME D'OUTILS MAÎTRISÉS ══ -->
+<section class="alt" id="ecosysteme">
+  <div class="wrap">
+    <div class="eyebrow"><span data-fr>La boîte à outils 2026</span><span data-he>ארגז הכלים המלא ל-2026</span></div>
+    <h2 class="sec-title">
+      <span data-fr>Pas un seul outil. <em>Tout l'écosystème IA</em> connecté à votre imprimerie.</span>
+      <span data-he>לא כלי בודד. <em>כל האקוסיסטם של ה-AI</em> מחובר לבית הדפוס ולסטודיו.</span>
+    </h2>
+    <p class="sec-sub">
+      <span data-fr>Chaque outil a une spécialité précise. Vous apprendrez quand utiliser Gemini, Google Flow, Claude Code, Antigravity ou Grok pour aller 10 fois plus vite.</span>
+      <span data-he>לכל כלי יש תפקיד מדויק. תלמדו איך לשלב בין Gemini, Google Flow, Claude Code, Antigravity ו-Grok כדי לעבוד פי 10 מהר יותר.</span>
+    </p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <span class="tool-tag">GOOGLE DEEP MIND · FLOW & GEMINI</span>
+        <h3>Gemini + Google Flow</h3>
+        <p>
+          <span data-fr>Direction artistique sans code, vidéos cinématographiques cohérentes avec personnages et textures ("Ingredients"), mise en scène de vos produits imprimés.</span>
+          <span data-he>בימוי קולנועי ללא קוד, יצירת סרטונים עקביים עם דמויות וטקסטורות (Ingredients), והנפשת מוצרי הדפוס של נקודה ברמת פרסומת טלוויזיה.</span>
+        </p>
+      </div>
+      <div class="tool-card">
+        <span class="tool-tag">ANTHROPIC · CLAUDE & CLAUDE CODE</span>
+        <h3>Claude, Artefacts & Claude Code</h3>
+        <p>
+          <span data-fr>Artefacts visuels instantanés, création de sites complets, automatisations de devis PDF/catalogues et pilotage direct des fichiers de votre ordinateur.</span>
+          <span data-he>יצירת ממשקים חיים עם Artifacts, בניית אתרים שלמים, הפקת הצעות מחיר וקטלוגים אוטומטיים ב-PDF ושליטה ישירה בקבצים על המחשב.</span>
+        </p>
+      </div>
+      <div class="tool-card">
+        <span class="tool-tag">GOOGLE AGENT IDE · NEXT-GEN</span>
+        <h3><span data-fr>Aperçu d'Antigravity</span><span data-he>הצצה ל-Antigravity</span></h3>
+        <p>
+          <span data-fr>Le poste de commande multi-agents qui orchestre le code, le navigateur et le déploiement web en parallèle pendant que vous créez.</span>
+          <span data-he>סביבת העבודה החדשה שמפעילה סוכני AI במקביל — כתיבת קוד, עיצוב, בדיקת דפדפן והעלאת אתרים לאוויר בזמן אמת.</span>
+        </p>
+      </div>
+      <div class="tool-card">
+        <span class="tool-tag">xAI · VITESSE & CRÉATION</span>
+        <h3>Grok, GrokBot & Grok Imagine</h3>
+        <p>
+          <span data-fr>Le travailleur ultra-rapide : génération d'images photoréalistes et vidéos avec Imagine, veille en temps réel et automatisations instantanées via GrokBot.</span>
+          <span data-he>העובד המהיר ביותר: יצירת תמונות פוטו-ריאליסטיות ווידאו עם Grok Imagine, מחקר שוק בזמן אמת וביצוע משימות מהיר דרך GrokBot.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 · PROGRAMME DÉTAILLÉ DES 5 SÉANCES (2h30 À 3h) ══ -->
+<section id="programme">
+  <div class="wrap">
+    <div class="eyebrow"><span data-fr>Curriculum Intensif · 5 × 2h30–3h</span><span data-he>תוכנית הלימודים המלאה · 5 מפגשים של 2.5–3 שעות</span></div>
+    <h2 class="sec-title">
+      <span data-fr>Les 5 Séances. <em>De Zéro à l'Usine Créative Automatisée.</em></span>
+      <span data-he>5 המפגשים: <em>מהיכרות בסיסית ועד מכונת תוכן, אתרים ולקוחות אוטומטית.</em></span>
+    </h2>
+    <p class="sec-sub">
+      <span data-fr>Chaque séance dure entre 2h30 et 3h00 au studio. Zéro théorie abstraite : chaque participante repart à la fin de chaque séance avec ses créations en ligne.</span>
+      <span data-he>כל מפגש אורך 2.5 עד 3 שעות של עבודה מעשית. אפס תיאוריה יבשה: בסוף כל מפגש כל אחת מהמשתתפות יוצאת עם תוצרים אמיתיים שעובדים.</span>
+    </p>
+
+    <div class="session-tabs">
+      <button type="button" class="session-tab-btn active" onclick="openAllSessions(true)">
+        <span data-fr>Tout déplier (Vue complète)</span><span data-he>פתיחת כל המפגשים (תצוגה מלאה)</span>
+      </button>
+      <button type="button" class="session-tab-btn" onclick="openAllSessions(false)">
+        <span data-fr>Tout replier</span><span data-he>סגירת הכל</span>
+      </button>
+      <a href="cours/" class="session-tab-btn" style="color:var(--gold);border-color:var(--gold)">
+        <span data-fr>📖 Voir la version Manuel de Cours →</span><span data-he>📖 מעבר לחוברת הקורס המלאה ←</span>
+      </a>
+    </div>
+
+    <div class="sessions-stack">
+
+      <!-- SÉANCE 1 -->
+      <details class="session-card" open>
+        <summary>
+          <div class="sc-head-left">
+            <div class="sc-num">01</div>
+            <div class="sc-title-wrap">
+              <h3>
+                <span data-fr>Séance 1 — Qu'est-ce que l'IA ? Outils de Base & Écosystème Complet</span>
+                <span data-he>מפגש 1 — מה זה AI? כלי הבסיס והיכרות עם כל האקוסיסטם</span>
+              </h3>
+              <p>
+                <span data-fr>Gemini + Google Flow · Claude, Claude Code, Artefacts & Automations · Aperçu d'Antigravity · Grok & GrokBot · Imagine (Images & Vidéos)</span>
+                <span data-he>Gemini + Google Flow · Claude, Claude Code, Artifacts & Automations · הצצה ל-Antigravity · Grok & GrokBot · יצירת תמונות ווידאו</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-meta">
+            <span class="sc-duration">⏱ 2h30 – 3h00</span>
+          </div>
+        </summary>
+        <div class="sc-body">
+          <div class="sc-timeline">
+            <div class="sc-step">
+              <span class="t-slot">00:00 – 00:40 · PARTIE 1</span>
+              <h4><span data-fr>Comprendre l'IA en 2026 & Gemini + Google Flow</span><span data-he>מהפכת ה-AI ב-2026 + Gemini & Google Flow</span></h4>
+              <p>
+                <span data-fr>Qu'est-ce que l'IA aujourd'hui ? Différence entre un chat classique et un studio génératif. Découverte de <strong>Gemini</strong> et prise en main de <strong>Google Flow</strong> pour transformer une idée en scène visuelle cohérente.</span>
+                <span data-he>איך באמת עובד AI מודרני? ההבדל בין צ׳אט רגיל למערכת יוצרת. היכרות מעשית עם <strong>Gemini</strong> וכניסה ראשונה ל-<strong>Google Flow</strong> ליצירת סצנות ויזואליות מרהיבות.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">00:40 – 01:30 · PARTIE 2</span>
+              <h4><span data-fr>Claude, Claude Code, Artefacts & Automations</span><span data-he>Claude, Claude Code, Artifacts ואוטומציות</span></h4>
+              <p>
+                <span data-fr>Pourquoi <strong>Claude</strong> est le meilleur architecte créatif et rédactionnel. Créer des mini-applications et maquettes en direct avec les <strong>Artefacts</strong>, découvrir <strong>Claude Code</strong> et les premières <strong>Automations</strong>.</span>
+                <span data-he>למה <strong>Claude</strong> הוא המוח החזק ביותר לכתיבה, עיצוב ובנייה. יצירת כלים ודפים אינטראקטיביים בזמן אמת עם <strong>Artifacts</strong>, היכרות עם <strong>Claude Code</strong> ואוטומציות חכמות.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">01:30 – 02:15 · PARTIE 3</span>
+              <h4><span data-fr>Aperçu d'Antigravity & Grok + GrokBot</span><span data-he>הצצה ל-Antigravity + Grok & GrokBot</span></h4>
+              <p>
+                <span data-fr>Démonstration d'<strong>Antigravity</strong> (comment plusieurs agents travaillent ensemble). Puis découverte de <strong>Grok</strong> comme travailleur ultra-rapide au quotidien et de <strong>GrokBot</strong> pour exécuter des missions instantanées.</span>
+                <span data-he>הדגמה חיה של <strong>Antigravity</strong> (איך מספר סוכני AI עובדים יחד כצוות). הכרת <strong>Grok</strong> כעובד מהיר במיוחד ו-<strong>GrokBot</strong> לביצוע משימות מיידיות.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">02:15 – 03:00 · PARTIE 4</span>
+              <h4><span data-fr>Gemini / Grok Imagine : Images & Vidéos HD</span><span data-he>יצירת תמונות וסרטונים עם Gemini ו-Grok Imagine</span></h4>
+              <p>
+                <span data-fr>Atelier pratique : générer vos premières photos de studio, textures d'impression, packagings dorés et clips vidéo courts avec <strong>Imagine</strong> et <strong>Google Flow</strong>.</span>
+                <span data-he>סדנה מעשית במקום: כל משתתפת מייצרת תמונות סטודיו מקצועיות, הדמיות מוצרים מוזהבים וסרטונים קצרים ראשונים עם <strong>Imagine</strong> ו-<strong>Google Flow</strong>.</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-deliverable-bar">
+            <strong>🎯 <span data-fr>Livrable de fin de Séance 1 :</span><span data-he>תוצר סיום מפגש 1:</span></strong>
+            <span class="chips">
+              <span class="chip"><span data-fr>Cockpit 5 IA configuré</span><span data-he>סביבת 5 כלי AI מוגדרת</span></span>
+              <span class="chip"><span data-fr>1er Artefact Claude interactif</span><span data-he>Artifact ראשון עובד בקלוד</span></span>
+              <span class="chip"><span data-fr>10 visuels & 2 clips Imagine/Flow</span><span data-he>10 תמונות ו-2 סרטוני AI</span></span>
+            </span>
+          </div>
+        </div>
+      </details>
+
+      <!-- SÉANCE 2 -->
+      <details class="session-card" open>
+        <summary>
+          <div class="sc-head-left">
+            <div class="sc-num">02</div>
+            <div class="sc-title-wrap">
+              <h3>
+                <span data-fr>Séance 2 — Google Flow Poussé (Sans Code), Produits Nekuda, Sites Mockup & 4 Shorts</span>
+                <span data-he>מפגש 2 — Google Flow מתקדם (ללא קוד), מוצרי דפוס נקודה, אתר מוקאפ ו-4 סרטוני Shorts</span>
+              </h3>
+              <p>
+                <span data-fr>Direction artistique Flow sans code · Sublimation des produits Nekuda · Templates web connectables · 1 site mockup + 4 Shorts par participante</span>
+                <span data-he>בימוי מתקדם ב-Flow · פרסום מוצרי דפוס נקודה · תבניות אתרים חכמות · אתר מוקאפ אישי + 4 סרטוני Shorts לכל משתתפת</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-meta">
+            <span class="sc-duration">⏱ 2h30 – 3h00</span>
+          </div>
+        </summary>
+        <div class="sc-body">
+          <div class="sc-timeline">
+            <div class="sc-step">
+              <span class="t-slot">00:00 – 00:45 · PARTIE 1</span>
+              <h4><span data-fr>Google Flow Poussé (100% Sans Code)</span><span data-he>שליטה מתקדמת ב-Google Flow (ללא קוד)</span></h4>
+              <p>
+                <span data-fr>Maîtriser les <em>Ingredients</em> (personnages fixes, produits réels, palettes de couleurs), l'enchaînement des plans (Scene Builder), les mouvements de caméra cinéma et la lumière studio.</span>
+                <span data-he>עבודה עם <em>Ingredients</em> (שמירה על עקביות מוצר ודמות), בניית רצף סצנות קולנועי, תנועות מצלמה (Macro, Orbit, Dolly) ותאורת סטודיו יוקרתית ללא שורת קוד אחת.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">00:45 – 01:30 · PARTIE 2</span>
+              <h4><span data-fr>Création Artistique & Produits Imprimerie Nekuda</span><span data-he>יצירה אמנותית סביב מוצרי הדפוס של נקודה</span></h4>
+              <p>
+                <span data-fr>Prendre les vrais produits de <code>nekudap.co.il</code> (cartes de visite à dorure/embossage, cahiers à spirale griffés, flyers, découpe laser, boîtes) et les mettre en scène dans des publicités dignes des plus grandes marques.</span>
+                <span data-he>לוקחים את המוצרים האמיתיים מתוך <code>nekudap.co.il</code> (כרטיסי ביקור עם פויל והבלטה, מחברות ספירלה ממותגות, חיתוך צורני, פנקסים) והופכים אותם לפרסומות וידאו עוצרות נשימה.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">01:30 – 02:15 · PARTIE 3</span>
+              <h4><span data-fr>Templates de Sites Internet Connectables</span><span data-he>תבניות אתרים מוכנות לחיבור עסקי</span></h4>
+              <p>
+                <span data-fr>Explorer et personnaliser notre bibliothèque de templates Design 3.0 (bilingues FR/HE, mobile-first, prêts à brancher WhatsApp, formulaires de devis et galeries vidéo).</span>
+                <span data-he>עבודה עם תבניות אתרי פרימיום (בעברית RTL וצרפתית, מותאמים למובייל) שמוכנים להתחבר לוואטסאפ, לטפסי הזמנה ולגלריות הווידאו שיצרתן.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">02:15 – 03:00 · PARTIE 4</span>
+              <h4><span data-fr>Sprint Individuel : Ton Site Mockup + Tes 4 Premiers Shorts</span><span data-he>ספרינט אישי: אתר מוקאפ + 4 סרטוני Shorts ראשונים</span></h4>
+              <p>
+                <span data-fr>Chaque participante (Michal, Gemma et chacune de leurs amies) assemble son propre site internet mockup complet ET exporte ses <strong>4 premiers Shorts / Reels verticaux (9:16)</strong> prêts pour Instagram, TikTok et YouTube.</span>
+                <span data-he>כל משתתפת (מיכל, ג׳מה וכל אחת מהחברות) בונה לעצמה אתר מוקאפ שלם ומייצאת את <strong>4 סרטוני ה-Shorts / Reels הראשונים שלה (9:16)</strong> מוכנים לפרסום באינסטגרם, טיקטוק ויוטיוב.</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-deliverable-bar">
+            <strong>🎯 <span data-fr>Livrable de fin de Séance 2 :</span><span data-he>תוצר סיום מפגש 2:</span></strong>
+            <span class="chips">
+              <span class="chip"><span data-fr>1 Site Mockup par participante</span><span data-he>אתר מוקאפ אישי לכל משתתפת</span></span>
+              <span class="chip"><span data-fr>4 Shorts/Reels 9:16 exportés chacune</span><span data-he>4 סרטוני Shorts/Reels מוכנים לכל אחת</span></span>
+              <span class="chip"><span data-fr>Vitrine vidéo Nekuda Print</span><span data-he>קמפיין וידאו למוצרי דפוס נקודה</span></span>
+            </span>
+          </div>
+        </div>
+      </details>
+
+      <!-- SÉANCE 3 -->
+      <details class="session-card" open>
+        <summary>
+          <div class="sc-head-left">
+            <div class="sc-num">03</div>
+            <div class="sc-title-wrap">
+              <h3>
+                <span data-fr>Séance 3 — Automatisations, Réseaux Sociaux, Vrai Site en Production & Documents Auto</span>
+                <span data-he>מפגש 3 — אוטומציות, חיבור רשתות חברתיות, העלאת האתר לאוויר והפקת מסמכים אוטומטית</span>
+              </h3>
+              <p>
+                <span data-fr>Setup complet sur l'ordinateur · Déploiement du vrai site live · Fonctions de code pour générer devis/catalogues PDF · Automatisation des posts</span>
+                <span data-he>התקנת סביבת עבודה מלאה במחשב · העלאת האתר לפרודקשן · קוד שמייצר הצעות מחיר וקטלוגים אוטומטית · פרסום אוטומטי ברשתות</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-meta">
+            <span class="sc-duration">⏱ 2h30 – 3h00</span>
+          </div>
+        </summary>
+        <div class="sc-body">
+          <div class="sc-timeline">
+            <div class="sc-step">
+              <span class="t-slot">00:00 – 00:45 · PARTIE 1</span>
+              <h4><span data-fr>Setup Complet de l'Environnement sur l'Ordinateur</span><span data-he>הקמת סביבת עבודה מלאה על המחשב האישי</span></h4>
+              <p>
+                <span data-fr>Installation pas-à-pas sur vos ordinateurs : Claude Code dans le terminal, Git/GitHub, Vercel, gestion propre des dossiers projets et bonnes pratiques de sécurité.</span>
+                <span data-he>הגדרה מלאה צעד-אחר-צעד על המחשבים בסטודיו: הפעלת Claude Code, חיבור ל-GitHub ול-Vercel, ארגון תיקיות חכם ועבודה בטוחה.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">00:45 – 01:30 · PARTIE 2</span>
+              <h4><span data-fr>Déploiement du Vrai Site en Production (Live URL)</span><span data-he>העלאת האתר האמיתי לאוויר (Production)</span></h4>
+              <p>
+                <span data-fr>Transformer le mockup de la Séance 2 en un <strong>vrai site en production</strong> accessible partout dans le monde en HTTPS, avec formulaire de commande fonctionnel et bouton WhatsApp direct.</span>
+                <span data-he>הפיכת המוקאפ ממפגש 2 ל<strong>אתר חי באוויר</strong> עם כתובת אינטרנט אמיתית, מותאם לטלפון, עם טופס לידים פעיל וחיבור ישיר לוואטסאפ העסקי.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">01:30 – 02:15 · PARTIE 3</span>
+              <h4><span data-fr>Fonctions de Code : Générer Devis & Documents en Automatique</span><span data-he>פונקציות קוד להפקה אוטומטית של הצעות מחיר ומסמכים</span></h4>
+              <p>
+                <span data-fr>Créer avec Claude Code des fonctions qui génèrent automatiquement des <strong>devis PDF griffés Nekuda (הצעות מחיר)</strong>, des bons de fabrication imprimerie, des factures proforma et des mini-catalogues clients en 1 clic.</span>
+                <span data-he>בניית מנגנון חכם עם Claude Code שמייצר בלחיצת כפתור <strong>הצעות מחיר מעוצבות ב-PDF לדפוס נקודה</strong>, טפסי הזמנת עבודה לדפוס וקטלוגים מותאמים אישית ללקוח.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">02:15 – 03:00 · PARTIE 4</span>
+              <h4><span data-fr>Connexion des Réseaux Sociaux & Automatisation des Posts</span><span data-he>חיבור רשתות חברתיות ואוטומציה של פוסטים</span></h4>
+              <p>
+                <span data-fr>Relier votre écosystème à Instagram, Facebook, TikTok et YouTube Shorts : génération automatique des légendes/hashtags en hébreu et français + calendrier de publication automatisé.</span>
+                <span data-he>חיבור המערכת לאינסטגרם, פייסבוק, טיקטוק ויוטיוב: כתיבה אוטומטית של פוסטים והאשטגים בעברית ובצרפתית ותזמון העלאות אוטומטי.</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-deliverable-bar">
+            <strong>🎯 <span data-fr>Livrable de fin de Séance 3 :</span><span data-he>תוצר סיום מפגש 3:</span></strong>
+            <span class="chips">
+              <span class="chip"><span data-fr>Ordinateur configuré Pro</span><span data-he>מחשב מוגדר מלא עם Claude Code</span></span>
+              <span class="chip"><span data-fr>Site Web LIVE (HTTP 200)</span><span data-he>אתר חי באוויר (HTTP 200)</span></span>
+              <span class="chip"><span data-fr>Générateur Devis PDF Auto</span><span data-he>מחולל הצעות מחיר אוטומטי ב-PDF</span></span>
+              <span class="chip"><span data-fr>Auto-Post Réseaux Sociaux</span><span data-he>מערכת פרסום אוטומטית לרשתות</span></span>
+            </span>
+          </div>
+        </div>
+      </details>
+
+      <!-- SÉANCE 4 -->
+      <details class="session-card" open>
+        <summary>
+          <div class="sc-head-left">
+            <div class="sc-num">04</div>
+            <div class="sc-title-wrap">
+              <h3>
+                <span data-fr>Séance 4 — Films Automatisés de Bout en Bout, Browser Automation & Prospection Client</span>
+                <span data-he>מפגש 4 — הפקת סרטים אוטומטית מקצה לקצה, אוטומציית דפדפן וגיוס לקוחות אוטומטי</span>
+              </h3>
+              <p>
+                <span data-fr>Pipeline film complet (script → voix → vidéo → montage) · Pilotage automatique du navigateur · Prospection B2B reliée à Claude Code</span>
+                <span data-he>צנרת הפקת סרטים מלאה · דפדפן שעובד לבד (Browser Automation) · מערכת איתור וגיוס לקוחות מחוברת ל-Claude Code</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-meta">
+            <span class="sc-duration">⏱ 2h30 – 3h00</span>
+          </div>
+        </summary>
+        <div class="sc-body">
+          <div class="sc-timeline">
+            <div class="sc-step">
+              <span class="t-slot">00:00 – 01:00 · PARTIE 1</span>
+              <h4><span data-fr>Films Automatisés de Bout en Bout (End-to-End Cinema)</span><span data-he>הפקת סרטים אוטומטית מקצה לקצה</span></h4>
+              <p>
+                <span data-fr>Comment construire un film comme le trailer de 54s de A à Z : storyboard IA, génération des plans dans Google Flow & Grok Imagine, voix-off naturelle, assemblage FFmpeg automatique, musique et sous-titres hébreu RTL impeccables.</span>
+                <span data-he>איך מפיקים סרט שלם מקצה לקצה (כמו טריילר 54 השניות שלנו): תסריט, יצירת שוטים ב-Flow ו-Imagine, קריינות טבעית, עריכה אוטומטית ב-FFmpeg, מוזיקה וכתוביות בעברית תקנית.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">01:00 – 01:55 · PARTIE 2</span>
+              <h4><span data-fr>Automatisation des Navigateurs (Browser Automation)</span><span data-he>אוטומציה של דפדפנים (Browser Automation)</span></h4>
+              <p>
+                <span data-fr>Apprendre à déléguer les tâches web répétitives à un agent navigateur : relever des prix fournisseurs, remplir des fiches produits sur le back-office, télécharger des ressources et vérifier ses pages automatiquement.</span>
+                <span data-he>איך גורמים לדפדפן לעבוד בשבילכן: איסוף מידע מספקים, הזנת מוצרים לאתר, בדיקת טפסים וביצוע פעולות חוזרות באינטרנט באופן אוטומטי לחלוטין.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">01:55 – 03:00 · PARTIE 3</span>
+              <h4><span data-fr>Prospection Client Automatisée Reliée à Claude Code</span><span data-he>מערכת גיוס לקוחות אוטומטית מחוברת ל-Claude Code</span></h4>
+              <p>
+                <span data-fr>Trouver automatiquement des entreprises à Bat Yam, Tel Aviv et dans tout Israël (restaurants, avocats, cliniques, marques) qui ont besoin d'imprimerie et de vidéos, générer une maquette personnalisée pour elles et préparer le message d'approche.</span>
+                <span data-he>איתור אוטומטי של עסקים בבת ים, תל אביב והמרכז שזקוקים למיתוג, דפוס ווידאו — יצירת הדמיה אישית עבורם והכנת פנייה חכמה שמתחברת לכל שאר המערכת.</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-deliverable-bar">
+            <strong>🎯 <span data-fr>Livrable de fin de Séance 4 :</span><span data-he>תוצר סיום מפגש 4:</span></strong>
+            <span class="chips">
+              <span class="chip"><span data-fr>1 Film Publicitaire Complet (30–60s)</span><span data-he>סרט פרסומת מלא (30–60 שנ׳)</span></span>
+              <span class="chip"><span data-fr>1 Robot Browser Automation</span><span data-he>תהליך דפדפן אוטומטי עובד</span></span>
+              <span class="chip"><span data-fr>Machine à Leads B2B Connectée</span><span data-he>מערכת פרוספקטינג מחוברת ל-Claude Code</span></span>
+            </span>
+          </div>
+        </div>
+      </details>
+
+      <!-- SÉANCE 5 -->
+      <details class="session-card" open>
+        <summary>
+          <div class="sc-head-left">
+            <div class="sc-num">05</div>
+            <div class="sc-title-wrap">
+              <h3>
+                <span data-fr>Séance 5 — Résumé & Workflow de A à Z, Machine Auto-Améliorante (YouTube) & Contact Direct David</span>
+                <span data-he>מפגש 5 — סיכום ותהליך עבודה מא׳ ועד ת׳, מכונה שמשתפרת מעצמה (יוטיוב) וקשר ישיר לדוד</span>
+              </h3>
+              <p>
+                <span data-fr>Workflow complet de A à Z · Analyse automatique des meilleures chaînes YouTube à modéliser · Soutenance des projets · Pont direct avec David (Jérusalem)</span>
+                <span data-he>חיבור כל המערכת מא׳ עד ת׳ · ניתוח אוטומטי של ערוצי היוטיוב הטובים בעולם · השקת הפרויקטים · ערוץ ישיר לדוד בירושלים</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-meta">
+            <span class="sc-duration">⏱ 2h30 – 3h00</span>
+          </div>
+        </summary>
+        <div class="sc-body">
+          <div class="sc-timeline">
+            <div class="sc-step">
+              <span class="t-slot">00:00 – 00:50 · PARTIE 1</span>
+              <h4><span data-fr>Le Workflow Maître de A à Z</span><span data-he>תהליך העבודה המלא מא׳ ועד ת׳</span></h4>
+              <p>
+                <span data-fr>Unifier tout ce qui a été appris : comment un brief client entrant le matin déclenche la création des visuels d'impression, la vidéo promo, la page web dédiée et le devis PDF en moins d'une heure.</span>
+                <span data-he>איחוד כל הכלים למערכת אחת חלקה: איך פנייה של לקוח בבוקר הופכת תוך פחות משעה להדמיית דפוס, סרטון תדמית, דף נחיתה חי והצעת מחיר מוכנה.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">00:50 – 01:45 · PARTIE 2</span>
+              <h4><span data-fr>Machine Auto-Améliorante : Modéliser les Meilleures Chaînes YouTube</span><span data-he>מכונה שמשתפרת לבד: מעקב ומידול ערוצי היוטיוב המובילים</span></h4>
+              <p>
+                <span data-fr>Installer le radar d'intelligence : comment repérer les vidéos "Outliers" (qui font 10× plus de vues que la moyenne), extraire automatiquement leurs transcripts complets et les transformer en nouvelles compétences pour votre studio.</span>
+                <span data-he>איך גורמים למערכת שלכם להשתפר כל שבוע מעצמה: סריקת ערוצי היוטיוב המובילים בעולם ב-AI ועיצוב, שליפת תמלולים מלאים והפיכת כל טכניקה חדשה לכלי עבודה מיידי בסטודיו.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">01:45 – 02:30 · PARTIE 3</span>
+              <h4><span data-fr>Lancement & Revue Finale de Chaque Participante</span><span data-he>השקת הפרויקטים האישיים של כל משתתפת</span></h4>
+              <p>
+                <span data-fr>Michal, Gemma et chacune de leurs amies valident leur écosystème complet en production : vérification mobile, vitesse, qualité des vidéos et test réel du tunnel client.</span>
+                <span data-he>מיכל, ג׳מה וכל החברות מציגות ובודקות את המערכת המלאה שלהן באוויר: בדיקת אתרים מהנייד, איכות הסרטונים ובדיקת זרימת הלידים והצעות המחיר.</span>
+              </p>
+            </div>
+            <div class="sc-step">
+              <span class="t-slot">02:30 – 03:00 · PARTIE 4</span>
+              <h4><span data-fr>Pont Direct avec David de Jérusalem pour Aller Plus Loin</span><span data-he>קשר ישיר עם דוד מירושלים להמשך צמיחה וליווי</span></h4>
+              <p>
+                <span data-fr>Ouverture du canal direct avec <strong>David Amor (DreamNova Jérusalem)</strong> : accompagnement sur les gros contrats, nouvelles architectures IA et partenariats business entre Bat Yam et Jérusalem.</span>
+                <span data-he>פתיחת ערוץ ישיר מול <strong>דוד אמור (DreamNova ירושלים)</strong>: ליווי בפרויקטים מורכבים ללקוחות גדולים, שדרוגים טכנולוגיים ושיתופי פעולה עסקיים בין בת ים לירושלים.</span>
+              </p>
+            </div>
+          </div>
+          <div class="sc-deliverable-bar">
+            <strong>🎯 <span data-fr>Livrable de fin de Séance 5 :</span><span data-he>תוצר סיום מפגש 5:</span></strong>
+            <span class="chips">
+              <span class="chip"><span data-fr>Système A-Z en Production</span><span data-he>מערכת מלאה מא׳ עד ת׳ באוויר</span></span>
+              <span class="chip"><span data-fr>Radar YouTube Auto-Améliorant</span><span data-he>מנוע למידה אוטומטי מיוטיוב</span></span>
+              <span class="chip"><span data-fr>Ligne Directe David (Jérusalem)</span><span data-he>קשר ישיר עם דוד מירושלים</span></span>
+            </span>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 · CAS PRATIQUE IMPRIMERIE NEKUDA BAT YAM (nekudap.co.il) ══ -->
+<section class="alt" id="cas-nekuda">
+  <div class="wrap">
+    <div class="eyebrow"><span data-fr>Cas Pratique Exclusif · דפוס נקודה (nekudap.co.il)</span><span data-he>מקרה בוחן מעשי · דפוס נקודה בת ים (nekudap.co.il)</span></div>
+    <h2 class="sec-title">
+      <span data-fr>Transformer 2 produits phares de <em>nekudap.co.il</em> en publicités vidéo IA & expériences 3D/Web.</span>
+      <span data-he>איך הופכים 2 מוצרי דגל מתוך <em>nekudap.co.il</em> לפרסומות וידאו AI ולחוויות תלת-ממד באתר.</span>
+    </h2>
+    <p class="sec-sub">
+      <span data-fr>Nous avons analysé le catalogue actuel de <strong>דפוס נקודה (`nekudap.co.il`)</strong>. Voici exactement ce que Michal, Gemma et leurs amies vont construire en séance sur leurs deux produits stars :</span>
+      <span data-he>לקחנו שני מוצרים מרכזיים מתוך האתר הקיים של <strong>דפוס נקודה (`nekudap.co.il`)</strong>. כך בדיוק נהפוך אותם במפגשים שלנו מתמונה סטטית לחוויית מכירה אינטראקטיבית ווידאו ויראלי:</span>
+    </p>
+
+    <div class="nekuda-case-grid">
+
+      <!-- PRODUIT PHARE 1 : CARTES DE VISITE DORURE / EMBOSSAGE -->
+      <div class="case-panel">
+        <div>
+          <span class="tool-tag">PRODUIT PHARE #1 · כרטיסי ביקור בהשבחת פויל והבלטה</span>
+          <h3 style="font-size:1.5rem;color:var(--gold);margin-bottom:8px">
+            <span data-fr>1. Cartes de Visite Premium à Dorure & Embossage</span>
+            <span data-he>1. כרטיסי ביקור יוקרתיים — למינציה, הבלטה ופויל זהב</span>
+          </h3>
+          <p style="color:var(--ink-soft);font-size:.94rem">
+            <span data-fr>Sur <code>nekudap.co.il/כרטיסי-ביקור/</code> : <em>« הדפסה מקצועית ואיכותית של כרטיסי ביקור בהשבחת למינציה, הבלטה ופוייל »</em>. En photo 2D classique, le client ne ressent ni la brillance de l'or ni le relief du papier.</span>
+            <span data-he>מתוך <code>nekudap.co.il/כרטיסי-ביקור/</code>: <em>״הדפסה מקצועית ואיכותית של כרטיסי ביקור בהשבחת למינציה, הבלטה ופוייל״</em>. בתמונה רגילה הלקוח לא מרגיש את הברק של הפויל ואת עומק ההבלטה.</span>
+          </p>
+        </div>
+
+        <div class="case-before-after">
+          <img src="assets/nekuda_cards.jpg" alt="Nekuda Business Cards">
+          <div>
+            <strong style="color:var(--cyan);font-size:.86rem;display:block;margin-bottom:4px">
+              <span data-fr>⚡ TRANSFORMATION IA (SÉANCES 2 & 3) :</span>
+              <span data-he>⚡ השדרוג עם AI (מפגשים 2 ו-3):</span>
+            </strong>
+            <p style="font-size:.86rem;color:var(--ink-soft)">
+              <span data-fr>1) <strong>Spot Vidéo Macro 4K</strong> (Google Flow) où la lumière dorée glisse sur le gaufrage. 2) <strong>Simulateur 3D Web interactif</strong> ci-dessous : testez-le en bougeant la souris ou en tapant le nom d'un client !</span>
+              <span data-he>1) <strong>סרטון מאקרו 4K</strong> ב-Google Flow שבו האור משתקף על הפויל המוזהב. 2) <strong>סימולטור תלת-ממד חי באתר</strong> (נסו להזיז את הכרטיס למטה ולשנות את שם העסק!):</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- LIVE 3D FOIL BUSINESS CARD SIMULATOR -->
+        <div class="foil-stage">
+          <div class="foil-card-3d" id="foilCard3D" onmousemove="tiltFoilCard(event)" onmouseleave="resetFoilCard()">
+            <div class="foil-shimmer" id="foilShimmer"></div>
+            <div>
+              <div class="foil-card-sub" id="cardSubPreview">NEKUDA PRINT · BAT YAM · דפוס נקודה</div>
+              <div class="foil-card-brand" id="cardBrandPreview">STUDIO MICHAL & GEMMA</div>
+            </div>
+            <div class="foil-card-footer">
+              <div>
+                <div style="color:var(--gold);font-weight:600">השבחת פויל זהב + הבלטה 3D</div>
+                <div>nekudap.co.il · 03-6814430</div>
+              </div>
+              <div style="font-family:var(--mono);font-size:.7rem;border:1px solid var(--gold);padding:3px 8px;border-radius:6px;color:var(--gold)">
+                FOIL 350g
+              </div>
+            </div>
+          </div>
+
+          <div class="foil-controls">
+            <input type="text" id="foilInputName" placeholder="Tapez le nom du client / הקלידו שם עסק..." oninput="updateFoilCardText(this.value)">
+            <button type="button" class="btn btn-gold btn-sm" onclick="setFoilFinish('gold')">✨ <span data-fr>Or</span><span data-he>פויל זהב</span></button>
+            <button type="button" class="btn btn-cyan btn-sm" onclick="setFoilFinish('cyan')">💎 <span data-fr>Holo Cyan</span><span data-he>הולוגרפי</span></button>
+            <button type="button" class="btn btn-ghost btn-sm" onclick="setFoilFinish('rose')">🌸 <span data-fr>Or Rose</span><span data-he>רוז גולד</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUIT PHARE 2 : CAHIERS À SPIRALE GRIFFÉS + DEVIS AUTO -->
+      <div class="case-panel">
+        <div>
+          <span class="tool-tag">PRODUIT PHARE #2 · מחברות ספירלה ממותגות לעסק</span>
+          <h3 style="font-size:1.5rem;color:var(--gold);margin-bottom:8px">
+            <span data-fr>2. Cahiers à Spirale Griffés & Devis PDF Automatique</span>
+            <span data-he>2. מחברות ספירלה ממותגות + מחולל הצעת מחיר אוטומטי</span>
+          </h3>
+          <p style="color:var(--ink-soft);font-size:.94rem">
+            <span data-fr>Sur <code>nekudap.co.il/מחברות-ממותגות/</code> : <em>« מגוון מחברות ספירלה ממותגות לעסק שלך במבחר דגמים בעיצוב אישי בכריכה רכה וקשה »</em>. Idéal pour les cadeaux d'entreprise, conférences et écoles !</span>
+            <span data-he>מתוך <code>nekudap.co.il/מחברות-ממותגות/</code>: <em>״מגוון מחברות ספירלה ממותגות לעסק שלך במבחר דגמים בעיצוב אישי בכריכה רכה וקשה״</em>. מוצר מושלם לחברות, כנסים ומתנות ממותגות!</span>
+          </p>
+        </div>
+
+        <div class="case-before-after">
+          <img src="assets/nekuda_notebooks.jpg" alt="Nekuda Branded Spiral Notebooks">
+          <div>
+            <strong style="color:var(--cyan);font-size:.86rem;display:block;margin-bottom:4px">
+              <span data-fr>⚡ TRANSFORMATION IA (SÉANCES 2, 3 & 4) :</span>
+              <span data-he>⚡ השדרוג עם AI (מפגשים 2, 3 ו-4):</span>
+            </strong>
+            <p style="font-size:.86rem;color:var(--ink-soft)">
+              <span data-fr>1) <strong>Reel 9:16</strong> : le cahier s'ouvre face à la mer de Bat Yam et libère le logo du client en 3D. 2) <strong>Calculateur de Devis Instantané</strong> (Séance 3) : testez la fonction de devis automatique ci-dessous !</span>
+              <span data-he>1) <strong>סרטון Reel</strong> שבו המחברת נפתחת מול הים בבת ים והלוגו מתעורר לחיים. 2) <strong>פונקציית הצעת מחיר אוטומטית</strong> (מפגש 3) — נסו את המחשבון החי למטה:</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- LIVE INTERACTIVE SPIRAL NOTEBOOK QUOTE GENERATOR -->
+        <div class="notebook-sim">
+          <div class="nb-controls-row">
+            <select id="nbCover" onchange="calcNotebookQuote()">
+              <option value="hard">כריכה קשה + למינציה / Couverture Rigide</option>
+              <option value="soft">כריכה רכה צבעונית / Couverture Souple</option>
+              <option value="foil">כריכה קשה + פויל זהב / Rigide + Dorure Or</option>
+            </select>
+            <select id="nbQty" onchange="calcNotebookQuote()">
+              <option value="50">50 יחידות / 50 ex.</option>
+              <option value="100" selected>100 יחידות / 100 ex.</option>
+              <option value="250">250 יחידות / 250 ex.</option>
+              <option value="500">500 יחידות / 500 ex.</option>
+            </select>
+          </div>
+          <div class="nb-controls-row">
+            <input type="text" id="nbClient" placeholder="Nom Entreprise / שם הלקוח (למשל: סטודיו בת ים)" oninput="calcNotebookQuote()">
+            <select id="nbSpiral" onchange="calcNotebookQuote()">
+              <option value="ספירלה מוזהבת / Spirale Or">ספירלה מוזהבת / Spirale Or</option>
+              <option value="ספירלה שחורה מט / Spirale Noire">ספירלה שחורה מט / Spirale Noire</option>
+              <option value="ספירלה כסופה / Spirale Argent">ספירלה כסופה / Spirale Argent</option>
+            </select>
+          </div>
+
+          <div class="quote-preview-box" id="quotePreviewBox">
+            <div class="q-header">
+              <span>📄 הצעת מחיר אוטומטית · דפוס נקודה (NEKUDA-2026)</span>
+              <span id="qDate">18/10/2026</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+              <div>
+                <div style="font-weight:700;color:var(--ink)" id="qDesc">100 × מחברות ספירלה ממותגות (כריכה קשה + למינציה)</div>
+                <div style="font-size:.8rem;color:var(--ink-soft)" id="qMeta">עבור: לקוח VIP · גימור: ספירלה מוזהבת · מוכן לדפוס</div>
+              </div>
+              <div class="q-price" id="qTotal">2,200 ₪</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button type="button" class="btn btn-gold btn-sm" style="flex:1" onclick="printInstantQuote()">
+              🖨️ <span data-fr>Générer le Devis PDF en 1 Clic</span><span data-he>הפקת הצעת מחיר PDF בלחיצה</span>
+            </button>
+            <a id="waQuoteLink" href="https://wa.me/972523230240?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%A4%D7%95%D7%A1%20%D7%A0%D7%A7%D7%95%D7%93%D7%94" target="_blank" rel="noopener" class="btn btn-cyan btn-sm">
+              💬 <span data-fr>Envoyer sur WhatsApp</span><span data-he>שליחה בוואטסאפ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 · CENTRE DE PROMPTS COPIABLES EN 1 CLIC (GOOGLE FLOW & GROK IMAGINE) ══ -->
+<section id="prompts">
+  <div class="wrap">
+    <div class="eyebrow"><span data-fr>Prompt Studio · Copiable en 1 Clic</span><span data-he>מרכז הפרומפטים · העתקה בלחיצה אחת</span></div>
+    <h2 class="sec-title">
+      <span data-fr>Vos Prompts Prêts à l'Emploi pour <em>Google Flow, Grok Imagine & Claude Code</em>.</span>
+      <span data-he>הפרומפטים המוכנים שלכן עבור <em>Google Flow, Grok Imagine ו-Claude Code</em>.</span>
+    </h2>
+    <p class="sec-sub">
+      <span data-fr>Cliquez sur n'importe quel prompt ci-dessous pour le copier instantanément et le coller dans Google Flow ou Grok Imagine pendant nos séances.</span>
+      <span data-he>לחצו על כל כפתור כדי להעתיק את הפרומפט המדויק ולהדביק אותו ישירות ב-Google Flow, ב-Grok Imagine או ב-Claude Code.</span>
+    </p>
+
+    <div class="prompt-filters">
+      <button type="button" class="pf-btn active" onclick="filterPrompts('all', this)"><span data-fr>Tous les Prompts (8)</span><span data-he>כל הפרומפטים (8)</span></button>
+      <button type="button" class="pf-btn" onclick="filterPrompts('flow', this)">🎬 Google Flow (Vidéo)</button>
+      <button type="button" class="pf-btn" onclick="filterPrompts('imagine', this)">✨ Grok Imagine (Photo/Vidéo)</button>
+      <button type="button" class="pf-btn" onclick="filterPrompts('claude', this)">⚡ Claude Code (Sites & Devis)</button>
+    </div>
+
+    <div class="prompts-grid" id="promptsGrid">
+
+      <!-- Prompt 1 -->
+      <div class="prompt-card" data-cat="flow">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--gold)"><span data-fr>1. Cartes de Visite Dorure Or (Macro 4K)</span><span data-he>1. כרטיסי ביקור פויל זהב (צילום מאקרו 4K)</span></strong>
+            <span class="prompt-engine">Google Flow</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Idéal pour sublimer le produit phare #1 de <code>nekudap.co.il</code> en Reel Instagram.</span>
+            <span data-he>מושלם ליצירת סרטון יוקרתי עבור כרטיסי הביקור המושבחים של דפוס נקודה.</span>
+          </p>
+          <div class="prompt-box" id="pText1">Extreme macro cinematic commercial shot, 85mm lens f/1.4: a stack of ultra-thick matte obsidian black business cards resting on a dark marble studio table in Bat Yam. Warm golden sunlight sweeps across the raised 3D gold foil embossed logo, creating shimmering specular highlights and subtle golden dust particles floating in slow motion, 4k photorealistic luxury print studio aesthetic.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText1', this)">
+          📋 <span data-fr>Copier le prompt Google Flow</span><span data-he>העתק פרומפט ל-Google Flow</span>
+        </button>
+      </div>
+
+      <!-- Prompt 2 -->
+      <div class="prompt-card" data-cat="flow">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--gold)"><span data-fr>2. Cahier à Spirale Griffé face à la Mer de Bat Yam</span><span data-he>2. מחברת ספירלה ממותגת מול הים בבת ים</span></strong>
+            <span class="prompt-engine">Google Flow</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Transforme les cahiers à spirale (<code>מחברות ממותגות</code>) en vidéo virale 9:16.</span>
+            <span data-he>הופך את המחברות הממותגות של דפוס נקודה לסרטון Reel מהפנט.</span>
+          </p>
+          <div class="prompt-box" id="pText2">Smooth orbital dolly shot: a custom branded hardcover spiral notebook with metallic gold twin-wire binding sits on a sunlit creative designer desk overlooking the turquoise Mediterranean beach of Bat Yam. A gentle sea breeze flips the crisp cream pages open, and glowing cyan and gold 3D geometric design sketches rise magically from the paper into the air, cinematic commercial lighting.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText2', this)">
+          📋 <span data-fr>Copier le prompt Google Flow</span><span data-he>העתק פרומפט ל-Google Flow</span>
+        </button>
+      </div>
+
+      <!-- Prompt 3 -->
+      <div class="prompt-card" data-cat="imagine">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--cyan)"><span data-fr>3. Du Studio Nekuda Bat Yam jusqu'à la Lune</span><span data-he>3. מסטודיו דפוס נקודה בבת ים ועד הירח</span></strong>
+            <span class="prompt-engine grok">Grok Imagine</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Le plan final spectaculaire du trailer (Chapitre 7 : Moonshot).</span>
+            <span data-he>השוט הסופי המרהיב מתוך הטריילר (פרק 7: המראה לירח).</span>
+          </p>
+          <div class="prompt-box" id="pText3">Epic continuous camera zoom-out: starting inside a vibrant high-tech boutique print & design studio in Bat Yam filled with golden foil prints and neon cyan holographic screens, zooming smoothly through the glass window over the Mediterranean coast, rising into outer space and landing on the surface of the Moon where a glowing golden flagship studio dome shines with Earth in the starry background, 8k IMAX quality.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText3', this)">
+          📋 <span data-fr>Copier le prompt Grok Imagine</span><span data-he>העתק פרומפט ל-Grok Imagine</span>
+        </button>
+      </div>
+
+      <!-- Prompt 4 -->
+      <div class="prompt-card" data-cat="imagine">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--cyan)"><span data-fr>4. Coffret Packaging & Découpe Laser (חיתוך צורני)</span><span data-he>4. מארז יוקרתי וחיתוך צורני (Die-Cut Packaging)</span></strong>
+            <span class="prompt-engine grok">Grok Imagine</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Pour présenter les découpes laser et packagings sur-mesure de Nekuda.</span>
+            <span data-he>ליצירת הדמיות מרהיבות של חיתוך צורני, מדבקות ומארזים ממותגים.</span>
+          </p>
+          <div class="prompt-box" id="pText4">High-speed product cinematography: intricate laser die-cut luxury gift boxes and holographic vinyl stickers assembling themselves mid-air in a sleek dark studio, dramatic rim lighting in gold and cyan, crisp paper textures, ultra-detailed commercial photography, 8k resolution.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText4', this)">
+          📋 <span data-fr>Copier le prompt Grok Imagine</span><span data-he>העתק פרומפט ל-Grok Imagine</span>
+        </button>
+      </div>
+
+      <!-- Prompt 5 -->
+      <div class="prompt-card" data-cat="flow">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--gold)"><span data-fr>5. Traversée Jérusalem (Kotel) → Train → Bat Yam</span><span data-he>5. מסע מירושלים (הכותל) ← רכבת ← בת ים</span></strong>
+            <span class="prompt-engine">Google Flow</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Transition dynamique reliant Jérusalem au studio de Bat Yam.</span>
+            <span data-he>מעבר קולנועי שמחבר את ירושלים והרכבת המהירה לחוף בת ים.</span>
+          </p>
+          <div class="prompt-box" id="pText5">Cinematic match-cut sequence: golden hour light on the ancient stones of the Western Wall in Jerusalem transitioning into a sleek high-speed Israeli train gliding past coastal palms with a glowing laptop screen displaying AI workflows, arriving at the sunny Bat Yam promenade at sunset, warm anamorphic lens flare.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText5', this)">
+          📋 <span data-fr>Copier le prompt Google Flow</span><span data-he>העתק פרומפט ל-Google Flow</span>
+        </button>
+      </div>
+
+      <!-- Prompt 6 -->
+      <div class="prompt-card" data-cat="claude">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--gold)"><span data-fr>6. Site Vitrine + Catalogue Connecté en 1 Prompt</span><span data-he>6. בניית אתר פרימיום וקטלוג מחובר בפרומפט אחד</span></strong>
+            <span class="prompt-engine">Claude Code</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Le prompt exact utilisé en Séance 2 & 3 pour générer et déployer un site complet.</span>
+            <span data-he>הפרומפט המדויק למפגשים 2 ו-3 לבניית אתר דו-לשוני מלא והעלאתו לאוויר.</span>
+          </p>
+          <div class="prompt-box" id="pText6">Crée un site web one-page Design 3.0 bilingue Hébreu (RTL, police Heebo/Frank Ruhl Libre) et Français (LTR, police Outfit/Fraunces) pour notre studio d'imprimerie et de création à Bat Yam. Inclus : Hero vidéo, galerie interactive de nos produits (cartes de visite dorure, cahiers à spirale, flyers, stickers), calculateur de devis instantané en Shekels (₪) exportable en PDF, et bouton WhatsApp pré-rempli.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText6', this)">
+          📋 <span data-fr>Copier le prompt Claude Code</span><span data-he>העתק פרומפט ל-Claude Code</span>
+        </button>
+      </div>
+
+      <!-- Prompt 7 -->
+      <div class="prompt-card" data-cat="claude">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--gold)"><span data-fr>7. Générateur Automatique de Devis PDF (הצעות מחיר)</span><span data-he>7. פונקציית קוד להפקת הצעות מחיר אוטומטיות ב-PDF</span></strong>
+            <span data-engine class="prompt-engine">Claude Code</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Pour automatiser les devis et bons de commande dès la Séance 3.</span>
+            <span data-he>לאוטומציה של הצעות מחיר וטפסי הזמנה בדפוס נקודה (מפגש 3).</span>
+          </p>
+          <div class="prompt-box" id="pText7">Écris un script et une interface web RTL en hébreu pour דפוס נקודה (nekudap.co.il) qui prend en entrée : le nom du client, le produit (כרטיסי ביקור פויל / מחברות ספירלה / פליירים / מדבקות), la quantité, le type de papier et de finition, calcule automatiquement le prix HT et TTC (מע"מ 18%) en ₪, et génère un PDF propre prêt à envoyer sur WhatsApp.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText7', this)">
+          📋 <span data-fr>Copier le prompt Claude Code</span><span data-he>העתק פרומפט ל-Claude Code</span>
+        </button>
+      </div>
+
+      <!-- Prompt 8 -->
+      <div class="prompt-card" data-cat="claude">
+        <div>
+          <div class="prompt-card-top">
+            <strong style="color:var(--cyan)"><span data-fr>8. Machine de Prospection Locale (Bat Yam & Gush Dan)</span><span data-he>8. סוכן איתור לקוחות עסקיים בבת ים וגוש דן</span></strong>
+            <span class="prompt-engine grok">Claude Code + Browser</span>
+          </div>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin:8px 0">
+            <span data-fr>Utilisé en Séance 4 & 5 pour identifier des clients B2B autour de Bat Yam.</span>
+            <span data-he>למפגשים 4 ו-5: בניית רשימת לקוחות פוטנציאליים והצעה מותאמת אישית.</span>
+          </p>
+          <div class="prompt-box" id="pText8">Analyse cette liste de 20 nouveaux commerces, cabinets et restaurants à Bat Yam, Holon et Tel Aviv. Pour chacun, identifie les 2 produits d'imprimerie de nekudap.co.il les plus pertinents (ex: cartes de visite dorées + carnets griffés ou menus pelliculés), génère un concept visuel personnalisé et rédige un message WhatsApp chaleureux en hébreu de la part de Michal & Gemma.</div>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt('pText8', this)">
+          📋 <span data-fr>Copier le prompt Prospection</span><span data-he>העתק פרומפט לגיוס לקוחות</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 · SÉANCE 5 FOCUS : MACHINE AUTO-AMÉLIORANTE & CHAÎNES YOUTUBE À MODÉLISER ══ -->
+<section class="alt" id="youtube-machine">
+  <div class="wrap">
+    <div class="eyebrow"><span data-fr>Séance 5 · Veille & Croissance Auto-Améliorante</span><span data-he>מפגש 5 · מערכת למידה וצמיחה שמשתפרת מעצמה</span></div>
+    <h2 class="sec-title">
+      <span data-fr>La Machine Auto-Améliorante : <em>Modéliser les Meilleures Chaînes YouTube</em>.</span>
+      <span data-he>המכונה שמשתפרת מעצמה: <em>ניתוח ומידול ערוצי היוטיוב הטובים בעולם</em>.</span>
+    </h2>
+    <p class="sec-sub">
+      <span data-fr>L'IA évolue chaque semaine. En Séance 5, nous installons votre radar automatique : il détecte les vidéos qui performent ("Outliers"), extrait leurs transcripts complets et transforme leurs secrets en workflows prêts à l'emploi pour Nekuda.</span>
+      <span data-he>עולם ה-AI מתקדם בכל שבוע. במפגש 5 נקים עבורכן מנגנון אוטומטי שסורק את הערוצים המובילים בארץ ובעולם, מחלץ את התמלול המלא של הסרטונים המצליחים ביותר והופך אותם ליכולות חדשות בסטודיו.</span>
+    </p>
+
+    <div class="yt-table-wrap">
+      <table class="yt-table">
+        <thead>
+          <tr>
+            <th><span data-fr>Domaine / Spécialité</span><span data-he>תחום התמחות</span></th>
+            <th><span data-fr>Chaînes YouTube de Référence à Modéliser</span><span data-he>ערוצי יוטיוב מומלצים למעקב ומידול</span></th>
+            <th><span data-fr>Ce que votre Machine extrait automatiquement</span><span data-he>מה המערכת מפיקה מהם אוטומטית עבור נקודה</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--gold)"><span data-fr>Cinéma IA & Google Flow</span><span data-he>קולנוע AI ו-Google Flow</span></strong></td>
+            <td>Curious Refuge · Theoretical Media · Runway / Google DeepMind Showcase</td>
+            <td><span data-fr>Nouveaux mouvements de caméra, prompts de textures (papier, or, verre) et transitions virales pour vos Reels.</span><span data-he>תנועות מצלמה חדשות, פרומפטים לטקסטורות דפוס (זהב, נייר, הבלטות) ומעברים ויראליים ל-Reels.</span></td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--cyan)"><span data-fr>Claude Code & Agents (Global & IL)</span><span data-he>Claude Code ואוטומציות (בעולם ובישראל)</span></strong></td>
+            <td>Greg Isenberg · Riley Brown · Mor Nissim (מור ניסים) · Eliron · Digital Culture IL</td>
+            <td><span data-fr>Nouveaux templates de sites, scripts d'automatisation de devis et connecteurs WhatsApp / CRM en hébreu.</span><span data-he>תבניות אתרים חדשות, אוטומציות וואטסאפ בעברית וכלים לחיסכון בזמן בניהול לקוחות.</span></td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--gold)"><span data-fr>Design, Branding & Print Moderne</span><span data-he>עיצוב גרפי, מיתוג ודפוס מתקדם</span></strong></td>
+            <td>The Futur (Chris Do) · Abi Connick · Brandon Shepherd · Studio Vlog Packaging</td>
+            <td><span data-fr>Structures d'offres premium, mise en scène d'unboxing de carnets/cartes et psychologie des prix B2B.</span><span data-he>אריזת הצעות מחיר יוקרתיות, רעיונות לצילומי Unboxing של מארזים ומחברות ותמחור חכם.</span></td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--cyan)"><span data-fr>Prospection & Croissance Locale</span><span data-he>שיווק, מכירות וגיוס לקוחות</span></strong></td>
+            <td>Patrick Dang · Alex Hormozi · Lia Katz (YouTube Authority) · DreamNova Academy</td>
+            <td><span data-fr>Scripts d'approche B2B, structure de vidéos courtes qui convertissent et systèmes de suivi client.</span><span data-he>תסריטי פנייה ללקוחות עסקיים, מבנה סרטונים שמייצרים פניות ומערכות מעקב לידים.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 · CONTACT DIRECT AVEC DAVID DE JÉRUSALEM & STUDIO NEKUDA BAT YAM ══ -->
+<section id="contact-david">
+  <div class="wrap">
+    <div class="david-contact-box">
+      <div>
+        <div class="eyebrow"><span data-fr>Pont Direct Jérusalem ↔ Bat Yam</span><span data-he>גשר ישיר: ירושלים ↔ בת ים</span></div>
+        <div class="david-profile">
+          <img src="assets/david_poster.jpg" alt="David Amor — DreamNova Jérusalem">
+          <div>
+            <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:4px">
+              <span data-fr>David Amor · <em>DreamNova Jérusalem</em></span>
+              <span data-he>דוד אמור · <em>DreamNova ירושלים</em></span>
+            </h2>
+            <p style="color:var(--cyan);font-family:var(--mono);font-size:.82rem">
+              <span data-fr>Fondateur DreamNova · 28 sites en prod · 58 systèmes IA construits</span>
+              <span data-he>מייסד DreamNova · 28 אתרים באוויר · 58 מערכות AI בפרודקשן</span>
+            </p>
+          </div>
+        </div>
+
+        <p style="color:var(--ink-soft);font-size:1.04rem;margin-bottom:24px">
+          <span data-fr>« Michal, Gemma et toute l'équipe de <strong>דפוס נקודה (Nekuda Print)</strong> : ce programme a été pensé spécialement pour votre studio à Bat Yam. Pendant nos 5 séances et bien après, vous avez ma ligne directe à Jérusalem pour construire, automatiser et décrocher vos plus beaux clients. »</span>
+          <span data-he>״מיכל, ג׳מה והחברות ב<strong>דפוס נקודה</strong>: התוכנית הזו נבנתה במיוחד למידות של הסטודיו ובית הדפוס שלכן בבת ים. לאורך 5 המפגשים וגם אחריהם, יש לכן קו ישיר אליי לירושלים לכל שאלה, פרויקט גדול או אוטומציה חדשה.״</span>
+        </p>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="https://wa.me/972584921492?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%93%2C%20%D7%9B%D7%90%D7%9F%20%D7%9E%D7%99%D7%9B%D7%9C%20%D7%95%D7%92%27%D7%9E%D7%94%20%D7%9E%D7%93%D7%A4%D7%95%D7%A1%20%D7%A0%D7%A7%D7%95%D7%93%D7%94%20%D7%91%D7%AA%20%D7%99%D7%9D%20%E2%80%94%20%D7%A8%D7%95%D7%A6%D7%95%D7%AA%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%A4%D7%92%D7%A9%D7%99%D7%9D!" target="_blank" rel="noopener" class="btn btn-gold">
+            💬 <span data-fr>Écrire à David sur WhatsApp (+972 58-492-1492)</span><span data-he>וואטסאפ ישיר לדוד בירושלים (058-4921492)</span>
+          </a>
+          <a href="cours/" class="btn btn-cyan">
+            📚 <span data-fr>Ouvrir le Syllabus Complet des 5 Séances</span><span data-he>פתיחת סילבוס הקורס המפורט</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="background:rgba(7,11,20,.82);border:1px solid var(--line);border-radius:20px;padding:26px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;border-bottom:1px solid var(--line);padding-bottom:12px">
+          <img src="assets/nekuda_logo.png" alt="דפוס נקודה" style="height:44px;background:#fff;padding:4px 10px;border-radius:8px">
+          <span class="tool-tag" style="margin:0">BAT YAM · TEL AVIV</span>
+        </div>
+        <h3 style="font-size:1.25rem;color:var(--gold);margin-bottom:10px">
+          <span data-fr>Fiche Studio : דפוס נקודה (Nekuda Print)</span>
+          <span data-he>פרטי הסטודיו: דפוס נקודה בע״מ</span>
+        </h3>
+        <ul style="list-style:none;display:grid;gap:8px;font-size:.92rem;color:var(--ink-soft)">
+          <li>👥 <strong><span data-fr>Participantes :</span><span data-he>משתתפות:</span></strong> <span data-fr>Michal, Gemma + 2 à 4 amies créatives</span><span data-he>מיכל, ג׳מה + 2 עד 4 חברות</span></li>
+          <li>🌐 <strong><span data-fr>Site officiel :</span><span data-he>אתר קיים:</span></strong> <a href="https://nekudap.co.il" target="_blank" rel="noopener" style="color:var(--cyan)">nekudap.co.il</a></li>
+          <li>📞 <strong><span data-fr>Téléphone :</span><span data-he>טלפון דפוס נקודה:</span></strong> <a href="tel:03-6814430" style="color:var(--gold)">03-6814430</a> · <a href="tel:052-3230240" style="color:var(--gold)">052-3230240</a></li>
+          <li>⏱ <strong><span data-fr>Format :</span><span data-he>מתכונת הקורס:</span></strong> <span data-fr>5 séances × 2h30 à 3h00 (15h de pratique)</span><span data-he>5 מפגשים × 2.5 עד 3 שעות (15 שעות מעשיות)</span></li>
+          <li>🚀 <strong><span data-fr>Objectif :</span><span data-he>מטרת העל:</span></strong> <span data-fr>Autonomie totale IA (Web, Vidéo, Print, Automatisation & Clients)</span><span data-he>עצמאות מלאה ב-AI (אתרים, וידאו, דפוס, אוטומציה ולקוחות)</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="wrap">
+    <p style="color:var(--gold);font-family:var(--serif);font-size:1.05rem;margin-bottom:6px">
+      בס״ד · Nekuda AI Academy — דפוס נקודה × DreamNova Studios (Jérusalem · Bat Yam)
+    </p>
+    <p>
+      <a href="#trailer" style="color:var(--ink-soft)">Trailer 54s</a> ·
+      <a href="#programme" style="color:var(--ink-soft)"><span data-fr>5 Séances</span><span data-he>5 מפגשים</span></a> ·
+      <a href="#cas-nekuda" style="color:var(--ink-soft)">Nekuda Print 3D</a> ·
+      <a href="#prompts" style="color:var(--ink-soft)">Prompt Studio</a> ·
+      <a href="cours/" style="color:var(--gold)"><span data-fr>Syllabus Complet</span><span data-he>סילבוס מלא</span></a> ·
+      <a href="https://nekudap.co.il" target="_blank" rel="noopener" style="color:var(--cyan)">nekudap.co.il</a>
+    </p>
+  </div>
+</footer>
+
+<div id="toast">✓ Copié dans le presse-papier !</div>
+
+<script>
+// ══ 1. BILINGUAL SWITCHER (FR LTR <-> HE RTL) ══
+let currentLang = 'fr';
+
+function setLanguage(lang) {
+  currentLang = lang === 'he' ? 'he' : 'fr';
+  document.body.classList.toggle('he', currentLang === 'he');
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+  document.getElementById('btnFr').classList.toggle('active', currentLang === 'fr');
+  document.getElementById('btnHe').classList.toggle('active', currentLang === 'he');
+  try { localStorage.setItem('nekuda_lang', currentLang); } catch (e) {}
+  renderStoryboardChapter(currentChapIndex);
+  calcNotebookQuote();
+}
+
+(function initLang() {
+  const params = new URLSearchParams(window.location.search);
+  let saved = params.get('lang');
+  if (!saved) {
+    try { saved = localStorage.getItem('nekuda_lang'); } catch (e) {}
+  }
+  if (saved === 'he' || saved === 'fr') {
+    setLanguage(saved);
+  }
+})();
+
+// ══ 2. 7-CHAPTER 54s HERO TRAILER & INTERACTIVE STORYBOARD ══
+const chaptersData = [
+  {
+    start: 0, end: 8, timeLabel: "00:00 – 00:08",
+    icon: "🕊️",
+    bg: "radial-gradient(circle at 50% 35%, rgba(230, 195, 106, 0.34), rgba(7, 11, 20, 0.94))",
+    fr: {
+      badge: "CHAPITRE 01 / 07 · SORTIE DU KOTEL (JÉRUSALEM)",
+      title: "1. Sortie du Kotel, Jérusalem (0:00 – 0:08)",
+      desc: "Lumière dorée sur les pierres de Jérusalem. David avance vers la caméra avec le coffret Nekuda doré.",
+      quote: "« Shalom Michal, Gemma et les amies de Bat Yam ! Je suis David de Jérusalem. Je suis parti de zéro — avec une petite base technique, beaucoup de prière et d'Emouna — et j'ai bâti depuis Jérusalem un empire d'IA. »"
+    },
+    he: {
+      badge: "פרק 01 / 07 · הכותל המערבי (ירושלים)",
+      title: "1. יציאה מהכותל, ירושלים (0:00 – 0:08)",
+      desc: "אור זהוב על אבני ירושלים. דוד צועד לכיוון המצלמה עם מארז קטלוג הדפוס המוזהב של נקודה.",
+      quote: "״שלום מיכל, ג'מה והחברות מבת ים! אני דוד מירושלים. התחלתי מאפס — עם רקע טכני קטן, הרבה תפילה ואמונה — ובניתי מירושלים אימפריה של בינה מלאכותית.״"
+    }
+  },
+  {
+    start: 8, end: 16, timeLabel: "00:08 – 00:16",
+    icon: "⚡",
+    bg: "radial-gradient(circle at 30% 40%, rgba(34, 211, 238, 0.28), rgba(7, 11, 20, 0.94))",
+    fr: {
+      badge: "CHAPITRE 02 / 07 · RUE BEN YEHUDA (SÉANCE 1)",
+      title: "2. Rue Ben Yehuda, Jérusalem (0:08 – 0:16) · Séance 1",
+      desc: "Transition fluide vers le centre piéton animé. Icônes holographiques dorées flottant autour du coffret Nekuda.",
+      quote: "« Dans la Séance 1, nous découvrirons les super-outils qui vont changer votre vie : Gemini, Google Flow, Claude Code, Antigravity, Grok et GrokBot — votre nouvelle équipe personnelle. »"
+    },
+    he: {
+      badge: "פרק 02 / 07 · מדרחוב בן יהודה (מפגש 1)",
+      title: "2. מדרחוב בן יהודה, ירושלים (0:08 – 0:16) · מפגש 1",
+      desc: "מעבר חלק למדרחוב התוסס בירושלים. סמלי הולוגרמה מוזהבים של כלי ה-AI מרחפים סביב המארז של נקודה.",
+      quote: "״במפגש הראשון נכיר את כלי העל שישנו לכן את החיים: ג'מיני, גוגל פלו, קלוד קוד, אנטיגרביטי, גרוק וגרוק-בוט — הצוות האישי החדש שלכן.״"
+    }
+  },
+  {
+    start: 16, end: 24, timeLabel: "00:16 – 00:24",
+    icon: "🚉",
+    bg: "radial-gradient(circle at 70% 35%, rgba(230, 195, 106, 0.26), rgba(16, 26, 48, 0.95))",
+    fr: {
+      badge: "CHAPITRE 03 / 07 · TACHANA MERKAZIT (SÉANCE 2)",
+      title: "3. Tachana Merkazit, Jérusalem (0:16 – 0:24) · Séance 2",
+      desc: "Le catalogue Nekuda s'ouvre et projette des créations vidéo et mockups 3D sans une seule ligne de code.",
+      quote: "« Dans la Séance 2, les produits Nekuda prennent vie ! Nous créerons ensemble sur Google Flow sans une seule ligne de code, construirons la maquette du site et produirons vos 4 premiers Shorts et Reels. »"
+    },
+    he: {
+      badge: "פרק 03 / 07 · התחנה המרכזית ירושלים (מפגש 2)",
+      title: "3. התחנה המרכזית, ירושלים (0:16 – 0:24) · מפגש 2",
+      desc: "קטלוג נקודה נפתח ומקרין באוויר יצירות וידאו, סקיצת אתר וארבעה סרטוני Shorts/Reels ללא קוד.",
+      quote: "״במפגש השני, המוצרים של 'נקודה' מתעוררים לחיים! ניצור יחד בגוגל פלו בלי שורת קוד אחת, נבנה סקיצה לאתר, ונפיק ארבעה סרטוני שורטס ורילס ראשונים.״"
+    }
+  },
+  {
+    start: 24, end: 32, timeLabel: "00:24 – 00:32",
+    icon: "🚄",
+    bg: "radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.32), rgba(7, 11, 20, 0.95))",
+    fr: {
+      badge: "CHAPITRE 04 / 07 · TRAIN ISRAEL RAILWAYS (SÉANCE 3)",
+      title: "4. Gare Yitzhak Navon & Train Rapide (0:24 – 0:32) · Séance 3",
+      desc: "David marche à travers le wagon high-tech entouré d'écrans de déploiement web, documents PDF et réseaux sociaux.",
+      quote: "« Dans la Séance 3, on monte dans le train à grande vitesse : mise en ligne d'un vrai site en production, configuration complète de votre ordinateur, et automatisation totale des documents et réseaux sociaux. »"
+    },
+    he: {
+      badge: "פרק 04 / 07 · הרכבת המהירה (מפגש 3)",
+      title: "4. תחנת יצחק נבון והרכבת המהירה (0:24 – 0:32) · מפגש 3",
+      desc: "צעידה בקרון הרכבת המהירה מוקף במסכים חיים של העלאת אתר לפרודקשן, מסמכים אוטומטיים ורשתות חברתיות.",
+      quote: "״במפגש השלישי עולים על הרכבת המהירה: מעלים אתר אמיתי לאוויר, מגדירים את המחשב שלכן מאלף ועד תו, ומחברים מסמכים ורשתות חברתיות לאוטומציה מלאה.״"
+    }
+  },
+  {
+    start: 32, end: 40, timeLabel: "00:32 – 00:40",
+    icon: "🌊",
+    bg: "radial-gradient(circle at 50% 35%, rgba(16, 185, 129, 0.26), rgba(7, 11, 20, 0.94))",
+    fr: {
+      badge: "CHAPITRE 05 / 07 · BAT YAM & IMPRIMERIE NEKUDA (SÉANCE 4)",
+      title: "5. Arrivée à Bat Yam & Studio Nekuda (0:32 – 0:40) · Séance 4",
+      desc: "Le front de mer de Bat Yam s'ouvre sur l'atelier d'impression Nekuda futuriste : films automatisés, Browser Automation et Claude Code.",
+      quote: "« Dans la Séance 4, nous arrivons à Bat Yam, au cœur de l'imprimerie Nekuda : production de films automatisée, pilotage intelligent du navigateur et moteur de prospection client propulsé par Claude Code. »"
+    },
+    he: {
+      badge: "פרק 05 / 07 · בת ים ודפוס נקודה (מפגש 4)",
+      title: "5. הגעה לבת ים ולב דפוס נקודה (0:32 – 0:40) · מפגש 4",
+      desc: "טיילת חוף בת ים נפתחת אל סטודיו דפוס נקודה העתידני: הפקת סרטים אוטומטית, דפדפן חכם וגיוס לקוחות עם Claude Code.",
+      quote: "״במפגש הרביעי אנחנו נוחתים בבת ים, בלב הדפוס של 'נקודה': הפקת סרטים אוטומטית, שליטה חכמה בדפדפן, ומנוע גיוס לקוחות שעובד בשבילכן עם קלוד קוד.״"
+    }
+  },
+  {
+    start: 40, end: 48, timeLabel: "00:40 – 00:48",
+    icon: "🚀",
+    bg: "radial-gradient(circle at 50% 40%, rgba(244, 63, 94, 0.25), rgba(16, 26, 48, 0.95))",
+    fr: {
+      badge: "CHAPITRE 06 / 07 · MARCHE SUR LA LUNE (SÉANCE 5)",
+      title: "6. Marche sur la Lune & Workflow A-Z (0:40 – 0:48) · Séance 5",
+      desc: "Le sol de l'imprimerie devient le régolithe lunaire ; la Terre bleue et dorée brille derrière David.",
+      quote: "« Et dans la Séance 5 — le ciel n'est même plus la limite ! Nous assemblerons un workflow complet de A à Z et une machine de prospection intelligente qui apprend et s'améliore toute seule chaque jour. »"
+    },
+    he: {
+      badge: "פרק 06 / 07 · הליכה על הירח (מפגש 5)",
+      title: "6. על פני הירח עם כדור הארץ ברקע (0:40 – 0:48) · מפגש 5",
+      desc: "רצפת בית הדפוס בבת ים הופכת לפני הירח וכדור הארץ זוהר ברקע עם רשת נוירונים מוזהבת.",
+      quote: "״ובמפגש החמישי — השמיים הם כבר לא הגבול! נחבר תהליך עבודה שלם מאלף ועד תו, ומערכת שיווק חכמה שלומדת ומשתפרת לבד כל יום.״"
+    }
+  },
+  {
+    start: 48, end: 54, timeLabel: "00:48 – 00:54",
+    icon: "🌕",
+    bg: "radial-gradient(circle at 50% 30%, rgba(230, 195, 106, 0.4), rgba(34, 211, 238, 0.2), rgba(4, 7, 14, 0.98))",
+    fr: {
+      badge: "CHAPITRE 07 / 07 · FINAL SUR LA LUNE",
+      title: "7. Final sur la Lune — Nekuda AI Academy (0:48 – 0:54)",
+      desc: "David tend le coffret Nekuda illuminé d'or vers la caméra, sourire rayonnant : Yatsaten LaDerekh !",
+      quote: "« Avec la foi, la vision et les bons outils — tout est possible. Nekuda AI Academy : vous êtes parties sur le chemin ! (יצאתן לדרך!) »"
+    },
+    he: {
+      badge: "פרק 07 / 07 · סיום חגיגי על הירח",
+      title: "7. סיום על הירח — נקודה AI אקדמי: יצאתן לדרך! (0:48 – 0:54)",
+      desc: "דוד מושיט את מארז נקודה הזוהר בזהב אל המצלמה בחיוך רחב על פני הירח.",
+      quote: "״עם אמונה, חזון והכלים הנכונים — הכל אפשרי. נקודה AI אקדמי: יצאתן לדרך!״"
+    }
+  }
+];
+
+let currentChapIndex = 0;
+let sbTimer = null;
+let sbSeconds = 0;
+let nativeVideoAvailable = false;
+
+const heroVideo = document.getElementById('heroVideo');
+const storyboardOverlay = document.getElementById('storyboardOverlay');
+
+heroVideo.addEventListener('loadedmetadata', () => {
+  if (heroVideo.duration > 0) {
+    nativeVideoAvailable = true;
+    storyboardOverlay.classList.add('hidden');
+  }
+});
+
+heroVideo.addEventListener('timeupdate', () => {
+  const t = heroVideo.currentTime;
+  const idx = chaptersData.findIndex(c => t >= c.start && t < c.end);
+  if (idx !== -1 && idx !== currentChapIndex) {
+    highlightChapterButton(idx);
+  }
+});
+
+function highlightChapterButton(idx) {
+  currentChapIndex = idx;
+  document.querySelectorAll('#chaptersGrid .chap-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === idx);
+  });
+}
+
+function renderStoryboardChapter(idx) {
+  currentChapIndex = idx;
+  highlightChapterButton(idx);
+  const ch = chaptersData[idx];
+  const copy = currentLang === 'he' ? ch.he : ch.fr;
+  document.getElementById('sbChapterBadge').textContent = copy.badge;
+  document.getElementById('sbIcon').textContent = ch.icon;
+  document.getElementById('sbTitle').textContent = copy.title;
+  document.getElementById('sbDesc').textContent = copy.desc;
+  document.getElementById('sbQuote').textContent = copy.quote;
+  document.getElementById('sbBackdrop').style.background = ch.bg;
+  const pct = Math.min(100, Math.round((ch.end / 54) * 100));
+  document.getElementById('sbProgressFill').style.width = pct + '%';
+  document.getElementById('sbTimecode').textContent = ch.timeLabel + ' / 00:54';
+}
+
+function selectChapter(idx) {
+  renderStoryboardChapter(idx);
+  sbSeconds = chaptersData[idx].start;
+  if (nativeVideoAvailable && storyboardOverlay.classList.contains('hidden')) {
+    heroVideo.currentTime = chaptersData[idx].start;
+    heroVideo.play().catch(() => {});
+  }
+}
+
+function stepChapter(delta) {
+  const next = (currentChapIndex + delta + chaptersData.length) % chaptersData.length;
+  selectChapter(next);
+}
+
+function toggleStoryboardMode() {
+  storyboardOverlay.classList.toggle('hidden');
+  if (!storyboardOverlay.classList.contains('hidden')) {
+    heroVideo.pause();
+  }
+}
+
+function tryPlayNativeVideo() {
+  storyboardOverlay.classList.add('hidden');
+  heroVideo.play().catch(() => {
+    storyboardOverlay.classList.remove('hidden');
+    showToast(currentLang === 'he'
+      ? '🎬 מצב סטוריבורד פעיל — קובץ הווידאו יטען אוטומטית עם סיום הרינדור'
+      : '🎬 Mode Storyboard actif — la vidéo MP4 se chargera dès la fin du rendu');
+  });
+}
+
+function toggleStoryboardPlay() {
+  const btn = document.getElementById('sbPlayBtn');
+  if (sbTimer) {
+    clearInterval(sbTimer);
+    sbTimer = null;
+    btn.innerHTML = currentLang === 'he' ? '▶ הפעל סימולציית 54 שנ׳' : '▶ Lancer la simulation 54s';
+    return;
+  }
+  btn.innerHTML = currentLang === 'he' ? '⏸ השהה סימולציה' : '⏸ Pause simulation';
+  sbTimer = setInterval(() => {
+    sbSeconds += 1;
+    if (sbSeconds >= 54) sbSeconds = 0;
+    const idx = chaptersData.findIndex(c => sbSeconds >= c.start && sbSeconds < c.end);
+    if (idx !== -1 && idx !== currentChapIndex) {
+      renderStoryboardChapter(idx);
+    }
+    const pct = Math.min(100, Math.round((sbSeconds / 54) * 100));
+    document.getElementById('sbProgressFill').style.width = pct + '%';
+    const mm = String(Math.floor(sbSeconds / 60)).padStart(2, '0');
+    const ss = String(sbSeconds % 60).padStart(2, '0');
+    document.getElementById('sbTimecode').textContent = `${mm}:${ss} / 00:54`;
+  }, 1000);
+}
+
+function scrubStoryboard(e) {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+  sbSeconds = Math.floor(ratio * 54);
+  const idx = chaptersData.findIndex(c => sbSeconds >= c.start && sbSeconds <= c.end);
+  if (idx !== -1) renderStoryboardChapter(idx);
+}
+
+// Initialize Chapter 0
+renderStoryboardChapter(0);
+
+// ══ 3. CURRICULUM ACCORDION CONTROLS ══
+function openAllSessions(openState) {
+  document.querySelectorAll('.session-card').forEach(d => {
+    d.open = openState;
+  });
+}
+
+// ══ 4. INTERACTIVE 3D FOIL BUSINESS CARD SIMULATOR ══
+function tiltFoilCard(e) {
+  const card = document.getElementById('foilCard3D');
+  const shimmer = document.getElementById('foilShimmer');
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const rotY = ((x / rect.width) - 0.5) * 24;
+  const rotX = (0.5 - (y / rect.height)) * 20;
+  card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
+  const shift = ((x / rect.width) * 80) - 40;
+  shimmer.style.transform = `translateX(${shift}%) rotate(12deg)`;
+}
+
+function resetFoilCard() {
+  const card = document.getElementById('foilCard3D');
+  card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+}
+
+function updateFoilCardText(val) {
+  const el = document.getElementById('cardBrandPreview');
+  el.textContent = val.trim() ? val.toUpperCase() : 'STUDIO MICHAL & GEMMA';
+}
+
+function setFoilFinish(type) {
+  const card = document.getElementById('foilCard3D');
+  const brand = document.getElementById('cardBrandPreview');
+  if (type === 'gold') {
+    card.style.borderColor = '#e6c36a';
+    brand.style.color = '#f7dfa0';
+    brand.style.textShadow = '0 2px 14px rgba(230, 195, 106, 0.6)';
+  } else if (type === 'cyan') {
+    card.style.borderColor = '#22d3ee';
+    brand.style.color = '#67e8f9';
+    brand.style.textShadow = '0 2px 14px rgba(34, 211, 238, 0.7)';
+  } else if (type === 'rose') {
+    card.style.borderColor = '#f43f5e';
+    brand.style.color = '#fda4af';
+    brand.style.textShadow = '0 2px 14px rgba(244, 63, 94, 0.65)';
+  }
+}
+
+// ══ 5. SPIRAL NOTEBOOK QUOTE GENERATOR (nekudap.co.il) ══
+function calcNotebookQuote() {
+  const cover = document.getElementById('nbCover').value;
+  const qty = parseInt(document.getElementById('nbQty').value, 10) || 100;
+  const client = document.getElementById('nbClient').value.trim() || (currentLang === 'he' ? 'לקוח VIP בת ים' : 'Client VIP Bat Yam');
+  const spiral = document.getElementById('nbSpiral').value;
+
+  let unitPrice = 22;
+  let coverLabelHe = 'כריכה קשה + למינציה';
+  let coverLabelFr = 'Couverture Rigide + Pelliculage';
+
+  if (cover === 'soft') {
+    unitPrice = 16;
+    coverLabelHe = 'כריכה רכה צבעונית';
+    coverLabelFr = 'Couverture Souple Couleur';
+  } else if (cover === 'foil') {
+    unitPrice = 29;
+    coverLabelHe = 'כריכה קשה + השבחת פויל זהב';
+    coverLabelFr = 'Couverture Rigide + Dorure Or';
+  }
+
+  if (qty >= 250) unitPrice = Math.round(unitPrice * 0.85);
+  if (qty >= 500) unitPrice = Math.round(unitPrice * 0.75);
+
+  const total = qty * unitPrice;
+  const descEl = document.getElementById('qDesc');
+  const metaEl = document.getElementById('qMeta');
+  const totalEl = document.getElementById('qTotal');
+
+  if (currentLang === 'he') {
+    descEl.textContent = `${qty} × מחברות ספירלה ממותגות (${coverLabelHe})`;
+    metaEl.textContent = `עבור: ${client} · גימור: ${spiral} · כולל הדפסה מלאה בדפוס נקודה`;
+  } else {
+    descEl.textContent = `${qty} × Cahiers à Spirale Griffés (${coverLabelFr})`;
+    metaEl.textContent = `Pour : ${client} · Finition : ${spiral} · Impression Nekuda Bat Yam`;
+  }
+  totalEl.textContent = total.toLocaleString() + ' ₪';
+
+  const waText = encodeURIComponent(`שלום דפוס נקודה, הנה הצעת מחיר מהסימולטור: ${qty} מחברות ספירלה (${coverLabelHe}) עבור ${client} — סה"כ ${total} ₪`);
+  document.getElementById('waQuoteLink').href = `https://wa.me/972523230240?text=${waText}`;
+}
+
+function printInstantQuote() {
+  showToast(currentLang === 'he'
+    ? '🖨️ הצעת המחיר הוכנה! במפגש 3 נחבר אותה להורדת PDF אוטומטית'
+    : '🖨️ Devis généré ! En Séance 3 vous connecterez cet export PDF en 1 clic');
+}
+
+// ══ 6. PROMPT CENTER FILTER & 1-CLICK COPY ══
+function filterPrompts(cat, btn) {
+  document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#promptsGrid .prompt-card').forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function copyPrompt(id, btn) {
+  const txt = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(txt).then(() => {
+    const oldHtml = btn.innerHTML;
+    btn.classList.add('copied');
+    btn.innerHTML = currentLang === 'he' ? '✓ הועתק ללוח!' : '✓ Prompt copié !';
+    showToast(currentLang === 'he' ? '✓ הפרומפט הועתק בהצלחה!' : '✓ Prompt copié dans le presse-papier !');
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = oldHtml;
+    }, 2200);
+  });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// Scroll progress bar
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  document.getElementById('scrollProgress').style.width = pct + '%';
+}, { passive: true });
+</script>
+</body>
+</html>
