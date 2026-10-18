@@ -10,6 +10,22 @@ Note de contrôle pour David. La page publique est en hébreu (RTL, langue par d
 - **Retirés parce qu'ils brouillaient le message** : la sphère 3D, le spot /brag, le carrousel produits et les flip cards. On peut les remettre si tu veux.
 - La version verticale du film n'est pas utilisée : c'est encore l'ancien montage (coffret noir et or).
 
+## v5 : les 5 nouveaux clips de David (18/10, 15h30)
+
+Transcription faite avec ElevenLabs Scribe sur ton compte (environ 0,12 $, 319 crédits), puisque Whisper est inaccessible depuis le cloud. Les 5 pistes audio ont été concaténées en un seul fichier pour ne lancer qu'une transcription.
+
+| Clip | Format | Ce que David dit | Décision |
+|---|---|---|---|
+| `a06d7334` Kotel + coffret « נקודה למחשבה » | 16:9 | « שלום מיכל, ג'מה and friends in Bat Yam. I'm David from Jerusalem… I built an AI empire » | **Section David** (`video/kotel.mp4`) |
+| `99bc5e19` gare centrale + tableau | 16:9 | « In session two, we dive into advanced Google Flow with zero code… first four viral reels » | **Carte Séance 2** (`video/s2.mp4`) |
+| `6b903a09` blazer multi-angles | 9:16 | « אחרי ההכשרה הזו של DreamNova תוכלו לעשות הכל… And the sky, And the sky is the limit » | **Hero**, dans un cadre de téléphone (`video/hero.mp4`). Le plan du bégaiement (7,42–8,50 s, une coupure de plan nette) a été retiré : durée 8,92 s |
+| `6020660f` blazer | 9:16 | même promesse, en hébreu propre | non utilisé, pour ne pas répéter le message du hero |
+| `4c256d93` blazer | 9:16 | même promesse, avec « נוכל » au lieu de « תוכלו » et un « בהחלט » parasite à la fin | non utilisé (sa dernière frame sert de poster au hero : sourire bouche fermée, même tenue) |
+
+- **Sous-titres** WebVTT HE et EN pour les 3 clips (`video/cc/`), écrits à partir de la transcription minutée. Ils suivent la langue de la page, y compris au changement en direct (testé).
+- **Posters** sur des frames souriantes bouche fermée : Kotel @9.52 s, gare @9.95 s, hero = fin du clip `4c256d93` @9.50 s.
+- **Lighthouse mobile** : 93 / 100 / 100 / 100. QA 1440 et 390, HE et EN : 0 scroll horizontal, 0 erreur, 0 image cassée.
+
 ## v4 (retours mobile de David, 18/10 après-midi)
 
 - **Bug corrigé** : les vignettes de chapitres s'étiraient en hauteur sur mobile, à cause des attributs `width`/`height` sans `height:auto`. Le film est maintenant en pleine largeur, avec une barre de chapitres segmentée (cliquable, qui se remplit pendant la lecture) et un carrousel de vignettes 16:9 qui défile au doigt sur mobile.

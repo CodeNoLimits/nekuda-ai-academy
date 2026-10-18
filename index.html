@@ -70,7 +70,7 @@
 <main id="main">
 <!-- ============ HERO ============ -->
 <section class="hero hero-v4" id="top">
-  <div class="wrap">
+  <div class="wrap hero-split">
     <div class="intro reveal">
       <span class="eyebrow"><span data-he>סדנת AI מעשית · בבית הדפוס בבת ים</span><span data-en>Hands-on AI workshop · at the print studio in Bat Yam</span></span>
       <h1>
@@ -96,6 +96,10 @@
         <li><b>5</b><span data-he>מפגשים של <bdi>2.5–3</bdi> שעות</span><span data-en>sessions of 2.5–3 hours</span></li>
       </ul>
     </div>
+    <figure class="phone-col reveal">
+      <div class="phone"><video controls playsinline preload="none" poster="video/hd/hero.webp" src="video/hero.mp4"><track kind="subtitles" srclang="he" label="עברית" src="video/cc/hero.he.vtt" default /><track kind="subtitles" srclang="en" label="English" src="video/cc/hero.en.vtt" /></video></div>
+      <figcaption><span data-he>דויד, 9 שניות: מה תדעו לעשות אחרי ההכשרה</span><span data-en>David, 9 seconds: what you'll be able to do after the training</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -204,7 +208,7 @@
       </div></article>
       <article class="sess bezel reveal"><div class="core">
         <div class="media">
-          <video controls playsinline preload="none" poster="video/hd/ch_3.webp" src="video/s2.mp4"></video>
+          <video controls playsinline preload="none" poster="video/hd/s2.webp" src="video/s2.mp4"><track kind="subtitles" srclang="he" label="עברית" src="video/cc/s2.he.vtt" default /><track kind="subtitles" srclang="en" label="English" src="video/cc/s2.en.vtt" /></video>
           <div class="ov" aria-hidden="true"><span class="k"><span data-he>מפגש 2</span><span data-en>SESSION 2</span></span><span class="t"><span data-he>4 רילס ראשונים, בלי קוד</span><span data-en>Your first 4 Reels, no code</span></span><span class="tags"><span style="--i:0" data-he>Flow בלי קוד</span><span style="--i:0" data-en>No-code Flow</span><span style="--i:1" data-he>4 רילס</span><span style="--i:1" data-en>4 Reels</span><span style="--i:2" data-he>מוקאפ אתר</span><span style="--i:2" data-en>Site mockup</span></span><i class="bar"></i></div>
         </div>
         <div>
@@ -352,8 +356,11 @@
 
 <!-- ============ DAVID ============ -->
 <section id="david">
-  <div class="wrap about">
-    <div class="bezel reveal"><div class="core flush"><img src="video/hd/david.webp" alt="David (Tselahya) Amor" loading="lazy" decoding="async" width="800" height="992" /></div></div>
+  <div class="wrap about has-video">
+    <div class="bezel reveal"><div class="core" style="padding:10px">
+      <video controls playsinline preload="none" poster="video/hd/kotel.webp" src="video/kotel.mp4"><track kind="subtitles" srclang="he" label="עברית" src="video/cc/kotel.he.vtt" default /><track kind="subtitles" srclang="en" label="English" src="video/cc/kotel.en.vtt" /></video>
+      <p class="vid-cap"><span data-he>דויד מציג את עצמו, מהכותל בירושלים</span><span data-en>David introduces himself, from the Kotel in Jerusalem</span></p>
+    </div></div>
     <div class="reveal">
       <span class="eyebrow"><span data-he>המנחה · DreamNova Studios, ירושלים</span><span data-en>Your instructor · DreamNova Studios, Jerusalem</span></span>
       <h2 style="margin-block:22px 18px"><span data-he>דויד (צלחיה) <em>אמור</em></span><span data-en>David (Tselahya) <em>Amor</em></span></h2>
@@ -500,6 +507,17 @@
   player.addEventListener('pause', sync);
   render();
   document.addEventListener('nk:lang', render);
+})();
+
+/* ---------- Captions follow the page language (HE default, EN) ---------- */
+(function () {
+  function sync() {
+    var L = NK.lang();
+    document.querySelectorAll('video').forEach(function (v) {
+      [].forEach.call(v.textTracks || [], function (t) { t.mode = t.language === L ? 'showing' : 'disabled'; });
+    });
+  }
+  sync(); document.addEventListener('nk:lang', sync);
 })();
 
 /* ---------- Sessions: animate the overlay when a card enters the screen; compact it while playing ---------- */
